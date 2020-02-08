@@ -1,0 +1,490 @@
+[
+  {
+    "id": 175924,
+    "name": "Polymetal",
+    "code": "POLY",
+    "market": 1,
+    "url": "moex-akcii/polymetal-international-plc",
+    "child": 1
+  },
+  {
+    "id": 414279,
+    "name": "RUSAL plc",
+    "code": "RUAL",
+    "market": 1,
+    "url": "moex-akcii/united-company-rusal-plc",
+    "child": 1
+  },
+  {
+    "id": 388383,
+    "name": "Yandex clA",
+    "code": "YNDX",
+    "market": 1,
+    "url": "moex-akcii/pllc-yandex-n-v",
+    "child": 1
+  },
+  {
+    "id": 22843,
+    "name": "iАвиастКао",
+    "code": "UNAC",
+    "market": 1,
+    "url": "moex-akcii/ob-aviastroitelnaya-korp",
+    "child": 1
+  },
+  {
+    "id": 81820,
+    "name": "АЛРОСА ао",
+    "code": "ALRS",
+    "market": 1,
+    "url": "moex-akcii/alrosa-ao",
+    "child": 1
+  },
+  {
+    "id": 17564,
+    "name": "Акрон",
+    "code": "AKRN",
+    "market": 1,
+    "url": "moex-akcii/akron",
+    "child": 1
+  },
+  {
+    "id": 29,
+    "name": "Аэрофлот",
+    "code": "AFLT",
+    "market": 1,
+    "url": "moex-akcii/aeroflot",
+    "child": 1
+  },
+  {
+    "id": 81757,
+    "name": "Башнефт ао",
+    "code": "BANE",
+    "market": 1,
+    "url": "moex-akcii/bashneft-ank-ao",
+    "child": 1
+  },
+  {
+    "id": 81758,
+    "name": "Башнефт ап",
+    "code": "BANEP",
+    "market": 1,
+    "url": "moex-akcii/bashneft-ank-ap",
+    "child": 1
+  },
+  {
+    "id": 15965,
+    "name": "ВСМПО-АВСМ",
+    "code": "VSMO",
+    "market": 1,
+    "decp": 5,
+    "url": "moex-akcii/verhnesald-mpo",
+    "child": 1
+  },
+  {
+    "id": 19043,
+    "name": "ВТБ ао",
+    "code": "VTBR",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/vtb",
+    "child": 1
+  },
+  {
+    "id": 16842,
+    "name": "ГАЗПРОМ ао",
+    "code": "GAZP",
+    "market": 1,
+    "url": "moex-akcii/gazprom",
+    "child": 1
+  },
+  {
+    "id": 795,
+    "name": "ГМКНорНик",
+    "code": "GMKN",
+    "market": 1,
+    "url": "moex-akcii/nornickel-gmk",
+    "child": 1
+  },
+  {
+    "id": 2,
+    "name": "Газпрнефть",
+    "code": "SIBN",
+    "market": 1,
+    "url": "moex-akcii/gazprom-neft",
+    "child": 1
+  },
+  {
+    "id": 20516,
+    "name": "ИнтерРАОао",
+    "code": "IRAO",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/inter-rao-ao",
+    "child": 1
+  },
+  {
+    "id": 8,
+    "name": "ЛУКОЙЛ",
+    "code": "LKOH",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lukoil",
+    "child": 1
+  },
+  {
+    "id": 12983,
+    "name": "МГТС-4ап",
+    "code": "MGTSP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mgts-4",
+    "child": 1
+  },
+  {
+    "id": 12984,
+    "name": "МГТС-5ао",
+    "code": "MGTS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mgts-5",
+    "child": 1
+  },
+  {
+    "id": 420694,
+    "name": "МКБ ао",
+    "code": "CBOM",
+    "market": 1,
+    "decp": 1,
+    "url": "moex-akcii/oao-mkb-ao",
+    "child": 1
+  },
+  {
+    "id": 16782,
+    "name": "ММК",
+    "code": "MAGN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mmk",
+    "child": 1
+  },
+  {
+    "id": 15523,
+    "name": "МТС-ао",
+    "code": "MTSS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mts",
+    "child": 1
+  },
+  {
+    "id": 17086,
+    "name": "Магнит ао",
+    "code": "MGNT",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/magnit",
+    "child": 1
+  },
+  {
+    "id": 152516,
+    "name": "МегаФон ао",
+    "code": "MFON",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/megafon-ao",
+    "child": 1
+  },
+  {
+    "id": 152798,
+    "name": "МосБиржа",
+    "code": "MOEX",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/moscowexchange",
+    "child": 1
+  },
+  {
+    "id": 20100,
+    "name": "НКНХ ао",
+    "code": "NKNC",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/niznekamskneftekhim-ao",
+    "child": 1
+  },
+  {
+    "id": 20101,
+    "name": "НКНХ ап",
+    "code": "NKNCP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/niznekamskneftekhim-pref",
+    "child": 1
+  },
+  {
+    "id": 17046,
+    "name": "НЛМК ао",
+    "code": "NLMK",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/nlmk-ao",
+    "child": 1
+  },
+  {
+    "id": 19629,
+    "name": "НМТП ао",
+    "code": "NMTP",
+    "market": 1,
+    "decp": 1,
+    "url": "moex-akcii/nmtp",
+    "child": 1
+  },
+  {
+    "id": 17370,
+    "name": "Новатэк ао",
+    "code": "NVTK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/novatek",
+    "child": 1
+  },
+  {
+    "id": 81856,
+    "name": "ОргСинт ао",
+    "code": "KZOS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/oao-organicheskiy-sintez-ao",
+    "child": 1
+  },
+  {
+    "id": 81857,
+    "name": "ОргСинт ап",
+    "code": "KZOSP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/oao-organicheskiy-sintez-ap",
+    "child": 1
+  },
+  {
+    "id": 18654,
+    "name": "ПИК ао",
+    "code": "PIKK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/pik",
+    "child": 1
+  },
+  {
+    "id": 17123,
+    "name": "Полюс",
+    "code": "PLZL",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/polus-zoloto",
+    "child": 1
+  },
+  {
+    "id": 181934,
+    "name": "РГС СК ао",
+    "code": "RGSS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/jsc-rosgosstrakh-ao",
+    "child": 1
+  },
+  {
+    "id": 16866,
+    "name": "Росбанк ао",
+    "code": "ROSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rosbank",
+    "child": 1
+  },
+  {
+    "id": 17273,
+    "name": "Роснефть",
+    "code": "ROSN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rosneft",
+    "child": 1
+  },
+  {
+    "id": 20971,
+    "name": "Россети ао",
+    "code": "RSTI",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rosseti-ao",
+    "child": 1
+  },
+  {
+    "id": 20972,
+    "name": "Россети ап",
+    "code": "RSTIP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rosseti-ap",
+    "child": 1
+  },
+  {
+    "id": 7,
+    "name": "Ростел -ао",
+    "code": "RTKM",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rostelecom",
+    "child": 1
+  },
+  {
+    "id": 15,
+    "name": "Ростел -ап",
+    "code": "RTKMP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rostelecom-pref",
+    "child": 1
+  },
+  {
+    "id": 20266,
+    "name": "РусГидро",
+    "code": "HYDR",
+    "market": 1,
+    "decp": 5,
+    "url": "moex-akcii/rusgidro",
+    "child": 1
+  },
+  {
+    "id": 465236,
+    "name": "РуссНфт ао",
+    "code": "RNFT",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/russneft-nk",
+    "child": 1
+  },
+  {
+    "id": 3,
+    "name": "Сбербанк",
+    "code": "SBER",
+    "market": 1,
+    "url": "moex-akcii/sberbank",
+    "child": 1
+  },
+  {
+    "id": 23,
+    "name": "Сбербанк-п",
+    "code": "SBERP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/sberbank-pref",
+    "child": 1
+  },
+  {
+    "id": 16136,
+    "name": "СевСт-ао",
+    "code": "CHMF",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/severstal-ao",
+    "child": 1
+  },
+  {
+    "id": 19715,
+    "name": "Система ао",
+    "code": "AFKS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/afk-sistema",
+    "child": 1
+  },
+  {
+    "id": 4,
+    "name": "Сургнфгз",
+    "code": "SNGS",
+    "market": 1,
+    "url": "moex-akcii/surgut",
+    "child": 1
+  },
+  {
+    "id": 13,
+    "name": "Сургнфгз-п",
+    "code": "SNGSP",
+    "market": 1,
+    "url": "moex-akcii/surgut-pref",
+    "child": 1
+  },
+  {
+    "id": 825,
+    "name": "Татнфт 3ао",
+    "code": "TATN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tatneft-3",
+    "child": 1
+  },
+  {
+    "id": 826,
+    "name": "Татнфт 3ап",
+    "code": "TATNP",
+    "market": 1,
+    "url": "moex-akcii/tatneft-pref",
+    "child": 1
+  },
+  {
+    "id": 74561,
+    "name": "ТрансК ао",
+    "code": "TRCN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/transkonteiner-ao",
+    "child": 1
+  },
+  {
+    "id": 1012,
+    "name": "Транснф ап",
+    "code": "TRNFP",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/transneft-pref",
+    "child": 1
+  },
+  {
+    "id": 19623,
+    "name": "Уркалий-ао",
+    "code": "URKA",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/uralkaliy",
+    "child": 1
+  },
+  {
+    "id": 20509,
+    "name": "ФСК ЕЭС ао",
+    "code": "FEES",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/fsk-ees",
+    "child": 1
+  },
+  {
+    "id": 81114,
+    "name": "ФосАгро ао",
+    "code": "PHOR",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/phosagro-ao",
+    "child": 1
+  },
+  {
+    "id": 18584,
+    "name": "Юнипро ао",
+    "code": "UPRO",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/e-on-russia",
+    "child": 1
+  }
+]

@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 182428,
+    "name": "BKTRUB_TOM",
+    "code": "BKTRUB000TOM",
+    "market": 45,
+    "decp": 4,
+    "url": "mosbirzha-valyutnyj-rynok/bktrubtom",
+    "child": 1
+  },
+  {
+    "id": 456494,
+    "name": "BYNRUB_TOD",
+    "code": "BYNRUB_TOD",
+    "market": 45,
+    "decp": 4,
+    "url": "mosbirzha-valyutnyj-rynok/byn-rubtod-byn-rub",
+    "child": 1
+  },
+  {
+    "id": 456495,
+    "name": "BYNRUB_TOM",
+    "code": "BYNRUB_TOM",
+    "market": 45,
+    "decp": 4,
+    "url": "mosbirzha-valyutnyj-rynok/byn-rubtom-byn-rub",
+    "child": 1
+  },
+  {
+    "id": 456493,
+    "name": "BYN_TODTOM",
+    "code": "BYNRUBTODTOM",
+    "market": 45,
+    "decp": 4,
+    "url": "mosbirzha-valyutnyj-rynok/byntodtom-swap-byn-rub",
+    "child": 1
+  },
+  {
+    "id": 399721,
+    "name": "BYRRUB_TOD",
+    "code": "BYRRUB_TOD",
+    "market": 45,
+    "decp": 4,
+    "url": "mosbirzha-valyutnyj-rynok/byr-rubtod-byr-rub",
+    "child": 1
+  },
+  {
+    "id": 182438,
+    "name": "BYRRUB_TOD",
+    "code": "BYR_RUB__TOM",
+    "market": 45,
+    "decp": 4,
+    "url": "mosbirzha-valyutnyj-rynok/byrrubtod",
+    "child": 1
+  },
+  {
+    "id": 399722,
+    "name": "BYRRUB_TOM",
+    "code": "BYRRUB_TOM",
+    "market": 45,
+    "decp": 2,
+    "url": "mosbirzha-valyutnyj-rynok/byr-rubtom-byr-rub",
+    "child": 1
+  },
+  {
+    "id": 399720,
+    "name": "BYR_TODTOM",
+    "code": "BYRRUBTODTOM",
+    "market": 45,
+    "decp": 2,
+    "url": "mosbirzha-valyutnyj-rynok/byrtodtom-swap-byr-rub",
+    "child": 1
+  },
+  {
+    "id": 457112,
+    "name": "CHFRUB_TOD",
+    "code": "CHFRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/chf-rubtod-chf-rub",
+    "child": 1
+  },
+  {
+    "id": 457113,
+    "name": "CHFRUB_TOM",
+    "code": "CHFRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/chf-rubtom-chf-rub",
+    "child": 1
+  },
+  {
+    "id": 457111,
+    "name": "CHF_TODTOM",
+    "code": "CHFRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/chftodtom-swap-chf-rub",
+    "child": 1
+  },
+  {
+    "id": 496985,
+    "name": "CNY/RUB - ФИКСИНГ 1 СЕК.",
+    "code": "CNYFIX",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rub-fix-1-sec",
+    "child": 1
+  },
+  {
+    "id": 496986,
+    "name": "CNY/RUB - ФИКСИНГ ЕЖЕДН.",
+    "code": "CNYFIXME",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rub-fix-daily",
+    "child": 1
+  },
+  {
+    "id": 182404,
+    "name": "CNYRUB_LTV",
+    "code": "CNYRUB_FWD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rubltv-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182405,
+    "name": "CNYRUB_SPT",
+    "code": "CNYRUB_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rubspt-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182402,
+    "name": "CNYRUB_TOD",
+    "code": "CNY000000TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rubtod-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182406,
+    "name": "CNYRUB_TOM",
+    "code": "CNYRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rubtom-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182403,
+    "name": "CNY_TODTOM",
+    "code": "CNYRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cnytodtom-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182408,
+    "name": "CNY_TOM1M",
+    "code": "CNYRUB_TOM1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182409,
+    "name": "CNY_TOM1W",
+    "code": "CNYRUB_TOM1W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1w-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182410,
+    "name": "CNY_TOM2M",
+    "code": "CNYRUB_TOM2M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2m-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182411,
+    "name": "CNY_TOM2W",
+    "code": "CNYRUB_TOM2W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2w-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182412,
+    "name": "CNY_TOM3M",
+    "code": "CNYRUB_TOM3M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom3m-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182413,
+    "name": "CNY_TOM6M",
+    "code": "CNYRUB_TOM6M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom6m-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182407,
+    "name": "CNY_TOMSPT",
+    "code": "CNYRUB_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1d-swap-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 496987,
+    "name": "EUR/RUB - ФИКСИНГ 1 СЕК.",
+    "code": "EURFIX",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-rub-fix-1-sec",
+    "child": 1
+  },
+  {
+    "id": 496988,
+    "name": "EUR/RUB - ФИКСИНГ ЕЖЕДН.",
+    "code": "EURFIXME",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-rub-fix-daily",
+    "child": 1
+  },
+  {
+    "id": 496989,
+    "name": "EUR/USD - ФИКСИНГ 1 СЕК.",
+    "code": "EURUSDFIX",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usd-fix-1-sec",
+    "child": 1
+  },
+  {
+    "id": 496990,
+    "name": "EUR/USD - ФИКСИНГ ЕЖЕДН.",
+    "code": "EURUSDFIXME",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usd-fix-daily",
+    "child": 1
+  },
+  {
+    "id": 182415,
+    "name": "EURRUB_LTV",
+    "code": "EURRUB_FWD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrubfwd-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 407322,
+    "name": "EURRUB_NYH",
+    "code": "EURRUB_NYH",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrub-nyh",
+    "child": 1
+  },
+  {
+    "id": 182416,
+    "name": "EURRUB_SPT",
+    "code": "EURRUB_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrubspt-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182441,
+    "name": "EURRUB_TOD",
+    "code": "EUR_RUB__TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrubtod-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182398,
+    "name": "EURRUB_TOM",
+    "code": "EUR_RUB__TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrubtom-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182440,
+    "name": "EURUSDTDTM",
+    "code": "EURUSDTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usdtodtom-swap-eur-usd",
+    "child": 1
+  },
+  {
+    "id": 497637,
+    "name": "EURUSDTMSP",
+    "code": "EURUSD_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usdtomspt-swap-eur-usd",
+    "child": 1
+  },
+  {
+    "id": 497636,
+    "name": "EURUSD_SPT",
+    "code": "EURUSD_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usdspt-eur-usd",
+    "child": 1
+  },
+  {
+    "id": 182439,
+    "name": "EURUSD_TOD",
+    "code": "EURUSD000TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usdtod-eur-usd",
+    "child": 1
+  },
+  {
+    "id": 182399,
+    "name": "EURUSD_TOM",
+    "code": "EURUSD000TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eur-usdtom-eur-usd",
+    "child": 1
+  },
+  {
+    "id": 407323,
+    "name": "EUR_NYH1M",
+    "code": "EURRUB_NYH1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-nyh-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 407324,
+    "name": "EUR_NYH2M",
+    "code": "EURRUB_NYH2M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2m-nyh-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 407325,
+    "name": "EUR_NYH3M",
+    "code": "EURRUB_NYH3M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom3m-nyh-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182414,
+    "name": "EUR_TODTOM",
+    "code": "EUR000TODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurtodtom-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182418,
+    "name": "EUR_TOM1M",
+    "code": "EURRUB_TOM1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182419,
+    "name": "EUR_TOM1W",
+    "code": "EURRUB_TOM1W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1w-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182435,
+    "name": "EUR_TOM1Y",
+    "code": "EURRUB_TOM1Y",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1y-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182431,
+    "name": "EUR_TOM2M",
+    "code": "EURRUB_TOM2M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182430,
+    "name": "EUR_TOM2W",
+    "code": "EURRUB_TOM2W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2w-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182432,
+    "name": "EUR_TOM3M",
+    "code": "EURRUB_TOM3M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom3m-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182433,
+    "name": "EUR_TOM6M",
+    "code": "EURRUB_TOM6M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom6m-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182434,
+    "name": "EUR_TOM9M",
+    "code": "EURRUB_TOM9M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom9m-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182417,
+    "name": "EUR_TOMSPT",
+    "code": "EURRUB_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1d-swap-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 399724,
+    "name": "GBPRUB_TOD",
+    "code": "GBPRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-rubtod-gbp-rub",
+    "child": 1
+  },
+  {
+    "id": 399725,
+    "name": "GBPRUB_TOM",
+    "code": "GBPRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-rubtom-gbp-rub",
+    "child": 1
+  },
+  {
+    "id": 497638,
+    "name": "GBPUSDTDTM",
+    "code": "GBPUSDTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-usdtodtom-swap-gbp-usd",
+    "child": 1
+  },
+  {
+    "id": 497642,
+    "name": "GBPUSDTMSP",
+    "code": "GBPUSD_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-usdtomspt-swap-gbp-usd",
+    "child": 1
+  },
+  {
+    "id": 497639,
+    "name": "GBPUSD_SPT",
+    "code": "GBPUSD_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-usdspt-gbp-usd",
+    "child": 1
+  },
+  {
+    "id": 497640,
+    "name": "GBPUSD_TOD",
+    "code": "GBPUSD_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-usdtod-gbp-usd",
+    "child": 1
+  },
+  {
+    "id": 497641,
+    "name": "GBPUSD_TOM",
+    "code": "GBPUSD_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbp-usdtom-gbp-usd",
+    "child": 1
+  },
+  {
+    "id": 399723,
+    "name": "GBP_TODTOM",
+    "code": "GBPRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gbptodtom-swap-gbp-rub",
+    "child": 1
+  },
+  {
+    "id": 182460,
+    "name": "GLDRUB_LTV",
+    "code": "GLDRUB_FWD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gldrubfwd-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 399726,
+    "name": "GLDRUB_SPT",
+    "code": "GLDRUB_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gldrubspt-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182461,
+    "name": "GLDRUB_TOD",
+    "code": "GLDRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gldrubtod-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182443,
+    "name": "GLDRUB_TOM",
+    "code": "GLDRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gldrubtom-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182442,
+    "name": "GLD_TODTOM",
+    "code": "GLDRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/gldtodtom-swap-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182445,
+    "name": "GLD_TOM1M",
+    "code": "GLDRUB_TOM1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182446,
+    "name": "GLD_TOM1W",
+    "code": "GLDRUB_TOM1W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1w-swap-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182447,
+    "name": "GLD_TOM6M",
+    "code": "GLDRUB_TOM6M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom6m-swap-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 182444,
+    "name": "GLD_TOMSPT",
+    "code": "GLDRUB_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1d-swap-gld-rub",
+    "child": 1
+  },
+  {
+    "id": 399728,
+    "name": "HKDRUB_TOD",
+    "code": "HKDRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/hkd-rubtod-hkd-rub",
+    "child": 1
+  },
+  {
+    "id": 399729,
+    "name": "HKDRUB_TOM",
+    "code": "HKDRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/hkd-rubtom-hkd-rub",
+    "child": 1
+  },
+  {
+    "id": 399727,
+    "name": "HKD_TODTOM",
+    "code": "HKDRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/hkdtodtom-swap-hkd-rub",
+    "child": 1
+  },
+  {
+    "id": 502049,
+    "name": "JPYRUB_TOD",
+    "code": "JPYRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/jpy-rubtod-jpy-rub",
+    "child": 1
+  },
+  {
+    "id": 883589,
+    "name": "JPYRUB_TOM",
+    "code": "JPYRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/jpy-rubtom-jpy-rub_jpyrubtom",
+    "child": 1
+  },
+  {
+    "id": 883588,
+    "name": "JPY_TODTOM",
+    "code": "JPYRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/jpy-rubtodtom-swap-jpy-rub_jpyrubtodtom",
+    "child": 1
+  },
+  {
+    "id": 497644,
+    "name": "KZTRUB_LTV",
+    "code": "KZTRUB_FWD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kzt-rubltv-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497645,
+    "name": "KZTRUB_SPT",
+    "code": "KZTRUB_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kzt-rubspt-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497646,
+    "name": "KZTRUB_TOD",
+    "code": "KZTRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kzt-rubtod-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 182448,
+    "name": "KZTRUB_TOD",
+    "code": "KZT000000TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kztrubtom-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497647,
+    "name": "KZTRUB_TOM",
+    "code": "KZTRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kzt-rubtom-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497643,
+    "name": "KZT_TODTOM",
+    "code": "KZTRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kzt-rubtodtom-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497649,
+    "name": "KZT_TOM1M",
+    "code": "KZTRUB_TOM1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497650,
+    "name": "KZT_TOM1W",
+    "code": "KZTRUB_TOM1W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1w-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497651,
+    "name": "KZT_TOM2M",
+    "code": "KZTRUB_TOM2M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2m-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497652,
+    "name": "KZT_TOM2W",
+    "code": "KZTRUB_TOM2W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2w-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497653,
+    "name": "KZT_TOM3M",
+    "code": "KZTRUB_TOM3M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom3m-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497654,
+    "name": "KZT_TOM6M",
+    "code": "KZTRUB_TOM6M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom6m-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 497648,
+    "name": "KZT_TOMSPT",
+    "code": "KZTRUB_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/kzt-rubtomspt-swap-kzt-rub",
+    "child": 1
+  },
+  {
+    "id": 182462,
+    "name": "SLVRUB_LTV",
+    "code": "SLVRUB_FWD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/slvrubfwd-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 399730,
+    "name": "SLVRUB_SPT",
+    "code": "SLVRUB_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/slvrubspt-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182463,
+    "name": "SLVRUB_TOD",
+    "code": "SLVRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/slvrubtod-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 182450,
+    "name": "SLVRUB_TOM",
+    "code": "SLVRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/slvrubtom-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 182449,
+    "name": "SLV_TODTOM",
+    "code": "SLVRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/slvtodtom-swap-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 182452,
+    "name": "SLV_TOM1M",
+    "code": "SLVRUB_TOM1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 182453,
+    "name": "SLV_TOM1W",
+    "code": "SLVRUB_TOM1W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1w-swap-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 182454,
+    "name": "SLV_TOM6M",
+    "code": "SLVRUB_TOM6M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom6m-swap-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 182451,
+    "name": "SLV_TOMSPT",
+    "code": "SLVRUB_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1d-swap-slv-rub",
+    "child": 1
+  },
+  {
+    "id": 491785,
+    "name": "TRYRUB_TOD",
+    "code": "TRYRUB_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/try-rubtod-try-rub",
+    "child": 1
+  },
+  {
+    "id": 491786,
+    "name": "TRYRUB_TOM",
+    "code": "TRYRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/try-rubtom-try-rub",
+    "child": 1
+  },
+  {
+    "id": 491784,
+    "name": "TRY_TODTOM",
+    "code": "TRYRUBTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/trytodtom-swap-try-rub",
+    "child": 1
+  },
+  {
+    "id": 182455,
+    "name": "UAHRUB_TOD",
+    "code": "UAH000000TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/uahrubtom-uah-rub",
+    "child": 1
+  },
+  {
+    "id": 496991,
+    "name": "USD/RUB - ФИКСИНГ 1 СЕК.",
+    "code": "USDFIX",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-rub-fix-1-sec",
+    "child": 1
+  },
+  {
+    "id": 496992,
+    "name": "USD/RUB - ФИКСИНГ ЕЖЕДН.",
+    "code": "USDFIXME",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-rub-fix-daily",
+    "child": 1
+  },
+  {
+    "id": 497655,
+    "name": "USDCHFTDTM",
+    "code": "USDCHFTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-chftodtom-swap-usd-chf",
+    "child": 1
+  },
+  {
+    "id": 497659,
+    "name": "USDCHFTMSP",
+    "code": "USDCHF_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-chftomspt-swap-usd-chf",
+    "child": 1
+  },
+  {
+    "id": 497656,
+    "name": "USDCHF_SPT",
+    "code": "USDCHF_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-chfspt-usd-chf",
+    "child": 1
+  },
+  {
+    "id": 497657,
+    "name": "USDCHF_TOD",
+    "code": "USDCHF_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-chftod-usd-chf",
+    "child": 1
+  },
+  {
+    "id": 497658,
+    "name": "USDCHF_TOM",
+    "code": "USDCHF_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-chftom-usd-chf",
+    "child": 1
+  },
+  {
+    "id": 497660,
+    "name": "USDCNYTDTM",
+    "code": "USDCNYTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-cnytodtom-swap-usd-cny",
+    "child": 1
+  },
+  {
+    "id": 497664,
+    "name": "USDCNYTMSP",
+    "code": "USDCNY_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-cnytomspt-swap-usd-cny",
+    "child": 1
+  },
+  {
+    "id": 497661,
+    "name": "USDCNY_SPT",
+    "code": "USDCNY_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-cnyspt-usd-cny",
+    "child": 1
+  },
+  {
+    "id": 497662,
+    "name": "USDCNY_TOD",
+    "code": "USDCNY_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-cnytod-usd-cny",
+    "child": 1
+  },
+  {
+    "id": 497663,
+    "name": "USDCNY_TOM",
+    "code": "USDCNY_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-cnytom-usd-cny",
+    "child": 1
+  },
+  {
+    "id": 182397,
+    "name": "USDEUR/RUB - КОРЗИНА",
+    "code": "RUBBKT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdeur-rub-basket",
+    "child": 1
+  },
+  {
+    "id": 903958,
+    "name": "USDJPYTDTM",
+    "code": "USDJPYTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-jpytodtom-swap-usd-jpy_usdjpytodtom",
+    "child": 1
+  },
+  {
+    "id": 903962,
+    "name": "USDJPYTMSP",
+    "code": "USDJPY_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-jpytomspt-swap-usd-jpy_usdjpytom1d",
+    "child": 1
+  },
+  {
+    "id": 903959,
+    "name": "USDJPY_SPT",
+    "code": "USDJPY_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-jpyspt-usd-jpy_usdjpyspt",
+    "child": 1
+  },
+  {
+    "id": 903960,
+    "name": "USDJPY_TOD",
+    "code": "USDJPY_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-jpytod-usd-jpy_usdjpytod",
+    "child": 1
+  },
+  {
+    "id": 903961,
+    "name": "USDJPY_TOM",
+    "code": "USDJPY_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-jpytom-usd-jpy_usdjpytom",
+    "child": 1
+  },
+  {
+    "id": 497665,
+    "name": "USDKZTTDTM",
+    "code": "USDKZTTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-kzttodtom-swap-usd-kzt",
+    "child": 1
+  },
+  {
+    "id": 497669,
+    "name": "USDKZTTMSP",
+    "code": "USDKZT_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-kzttomspt-swap-usd-kzt",
+    "child": 1
+  },
+  {
+    "id": 497666,
+    "name": "USDKZT_SPT",
+    "code": "USDKZT_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-kztspt-usd-kzt",
+    "child": 1
+  },
+  {
+    "id": 497667,
+    "name": "USDKZT_TOD",
+    "code": "USDKZT_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-kzttod-usd-kzt",
+    "child": 1
+  },
+  {
+    "id": 497668,
+    "name": "USDKZT_TOM",
+    "code": "USDKZT_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-kzttom-usd-kzt",
+    "child": 1
+  },
+  {
+    "id": 472223,
+    "name": "USDRUB_DIS",
+    "code": "USDRUB_DIS",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/discrete-auction-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182464,
+    "name": "USDRUB_LTV",
+    "code": "USDRUB_FWD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubfwd-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 407326,
+    "name": "USDRUB_NYH",
+    "code": "USDRUB_NYH",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrub-nyh",
+    "child": 1
+  },
+  {
+    "id": 182401,
+    "name": "USDRUB_SPT",
+    "code": "USDRUB_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubspt-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 883590,
+    "name": "USDRUB_TDB",
+    "code": "USDRUB_TDB",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubtdb-usd-rub_usdrubtdb",
+    "child": 1
+  },
+  {
+    "id": 182456,
+    "name": "USDRUB_TOD",
+    "code": "USD000000TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubtod-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182400,
+    "name": "USDRUB_TOM",
+    "code": "USD000UTSTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubtom-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 497670,
+    "name": "USDTRYTDTM",
+    "code": "USDTRYTODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-trytodtom-swap-usd-try",
+    "child": 1
+  },
+  {
+    "id": 497674,
+    "name": "USDTRYTMSP",
+    "code": "USDTRY_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-trytomspt-swap-usd-try",
+    "child": 1
+  },
+  {
+    "id": 497671,
+    "name": "USDTRY_SPT",
+    "code": "USDTRY_SPT",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-tryspt-usd-try",
+    "child": 1
+  },
+  {
+    "id": 497672,
+    "name": "USDTRY_TOD",
+    "code": "USDTRY_TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-trytod-usd-try",
+    "child": 1
+  },
+  {
+    "id": 497673,
+    "name": "USDTRY_TOM",
+    "code": "USDTRY_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usd-trytom-usd-try",
+    "child": 1
+  },
+  {
+    "id": 407327,
+    "name": "USD_NYH1M",
+    "code": "USDRUB_NYH1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-nyh-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 407328,
+    "name": "USD_NYH2M",
+    "code": "USDRUB_NYH2M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2m-nyh-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 407329,
+    "name": "USD_NYH3M",
+    "code": "USDRUB_NYH3M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom3m-nyh-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182457,
+    "name": "USD_TODTOM",
+    "code": "USD000TODTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdtodtom-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182425,
+    "name": "USD_TOM1M",
+    "code": "USDRUB_TOM1M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1m-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182426,
+    "name": "USD_TOM1W",
+    "code": "USDRUB_TOM1W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1w-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182420,
+    "name": "USD_TOM1Y",
+    "code": "USDRUB_TOM1Y",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1y-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182422,
+    "name": "USD_TOM2M",
+    "code": "USDRUB_TOM2M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2m-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182427,
+    "name": "USD_TOM2W",
+    "code": "USDRUB_TOM2W",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom2w-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182424,
+    "name": "USD_TOM3M",
+    "code": "USDRUB_TOM3M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom3m-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182423,
+    "name": "USD_TOM6M",
+    "code": "USDRUB_TOM6M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom6m-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182421,
+    "name": "USD_TOM9M",
+    "code": "USDRUB_TOM9M",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom9m-swap-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182458,
+    "name": "USD_TOMSPT",
+    "code": "USDRUB_TOM1D",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/tom1d-swap-usd-rub",
+    "child": 1
+  }
+]

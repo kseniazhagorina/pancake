@@ -1,0 +1,3537 @@
+[
+  {
+    "id": 888174,
+    "name": "1MFR-1.20(MFF0)",
+    "code": "MFF0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-1-20-mff0_mff0",
+    "child": 1
+  },
+  {
+    "id": 888175,
+    "name": "1MFR-10.19(MFV9)",
+    "code": "MFV9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-10-19-mfv9_mfv9",
+    "child": 1
+  },
+  {
+    "id": 888176,
+    "name": "1MFR-11.19(MFX9)",
+    "code": "MFX9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-11-19-mfx9_mfx9",
+    "child": 1
+  },
+  {
+    "id": 888177,
+    "name": "1MFR-12.19(MFZ9)",
+    "code": "MFZ9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-12-19-mfz9_mfz9",
+    "child": 1
+  },
+  {
+    "id": 888178,
+    "name": "1MFR-2.20(MFG0)",
+    "code": "MFG0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-2-20-mfg0_mfg0",
+    "child": 1
+  },
+  {
+    "id": 888179,
+    "name": "1MFR-3.20(MFH0)",
+    "code": "MFH0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-3-20-mfh0_mfh0",
+    "child": 1
+  },
+  {
+    "id": 888180,
+    "name": "1MFR-4.20(MFJ0)",
+    "code": "MFJ0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-4-20-mfj0_mfj0",
+    "child": 1
+  },
+  {
+    "id": 889960,
+    "name": "1MFR-5.20(MFK0)",
+    "code": "MFK0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/1mfr-5-20-mfk0_mfk0",
+    "child": 1
+  },
+  {
+    "id": 898228,
+    "name": "1MFR-6.20(MFM0)",
+    "code": "MFM0",
+    "market": 14,
+    "decp": 3,
+    "url": "mosbirzha-fyuchersy/1mfr-6-20-mfm0_mfm0",
+    "child": 1
+  },
+  {
+    "id": 901424,
+    "name": "1MFR-7.20(MFN0)",
+    "code": "MFN0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/1mfr-7-20-mfn0_mfn0",
+    "child": 1
+  },
+  {
+    "id": 906367,
+    "name": "1MFR-8.20(MFQ0)",
+    "code": "MFQ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/1mfr-8-20-mfq0_mfq0",
+    "child": 1
+  },
+  {
+    "id": 910578,
+    "name": "1MFR-9.20(MFU0)",
+    "code": "MFU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/1mfr-9-20-mfu0_mfu0",
+    "child": 1
+  },
+  {
+    "id": 892969,
+    "name": "AFLT-12.19(AFZ9)",
+    "code": "AFZ9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/aflt-12-19-afz9_afz9",
+    "child": 1
+  },
+  {
+    "id": 909146,
+    "name": "AFLT-3.20(AFH0)",
+    "code": "AFH0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/aflt-3-20-afh0_afh0",
+    "child": 1
+  },
+  {
+    "id": 906132,
+    "name": "AKEUA",
+    "code": "AKEUA",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/akeua_akeua",
+    "child": 1
+  },
+  {
+    "id": 876253,
+    "name": "AKSPA",
+    "code": "RI.AKSPA",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/akspa",
+    "child": 1
+  },
+  {
+    "id": 910976,
+    "name": "ALMN-1.20(AMF0)",
+    "code": "AMF0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/almn-1-20-amf0_amf0",
+    "child": 1
+  },
+  {
+    "id": 898585,
+    "name": "ALMN-10.19(AMV9)",
+    "code": "AMV9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/almn-10-19-amv9_amv9",
+    "child": 1
+  },
+  {
+    "id": 901458,
+    "name": "ALMN-11.19(AMX9)",
+    "code": "AMX9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/almn-11-19-amx9_amx9",
+    "child": 1
+  },
+  {
+    "id": 909973,
+    "name": "ALMN-12.19(AMZ9)",
+    "code": "AMZ9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/almn-12-19-amz9_amz9",
+    "child": 1
+  },
+  {
+    "id": 461013,
+    "name": "ALRS",
+    "code": "ALRS",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/spfb-alrs",
+    "child": 1
+  },
+  {
+    "id": 892970,
+    "name": "ALRS-12.19(ALZ9)",
+    "code": "ALZ9",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/alrs-12-19-alz9_alz9",
+    "child": 1
+  },
+  {
+    "id": 909147,
+    "name": "ALRS-3.20(ALH0)",
+    "code": "ALH0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/alrs-3-20-alh0_alh0",
+    "child": 1
+  },
+  {
+    "id": 82699,
+    "name": "ALSI",
+    "code": "ALSI",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/alsi",
+    "child": 1
+  },
+  {
+    "id": 81009,
+    "name": "AUDU",
+    "code": "AUDU",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/audu",
+    "child": 1
+  },
+  {
+    "id": 891326,
+    "name": "AUDU-12.19(AUZ9)",
+    "code": "AUZ9",
+    "market": 14,
+    "decp": 3,
+    "url": "mosbirzha-fyuchersy/audu-12-19-auz9_auz9",
+    "child": 1
+  },
+  {
+    "id": 909113,
+    "name": "AUDU-3.20(AUH0)",
+    "code": "AUH0",
+    "market": 14,
+    "decp": 3,
+    "url": "mosbirzha-fyuchersy/audu-3-20-auh0_auh0",
+    "child": 1
+  },
+  {
+    "id": 22460,
+    "name": "BR",
+    "code": "BR",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/br",
+    "child": 1
+  },
+  {
+    "id": 517639,
+    "name": "BR-1.20(BRF0)",
+    "code": "BRF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-1-20-brf0",
+    "child": 1
+  },
+  {
+    "id": 906369,
+    "name": "BR-10.19-11.19(BRV9BRX9)",
+    "code": "BRV9BRX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-10-19-11-19-brv9brx9_brv9brx9",
+    "child": 1
+  },
+  {
+    "id": 910170,
+    "name": "BR-10.20(BRV0)",
+    "code": "BRV0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-10-20-brv0_brv0",
+    "child": 1
+  },
+  {
+    "id": 495455,
+    "name": "BR-11.19(BRX9)",
+    "code": "BRX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-11-19-brx9",
+    "child": 1
+  },
+  {
+    "id": 910579,
+    "name": "BR-11.19-12.19(BRX9BRZ9)",
+    "code": "BRX9BRZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-11-19-12-19-brx9brz9_brx9brz9",
+    "child": 1
+  },
+  {
+    "id": 496377,
+    "name": "BR-11.20(BRX0)",
+    "code": "BRX0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-11-20-brx0",
+    "child": 1
+  },
+  {
+    "id": 501639,
+    "name": "BR-12.19(BRZ9)",
+    "code": "BRZ9",
+    "market": 14,
+    "decp": 5,
+    "url": "mosbirzha-fyuchersy/br-12-19-brz9",
+    "child": 1
+  },
+  {
+    "id": 571771,
+    "name": "BR-2.20(BRG0)",
+    "code": "BRG0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/br-2-20-brg0",
+    "child": 1
+  },
+  {
+    "id": 578913,
+    "name": "BR-3.20(BRH0)",
+    "code": "BRH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-3-20-brh0",
+    "child": 1
+  },
+  {
+    "id": 875177,
+    "name": "BR-4.20(BRJ0)",
+    "code": "BRJ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-4-20-brj0",
+    "child": 1
+  },
+  {
+    "id": 496378,
+    "name": "BR-5.20(BRK0)",
+    "code": "BRK0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/br-5-20-brk0",
+    "child": 1
+  },
+  {
+    "id": 888739,
+    "name": "BR-6.20(BRM0)",
+    "code": "BRM0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/br-6-20-brm0_brm0",
+    "child": 1
+  },
+  {
+    "id": 897964,
+    "name": "BR-7.20(BRN0)",
+    "code": "BRN0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/br-7-20-brn0_brn0",
+    "child": 1
+  },
+  {
+    "id": 901187,
+    "name": "BR-8.20(BRQ0)",
+    "code": "BRQ0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/br-8-20-brq0_brq0",
+    "child": 1
+  },
+  {
+    "id": 906238,
+    "name": "BR-9.20(BRU0)",
+    "code": "BRU0",
+    "market": 14,
+    "decp": 4,
+    "url": "mosbirzha-fyuchersy/br-9-20-bru0_bru0",
+    "child": 1
+  },
+  {
+    "id": 81023,
+    "name": "CHMF",
+    "code": "CHMF",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/chmf",
+    "child": 1
+  },
+  {
+    "id": 892971,
+    "name": "CHMF-12.19(CHZ9)",
+    "code": "CHZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/chmf-12-19-chz9_chz9",
+    "child": 1
+  },
+  {
+    "id": 909148,
+    "name": "CHMF-3.20(CHH0)",
+    "code": "CHH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/chmf-3-20-chh0_chh0",
+    "child": 1
+  },
+  {
+    "id": 899118,
+    "name": "CL-1.20(CLF0)",
+    "code": "CLF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cl-1-20-clf0_clf0",
+    "child": 1
+  },
+  {
+    "id": 883163,
+    "name": "CL-10.19(CLV9)",
+    "code": "CLV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cl-10-19-clv9",
+    "child": 1
+  },
+  {
+    "id": 883940,
+    "name": "CL-11.19(CLX9)",
+    "code": "CLX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cl-11-19-clx9_clx9",
+    "child": 1
+  },
+  {
+    "id": 909972,
+    "name": "CL-2.20(CLG0)",
+    "code": "CLG0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cl-2-20-clg0_clg0",
+    "child": 1
+  },
+  {
+    "id": 81171,
+    "name": "CRN",
+    "code": "CRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/crn",
+    "child": 1
+  },
+  {
+    "id": 175634,
+    "name": "CRNU",
+    "code": "CRNU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/crnu",
+    "child": 1
+  },
+  {
+    "id": 81168,
+    "name": "CTN",
+    "code": "CTN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ctn",
+    "child": 1
+  },
+  {
+    "id": 175635,
+    "name": "CTNU",
+    "code": "CTNU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ctnu",
+    "child": 1
+  },
+  {
+    "id": 81172,
+    "name": "CU",
+    "code": "CU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cu",
+    "child": 1
+  },
+  {
+    "id": 891327,
+    "name": "CU-12.19(CUZ9)",
+    "code": "CUZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cu-12-19-cuz9_cuz9",
+    "child": 1
+  },
+  {
+    "id": 909117,
+    "name": "CU-3.20(CUH0)",
+    "code": "CUH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cu-3-20-cuh0_cuh0",
+    "child": 1
+  },
+  {
+    "id": 410570,
+    "name": "CY",
+    "code": "CY",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-cy",
+    "child": 1
+  },
+  {
+    "id": 891328,
+    "name": "CY-12.19(CYZ9)",
+    "code": "CYZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cy-12-19-cyz9_cyz9",
+    "child": 1
+  },
+  {
+    "id": 909978,
+    "name": "CY-3.20(CYH0)",
+    "code": "CYH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/cy-3-20-cyh0_cyh0",
+    "child": 1
+  },
+  {
+    "id": 910977,
+    "name": "Co-1.20(CoF0)",
+    "code": "CoF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/co-1-20-cof0_cof0",
+    "child": 1
+  },
+  {
+    "id": 898586,
+    "name": "Co-10.19(CoV9)",
+    "code": "CoV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/co-10-19-cov9_cov9",
+    "child": 1
+  },
+  {
+    "id": 901459,
+    "name": "Co-11.19(CoX9)",
+    "code": "CoX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/co-11-19-cox9_cox9",
+    "child": 1
+  },
+  {
+    "id": 909975,
+    "name": "Co-12.19(CoZ9)",
+    "code": "CoZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/co-12-19-coz9_coz9",
+    "child": 1
+  },
+  {
+    "id": 81016,
+    "name": "DS",
+    "code": "DS",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ds",
+    "child": 1
+  },
+  {
+    "id": 81160,
+    "name": "ECBM",
+    "code": "ECBM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ecbm",
+    "child": 1
+  },
+  {
+    "id": 181597,
+    "name": "ECBQ",
+    "code": "ECBQ",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ecbq",
+    "child": 1
+  },
+  {
+    "id": 181599,
+    "name": "ECBY",
+    "code": "ECBY",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ecby",
+    "child": 1
+  },
+  {
+    "id": 81161,
+    "name": "ECPM",
+    "code": "ECPM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ecpm",
+    "child": 1
+  },
+  {
+    "id": 21989,
+    "name": "ED",
+    "code": "ED",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ed",
+    "child": 1
+  },
+  {
+    "id": 633973,
+    "name": "ED-12.19(EDZ9)",
+    "code": "EDZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ed-12-19-edz9",
+    "child": 1
+  },
+  {
+    "id": 891330,
+    "name": "ED-3.20(EDH0)",
+    "code": "EDH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ed-3-20-edh0_edh0",
+    "child": 1
+  },
+  {
+    "id": 909114,
+    "name": "ED-6.20(EDM0)",
+    "code": "EDM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ed-6-20-edm0_edm0",
+    "child": 1
+  },
+  {
+    "id": 81162,
+    "name": "EUBM",
+    "code": "EUBM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eubm",
+    "child": 1
+  },
+  {
+    "id": 181598,
+    "name": "EUBQ",
+    "code": "EUBQ",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eubq",
+    "child": 1
+  },
+  {
+    "id": 181600,
+    "name": "EUBY",
+    "code": "EUBY",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/euby",
+    "child": 1
+  },
+  {
+    "id": 81163,
+    "name": "EUPM",
+    "code": "EUPM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eupm",
+    "child": 1
+  },
+  {
+    "id": 22010,
+    "name": "Eu",
+    "code": "Eu",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu",
+    "child": 1
+  },
+  {
+    "id": 496219,
+    "name": "Eu-12.19(EuZ9)",
+    "code": "EuZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu-12-19-euz9",
+    "child": 1
+  },
+  {
+    "id": 909661,
+    "name": "Eu-12.19-3.20(EuZ9EuH0)",
+    "code": "EuZ9EuH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu-12-19-3-20-euz9euh0_euz9euh0",
+    "child": 1
+  },
+  {
+    "id": 497613,
+    "name": "Eu-3.20(EuH0)",
+    "code": "EuH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu-3-20-euh0",
+    "child": 1
+  },
+  {
+    "id": 909974,
+    "name": "Eu-3.21(EuH1)",
+    "code": "EuH1",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu-3-21-euh1_euh1",
+    "child": 1
+  },
+  {
+    "id": 502417,
+    "name": "Eu-6.20(EuM0)",
+    "code": "EuM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu-6-20-eum0",
+    "child": 1
+  },
+  {
+    "id": 874137,
+    "name": "Eu-9.20(EuU0)",
+    "code": "EuU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/eu-9-20-euu0",
+    "child": 1
+  },
+  {
+    "id": 81020,
+    "name": "FEES",
+    "code": "FEES",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/fees",
+    "child": 1
+  },
+  {
+    "id": 892973,
+    "name": "FEES-12.19(FSZ9)",
+    "code": "FSZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/fees-12-19-fsz9_fsz9",
+    "child": 1
+  },
+  {
+    "id": 909149,
+    "name": "FEES-3.20(FSH0)",
+    "code": "FSH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/fees-3-20-fsh0_fsh0",
+    "child": 1
+  },
+  {
+    "id": 17451,
+    "name": "GAZP",
+    "code": "GAZR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gazp",
+    "child": 1
+  },
+  {
+    "id": 502293,
+    "name": "GAZR-12.19(GZZ9)",
+    "code": "GZZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gazr-12-19-gzz9",
+    "child": 1
+  },
+  {
+    "id": 909662,
+    "name": "GAZR-12.19-3.20(GZZ9GZH0)",
+    "code": "GZZ9GZH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gazr-12-19-3-20-gzz9gzh0_gzz9gzh0",
+    "child": 1
+  },
+  {
+    "id": 874073,
+    "name": "GAZR-3.20(GZH0)",
+    "code": "GZH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gazr-3-20-gzh0",
+    "child": 1
+  },
+  {
+    "id": 892974,
+    "name": "GAZR-6.20(GZM0)",
+    "code": "GZM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gazr-6-20-gzm0_gzm0",
+    "child": 1
+  },
+  {
+    "id": 909163,
+    "name": "GAZR-9.20(GZU0)",
+    "code": "GZU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gazr-9-20-gzu0_gzu0",
+    "child": 1
+  },
+  {
+    "id": 181582,
+    "name": "GBMW",
+    "code": "GBMW",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gbmw",
+    "child": 1
+  },
+  {
+    "id": 909783,
+    "name": "GBMW-12.19(BWZ9)",
+    "code": "BWZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gbmw-12-19-bwz9_bwz9",
+    "child": 1
+  },
+  {
+    "id": 81010,
+    "name": "GBPU",
+    "code": "GBPU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gbpu",
+    "child": 1
+  },
+  {
+    "id": 891331,
+    "name": "GBPU-12.19(GUZ9)",
+    "code": "GUZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gbpu-12-19-guz9_guz9",
+    "child": 1
+  },
+  {
+    "id": 909118,
+    "name": "GBPU-3.20(GUH0)",
+    "code": "GUH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gbpu-3-20-guh0_guh0",
+    "child": 1
+  },
+  {
+    "id": 181583,
+    "name": "GDAI",
+    "code": "GDAI",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-gdai",
+    "child": 1
+  },
+  {
+    "id": 909784,
+    "name": "GDAI-12.19(DMZ9)",
+    "code": "DMZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gdai-12-19-dmz9_dmz9",
+    "child": 1
+  },
+  {
+    "id": 181584,
+    "name": "GDBK",
+    "code": "GDBK",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gdbk",
+    "child": 1
+  },
+  {
+    "id": 909785,
+    "name": "GDBK-12.19(DBZ9)",
+    "code": "DBZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gdbk-12-19-dbz9_dbz9",
+    "child": 1
+  },
+  {
+    "id": 910978,
+    "name": "GLD-1.20(GOF0)",
+    "code": "GOF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gld-1-20-gof0_gof0",
+    "child": 1
+  },
+  {
+    "id": 898590,
+    "name": "GLD-10.19(GOV9)",
+    "code": "GOV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gld-10-19-gov9_gov9",
+    "child": 1
+  },
+  {
+    "id": 901457,
+    "name": "GLD-11.19(GOX9)",
+    "code": "GOX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gld-11-19-gox9_gox9",
+    "child": 1
+  },
+  {
+    "id": 909112,
+    "name": "GLD-12.19(GOZ9)",
+    "code": "GOZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gld-12-19-goz9_goz9",
+    "child": 1
+  },
+  {
+    "id": 17452,
+    "name": "GMKN",
+    "code": "GMKR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gmkn",
+    "child": 1
+  },
+  {
+    "id": 892976,
+    "name": "GMKR-12.19(GMZ9)",
+    "code": "GMZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gmkr-12-19-gmz9_gmz9",
+    "child": 1
+  },
+  {
+    "id": 909663,
+    "name": "GMKR-12.19-3.20(GMZ9GMH0)",
+    "code": "GMZ9GMH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gmkr-12-19-3-20-gmz9gmh0_gmz9gmh0",
+    "child": 1
+  },
+  {
+    "id": 892921,
+    "name": "GMKR-3.20(GMH0)",
+    "code": "GMH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gmkr-3-20-gmh0_gmh0",
+    "child": 1
+  },
+  {
+    "id": 19898,
+    "name": "GOLD",
+    "code": "GOLD",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gold",
+    "child": 1
+  },
+  {
+    "id": 502234,
+    "name": "GOLD-12.19(GDZ9)",
+    "code": "GDZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gold-12-19-gdz9",
+    "child": 1
+  },
+  {
+    "id": 909651,
+    "name": "GOLD-12.19-3.20(GDZ9GDH0)",
+    "code": "GDZ9GDH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gold-12-19-3-20-gdz9gdh0_gdz9gdh0",
+    "child": 1
+  },
+  {
+    "id": 633976,
+    "name": "GOLD-3.20(GDH0)",
+    "code": "GDH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gold-3-20-gdh0",
+    "child": 1
+  },
+  {
+    "id": 891333,
+    "name": "GOLD-6.20(GDM0)",
+    "code": "GDM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gold-6-20-gdm0_gdm0",
+    "child": 1
+  },
+  {
+    "id": 909108,
+    "name": "GOLD-9.20(GDU0)",
+    "code": "GDU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gold-9-20-gdu0_gdu0",
+    "child": 1
+  },
+  {
+    "id": 876239,
+    "name": "GPBCBI2Y",
+    "code": "RI.GPBCBI2Y",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gpbcbi2y",
+    "child": 1
+  },
+  {
+    "id": 876240,
+    "name": "GPBCBI4Y",
+    "code": "RI.GPBCBI4Y",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gpbcbi4y",
+    "child": 1
+  },
+  {
+    "id": 898915,
+    "name": "GPBMA",
+    "code": "RI.GPBMA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gpbma",
+    "child": 1
+  },
+  {
+    "id": 898914,
+    "name": "GPBSA",
+    "code": "RI.GPBSA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gpbsa",
+    "child": 1
+  },
+  {
+    "id": 81169,
+    "name": "GR",
+    "code": "GR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gr",
+    "child": 1
+  },
+  {
+    "id": 175636,
+    "name": "GRU",
+    "code": "GRU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gru",
+    "child": 1
+  },
+  {
+    "id": 181585,
+    "name": "GSIE",
+    "code": "GSIE",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gsie",
+    "child": 1
+  },
+  {
+    "id": 909786,
+    "name": "GSIE-12.19(SMZ9)",
+    "code": "SMZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gsie-12-19-smz9_smz9",
+    "child": 1
+  },
+  {
+    "id": 81166,
+    "name": "GSL",
+    "code": "GSL",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gsl",
+    "child": 1
+  },
+  {
+    "id": 175637,
+    "name": "GSLU",
+    "code": "GSLU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gslu",
+    "child": 1
+  },
+  {
+    "id": 181586,
+    "name": "GVW3",
+    "code": "GVW3",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-gvw3",
+    "child": 1
+  },
+  {
+    "id": 909787,
+    "name": "GVW3-12.19(VMZ9)",
+    "code": "VMZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/gvw3-12-19-vmz9_vmz9",
+    "child": 1
+  },
+  {
+    "id": 82700,
+    "name": "HSIF",
+    "code": "HSIF",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/hsif",
+    "child": 1
+  },
+  {
+    "id": 81025,
+    "name": "HYDR",
+    "code": "HYDR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/hydr",
+    "child": 1
+  },
+  {
+    "id": 892979,
+    "name": "HYDR-12.19(HYZ9)",
+    "code": "HYZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/hydr-12-19-hyz9_hyz9",
+    "child": 1
+  },
+  {
+    "id": 909150,
+    "name": "HYDR-3.20(HYH0)",
+    "code": "HYH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/hydr-3-20-hyh0_hyh0",
+    "child": 1
+  },
+  {
+    "id": 82707,
+    "name": "IBVS",
+    "code": "IBVS",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ibvs",
+    "child": 1
+  },
+  {
+    "id": 17453,
+    "name": "LKOH",
+    "code": "LKOH",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/lkoh",
+    "child": 1
+  },
+  {
+    "id": 502298,
+    "name": "LKOH-12.19(LKZ9)",
+    "code": "LKZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/lkoh-12-19-lkz9",
+    "child": 1
+  },
+  {
+    "id": 909658,
+    "name": "LKOH-12.19-3.20(LKZ9LKH0)",
+    "code": "LKZ9LKH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/lkoh-12-19-3-20-lkz9lkh0_lkz9lkh0",
+    "child": 1
+  },
+  {
+    "id": 874078,
+    "name": "LKOH-3.20(LKH0)",
+    "code": "LKH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/lkoh-3-20-lkh0",
+    "child": 1
+  },
+  {
+    "id": 892980,
+    "name": "LKOH-6.20(LKM0)",
+    "code": "LKM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/lkoh-6-20-lkm0_lkm0",
+    "child": 1
+  },
+  {
+    "id": 909165,
+    "name": "LKOH-9.20(LKU0)",
+    "code": "LKU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/lkoh-9-20-lku0_lku0",
+    "child": 1
+  },
+  {
+    "id": 892982,
+    "name": "MAGN-12.19(MGZ9)",
+    "code": "MGZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/magn-12-19-mgz9_mgz9",
+    "child": 1
+  },
+  {
+    "id": 909151,
+    "name": "MAGN-3.20(MGH0)",
+    "code": "MGH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/magn-3-20-mgh0_mgh0",
+    "child": 1
+  },
+  {
+    "id": 548848,
+    "name": "MECHTR",
+    "code": "RI.MECHTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mechtr",
+    "child": 1
+  },
+  {
+    "id": 548849,
+    "name": "MECHTRN",
+    "code": "RI.MECHTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mechtrn",
+    "child": 1
+  },
+  {
+    "id": 548850,
+    "name": "MECHTRR",
+    "code": "RI.MECHTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mechtrr",
+    "child": 1
+  },
+  {
+    "id": 548851,
+    "name": "MECNTR",
+    "code": "RI.MECNTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mecntr",
+    "child": 1
+  },
+  {
+    "id": 548852,
+    "name": "MECNTRN",
+    "code": "RI.MECNTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mecntrn",
+    "child": 1
+  },
+  {
+    "id": 548853,
+    "name": "MECNTRR",
+    "code": "RI.MECNTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mecntrr",
+    "child": 1
+  },
+  {
+    "id": 548854,
+    "name": "MEEUTR",
+    "code": "RI.MEEUTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/meeutr",
+    "child": 1
+  },
+  {
+    "id": 548855,
+    "name": "MEEUTRN",
+    "code": "RI.MEEUTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/meeutrn",
+    "child": 1
+  },
+  {
+    "id": 548856,
+    "name": "MEEUTRR",
+    "code": "RI.MEEUTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/meeutrr",
+    "child": 1
+  },
+  {
+    "id": 548857,
+    "name": "MEFNTR",
+    "code": "RI.MEFNTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mefntr",
+    "child": 1
+  },
+  {
+    "id": 548858,
+    "name": "MEFNTRN",
+    "code": "RI.MEFNTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mefntrn",
+    "child": 1
+  },
+  {
+    "id": 548859,
+    "name": "MEFNTRR",
+    "code": "RI.MEFNTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mefntrr",
+    "child": 1
+  },
+  {
+    "id": 548860,
+    "name": "MEMMTR",
+    "code": "RI.MEMMTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/memmtr",
+    "child": 1
+  },
+  {
+    "id": 548861,
+    "name": "MEMMTRN",
+    "code": "RI.MEMMTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/memmtrn",
+    "child": 1
+  },
+  {
+    "id": 548862,
+    "name": "MEMMTRR",
+    "code": "RI.MEMMTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/memmtrr",
+    "child": 1
+  },
+  {
+    "id": 548863,
+    "name": "MEOGTR",
+    "code": "RI.MEOGTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/meogtr",
+    "child": 1
+  },
+  {
+    "id": 548864,
+    "name": "MEOGTRN",
+    "code": "RI.MEOGTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/meogtrn",
+    "child": 1
+  },
+  {
+    "id": 548865,
+    "name": "MEOGTRR",
+    "code": "RI.MEOGTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/meogtrr",
+    "child": 1
+  },
+  {
+    "id": 548866,
+    "name": "MESMTR",
+    "code": "RI.MESMTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mesmtr",
+    "child": 1
+  },
+  {
+    "id": 548867,
+    "name": "MESMTRN",
+    "code": "RI.MESMTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mesmtrn",
+    "child": 1
+  },
+  {
+    "id": 548868,
+    "name": "MESMTRR",
+    "code": "RI.MESMTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mesmtrr",
+    "child": 1
+  },
+  {
+    "id": 548869,
+    "name": "METLTR",
+    "code": "RI.METLTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/metltr",
+    "child": 1
+  },
+  {
+    "id": 548870,
+    "name": "METLTRN",
+    "code": "RI.METLTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/metltrn",
+    "child": 1
+  },
+  {
+    "id": 548871,
+    "name": "METLTRR",
+    "code": "RI.METLTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/metltrr",
+    "child": 1
+  },
+  {
+    "id": 548872,
+    "name": "METNTR",
+    "code": "RI.METNTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/metntr",
+    "child": 1
+  },
+  {
+    "id": 548873,
+    "name": "METNTRN",
+    "code": "RI.METNTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/metntrn",
+    "child": 1
+  },
+  {
+    "id": 548874,
+    "name": "METNTRR",
+    "code": "RI.METNTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/metntrr",
+    "child": 1
+  },
+  {
+    "id": 181645,
+    "name": "MEXC",
+    "code": "MEXC",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mexc",
+    "child": 1
+  },
+  {
+    "id": 390848,
+    "name": "MGNT",
+    "code": "MGNT",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mgnt",
+    "child": 1
+  },
+  {
+    "id": 892983,
+    "name": "MGNT-12.19(MNZ9)",
+    "code": "MNZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mgnt-12-19-mnz9_mnz9",
+    "child": 1
+  },
+  {
+    "id": 892922,
+    "name": "MGNT-3.20(MNH0)",
+    "code": "MNH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mgnt-3-20-mnh0_mnh0",
+    "child": 1
+  },
+  {
+    "id": 578779,
+    "name": "MICEX10INDEX",
+    "code": "RI.MICEX10INDEX",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micex10index",
+    "child": 1
+  },
+  {
+    "id": 578780,
+    "name": "MICEXBMI",
+    "code": "RI.MICEXBMI",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexbmi",
+    "child": 1
+  },
+  {
+    "id": 578781,
+    "name": "MICEXCBICP",
+    "code": "RI.MICEXCBICP",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexcbicp",
+    "child": 1
+  },
+  {
+    "id": 578782,
+    "name": "MICEXCBICP5Y",
+    "code": "RI.MICEXCBICP5Y",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexcbicp5y",
+    "child": 1
+  },
+  {
+    "id": 578783,
+    "name": "MICEXCBITR",
+    "code": "RI.MICEXCBITR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexcbitr",
+    "child": 1
+  },
+  {
+    "id": 578784,
+    "name": "MICEXCBITR5Y",
+    "code": "RI.MICEXCBITR5Y",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexcbitr5y",
+    "child": 1
+  },
+  {
+    "id": 578788,
+    "name": "MICEXCGS",
+    "code": "RI.MICEXCGS",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexcgs",
+    "child": 1
+  },
+  {
+    "id": 578789,
+    "name": "MICEXCHM",
+    "code": "RI.MICEXCHM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexchm",
+    "child": 1
+  },
+  {
+    "id": 578790,
+    "name": "MICEXFNL",
+    "code": "RI.MICEXFNL",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexfnl",
+    "child": 1
+  },
+  {
+    "id": 578785,
+    "name": "MICEXINNOV",
+    "code": "RI.MICEXINNOV",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexinnov",
+    "child": 1
+  },
+  {
+    "id": 578791,
+    "name": "MICEXM&M",
+    "code": "RI.MICEXM&M",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexm-m",
+    "child": 1
+  },
+  {
+    "id": 578786,
+    "name": "MICEXMBICP",
+    "code": "RI.MICEXMBICP",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexmbicp",
+    "child": 1
+  },
+  {
+    "id": 578787,
+    "name": "MICEXMBITR",
+    "code": "RI.MICEXMBITR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexmbitr",
+    "child": 1
+  },
+  {
+    "id": 578792,
+    "name": "MICEXO&G",
+    "code": "RI.MICEXO&G",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexo-g",
+    "child": 1
+  },
+  {
+    "id": 578793,
+    "name": "MICEXPWR",
+    "code": "RI.MICEXPWR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micexpwr",
+    "child": 1
+  },
+  {
+    "id": 578794,
+    "name": "MICEXTLC",
+    "code": "RI.MICEXTLC",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micextlc",
+    "child": 1
+  },
+  {
+    "id": 578795,
+    "name": "MICEXTRN",
+    "code": "RI.MICEXTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/micextrn",
+    "child": 1
+  },
+  {
+    "id": 81408,
+    "name": "MIX",
+    "code": "MIX",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mix",
+    "child": 1
+  },
+  {
+    "id": 502235,
+    "name": "MIX-12.19(MXZ9)",
+    "code": "MXZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mix-12-19-mxz9",
+    "child": 1
+  },
+  {
+    "id": 909655,
+    "name": "MIX-12.19-3.20(MXZ9MXH0)",
+    "code": "MXZ9MXH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mix-12-19-3-20-mxz9mxh0_mxz9mxh0",
+    "child": 1
+  },
+  {
+    "id": 633977,
+    "name": "MIX-3.20(MXH0)",
+    "code": "MXH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mix-3-20-mxh0",
+    "child": 1
+  },
+  {
+    "id": 891334,
+    "name": "MIX-6.20(MXM0)",
+    "code": "MXM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mix-6-20-mxm0_mxm0",
+    "child": 1
+  },
+  {
+    "id": 909109,
+    "name": "MIX-9.20(MXU0)",
+    "code": "MXU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mix-9-20-mxu0_mxu0",
+    "child": 1
+  },
+  {
+    "id": 390846,
+    "name": "MOEX",
+    "code": "MOEX",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/moex",
+    "child": 1
+  },
+  {
+    "id": 892985,
+    "name": "MOEX-12.19(MEZ9)",
+    "code": "MEZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/moex-12-19-mez9_mez9",
+    "child": 1
+  },
+  {
+    "id": 909152,
+    "name": "MOEX-3.20(MEH0)",
+    "code": "MEH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/moex-3-20-meh0_meh0",
+    "child": 1
+  },
+  {
+    "id": 81031,
+    "name": "MOPR",
+    "code": "MOPR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mopr",
+    "child": 1
+  },
+  {
+    "id": 890161,
+    "name": "MOPR-12.19(MPZ9)",
+    "code": "MPZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mopr-12-19-mpz9_mpz9",
+    "child": 1
+  },
+  {
+    "id": 906611,
+    "name": "MOPR-3.20(MPH0)",
+    "code": "MPH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mopr-3-20-mph0_mph0",
+    "child": 1
+  },
+  {
+    "id": 81028,
+    "name": "MPRI",
+    "code": "MPRI",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mpri",
+    "child": 1
+  },
+  {
+    "id": 876237,
+    "name": "MRRT",
+    "code": "RI.MRRT",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mrrt",
+    "child": 1
+  },
+  {
+    "id": 876238,
+    "name": "MRSV",
+    "code": "RI.MRSV",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mrsv",
+    "child": 1
+  },
+  {
+    "id": 81029,
+    "name": "MTSI",
+    "code": "MTSI",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mtsi",
+    "child": 1
+  },
+  {
+    "id": 892986,
+    "name": "MTSI-12.19(MTZ9)",
+    "code": "MTZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mtsi-12-19-mtz9_mtz9",
+    "child": 1
+  },
+  {
+    "id": 909153,
+    "name": "MTSI-3.20(MTH0)",
+    "code": "MTH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mtsi-3-20-mth0_mth0",
+    "child": 1
+  },
+  {
+    "id": 436202,
+    "name": "MXI",
+    "code": "MXI",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-mxi",
+    "child": 1
+  },
+  {
+    "id": 502237,
+    "name": "MXI-12.19(MMZ9)",
+    "code": "MMZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mxi-12-19-mmz9",
+    "child": 1
+  },
+  {
+    "id": 909657,
+    "name": "MXI-12.19-3.20(MMZ9MMH0)",
+    "code": "MMZ9MMH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mxi-12-19-3-20-mmz9mmh0_mmz9mmh0",
+    "child": 1
+  },
+  {
+    "id": 633979,
+    "name": "MXI-3.20(MMH0)",
+    "code": "MMH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mxi-3-20-mmh0",
+    "child": 1
+  },
+  {
+    "id": 891335,
+    "name": "MXI-6.20(MMM0)",
+    "code": "MMM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mxi-6-20-mmm0_mmm0",
+    "child": 1
+  },
+  {
+    "id": 909110,
+    "name": "MXI-9.20(MMU0)",
+    "code": "MMU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/mxi-9-20-mmu0_mmu0",
+    "child": 1
+  },
+  {
+    "id": 453418,
+    "name": "NLMK",
+    "code": "NLMK",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-nlmk",
+    "child": 1
+  },
+  {
+    "id": 892988,
+    "name": "NLMK-12.19(NMZ9)",
+    "code": "NMZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/nlmk-12-19-nmz9_nmz9",
+    "child": 1
+  },
+  {
+    "id": 909154,
+    "name": "NLMK-3.20(NMH0)",
+    "code": "NMH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/nlmk-3-20-nmh0_nmh0",
+    "child": 1
+  },
+  {
+    "id": 19892,
+    "name": "NOTK",
+    "code": "NOTK",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/notk",
+    "child": 1
+  },
+  {
+    "id": 892989,
+    "name": "NOTK-12.19(NKZ9)",
+    "code": "NKZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/notk-12-19-nkz9_nkz9",
+    "child": 1
+  },
+  {
+    "id": 909155,
+    "name": "NOTK-3.20(NKH0)",
+    "code": "NKH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/notk-3-20-nkh0_nkh0",
+    "child": 1
+  },
+  {
+    "id": 910979,
+    "name": "Nl-1.20(NlF0)",
+    "code": "NlF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/nl-1-20-nlf0_nlf0",
+    "child": 1
+  },
+  {
+    "id": 898587,
+    "name": "Nl-10.19(NlV9)",
+    "code": "NlV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/nl-10-19-nlv9_nlv9",
+    "child": 1
+  },
+  {
+    "id": 901460,
+    "name": "Nl-11.19(NlX9)",
+    "code": "NlX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/nl-11-19-nlx9_nlx9",
+    "child": 1
+  },
+  {
+    "id": 909976,
+    "name": "Nl-12.19(NlZ9)",
+    "code": "NlZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/nl-12-19-nlz9_nlz9",
+    "child": 1
+  },
+  {
+    "id": 152663,
+    "name": "OF10",
+    "code": "OF10",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-of10",
+    "child": 1
+  },
+  {
+    "id": 904254,
+    "name": "OF10-12.19(OXZ9)",
+    "code": "OXZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/of10-12-19-oxz9_oxz9",
+    "child": 1
+  },
+  {
+    "id": 904259,
+    "name": "OF10-9.19-12.19(OXU9OXZ9)",
+    "code": "OXU9OXZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/of10-9-19-12-19-oxu9oxz9_oxu9oxz9",
+    "child": 1
+  },
+  {
+    "id": 175864,
+    "name": "OF15",
+    "code": "OF15",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-of15",
+    "child": 1
+  },
+  {
+    "id": 904255,
+    "name": "OF15-12.19(OVZ9)",
+    "code": "OVZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/of15-12-19-ovz9_ovz9",
+    "child": 1
+  },
+  {
+    "id": 904260,
+    "name": "OF15-9.19-12.19(OVU9OVZ9)",
+    "code": "OVU9OVZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/of15-9-19-12-19-ovu9ovz9_ovu9ovz9",
+    "child": 1
+  },
+  {
+    "id": 81173,
+    "name": "OFZ2",
+    "code": "OFZ2",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz2",
+    "child": 1
+  },
+  {
+    "id": 904251,
+    "name": "OFZ2-12.19(O2Z9)",
+    "code": "O2Z9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz2-12-19-o2z9_o2z9",
+    "child": 1
+  },
+  {
+    "id": 904256,
+    "name": "OFZ2-9.19-12.19(O2U9O2Z9)",
+    "code": "O2U9O2Z9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz2-9-19-12-19-o2u9o2z9_o2u9o2z9",
+    "child": 1
+  },
+  {
+    "id": 81174,
+    "name": "OFZ4",
+    "code": "OFZ4",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz4",
+    "child": 1
+  },
+  {
+    "id": 904252,
+    "name": "OFZ4-12.19(O4Z9)",
+    "code": "O4Z9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz4-12-19-o4z9_o4z9",
+    "child": 1
+  },
+  {
+    "id": 904257,
+    "name": "OFZ4-9.19-12.19(O4U9O4Z9)",
+    "code": "O4U9O4Z9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz4-9-19-12-19-o4u9o4z9_o4u9o4z9",
+    "child": 1
+  },
+  {
+    "id": 81746,
+    "name": "OFZ6",
+    "code": "OFZ6",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz6",
+    "child": 1
+  },
+  {
+    "id": 904253,
+    "name": "OFZ6-12.19(O6Z9)",
+    "code": "O6Z9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz6-12-19-o6z9_o6z9",
+    "child": 1
+  },
+  {
+    "id": 904258,
+    "name": "OFZ6-9.19-12.19(O6U9O6Z9)",
+    "code": "O6U9O6Z9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ofz6-9-19-12-19-o6u9o6z9_o6u9o6z9",
+    "child": 1
+  },
+  {
+    "id": 81011,
+    "name": "PLD",
+    "code": "PLD",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/pld",
+    "child": 1
+  },
+  {
+    "id": 633981,
+    "name": "PLD-12.19(PDZ9)",
+    "code": "PDZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/pld-12-19-pdz9",
+    "child": 1
+  },
+  {
+    "id": 891337,
+    "name": "PLD-3.20(PDH0)",
+    "code": "PDH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/pld-3-20-pdh0_pdh0",
+    "child": 1
+  },
+  {
+    "id": 909115,
+    "name": "PLD-6.20(PDM0)",
+    "code": "PDM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/pld-6-20-pdm0_pdm0",
+    "child": 1
+  },
+  {
+    "id": 81012,
+    "name": "PLT",
+    "code": "PLT",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/plt",
+    "child": 1
+  },
+  {
+    "id": 633982,
+    "name": "PLT-12.19(PTZ9)",
+    "code": "PTZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/plt-12-19-ptz9",
+    "child": 1
+  },
+  {
+    "id": 891338,
+    "name": "PLT-3.20(PTH0)",
+    "code": "PTH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/plt-3-20-pth0_pth0",
+    "child": 1
+  },
+  {
+    "id": 909116,
+    "name": "PLT-6.20(PTM0)",
+    "code": "PTM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/plt-6-20-ptm0_ptm0",
+    "child": 1
+  },
+  {
+    "id": 19893,
+    "name": "PLZL",
+    "code": "PLZL",
+    "market": 14,
+    "url": "forts-arhiv/plzl",
+    "child": 1
+  },
+  {
+    "id": 892990,
+    "name": "PLZL-12.19(PZZ9)",
+    "code": "PZZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/plzl-12-19-pzz9_pzz9",
+    "child": 1
+  },
+  {
+    "id": 909156,
+    "name": "PLZL-3.20(PZH0)",
+    "code": "PZH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/plzl-3-20-pzh0_pzh0",
+    "child": 1
+  },
+  {
+    "id": 398098,
+    "name": "RF30",
+    "code": "RF30",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-rf30",
+    "child": 1
+  },
+  {
+    "id": 152860,
+    "name": "RG1EU",
+    "code": "RG1EU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-rg1eu",
+    "child": 1
+  },
+  {
+    "id": 19894,
+    "name": "ROSN",
+    "code": "ROSN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rosn",
+    "child": 1
+  },
+  {
+    "id": 502305,
+    "name": "ROSN-12.19(RNZ9)",
+    "code": "RNZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rosn-12-19-rnz9",
+    "child": 1
+  },
+  {
+    "id": 909656,
+    "name": "ROSN-12.19-3.20(RNZ9RNH0)",
+    "code": "RNZ9RNH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rosn-12-19-3-20-rnz9rnh0_rnz9rnh0",
+    "child": 1
+  },
+  {
+    "id": 874087,
+    "name": "ROSN-3.20(RNH0)",
+    "code": "RNH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rosn-3-20-rnh0",
+    "child": 1
+  },
+  {
+    "id": 892991,
+    "name": "ROSN-6.20(RNM0)",
+    "code": "RNM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rosn-6-20-rnm0_rnm0",
+    "child": 1
+  },
+  {
+    "id": 909166,
+    "name": "ROSN-9.20(RNU0)",
+    "code": "RNU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rosn-9-20-rnu0_rnu0",
+    "child": 1
+  },
+  {
+    "id": 152861,
+    "name": "RREXU",
+    "code": "RREXU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-rrexu",
+    "child": 1
+  },
+  {
+    "id": 152862,
+    "name": "RT1EU",
+    "code": "RT1EU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-rt1eu",
+    "child": 1
+  },
+  {
+    "id": 17454,
+    "name": "RTKM",
+    "code": "RTKM",
+    "market": 14,
+    "url": "forts-arhiv/rtkm",
+    "child": 1
+  },
+  {
+    "id": 892993,
+    "name": "RTKM-12.19(RTZ9)",
+    "code": "RTZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtkm-12-19-rtz9_rtz9",
+    "child": 1
+  },
+  {
+    "id": 909157,
+    "name": "RTKM-3.20(RTH0)",
+    "code": "RTH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtkm-3-20-rth0_rth0",
+    "child": 1
+  },
+  {
+    "id": 17455,
+    "name": "RTS",
+    "code": "RTS",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts",
+    "child": 1
+  },
+  {
+    "id": 490855,
+    "name": "RTS-12.19(RIZ9)",
+    "code": "RIZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-12-19-riz9",
+    "child": 1
+  },
+  {
+    "id": 502281,
+    "name": "RTS-12.19-3.20(RIZ9RIH0)",
+    "code": "RIZ9RIH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-12-19-3-20-riz9rih0",
+    "child": 1
+  },
+  {
+    "id": 502418,
+    "name": "RTS-12.20(RIZ0)",
+    "code": "RIZ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-12-20-riz0",
+    "child": 1
+  },
+  {
+    "id": 491426,
+    "name": "RTS-3.20(RIH0)",
+    "code": "RIH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-3-20-rih0",
+    "child": 1
+  },
+  {
+    "id": 634010,
+    "name": "RTS-3.20-6.20(RIH0RIM0)",
+    "code": "RIH0RIM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-3-20-6-20-rih0rim0",
+    "child": 1
+  },
+  {
+    "id": 874138,
+    "name": "RTS-3.21(RIH1)",
+    "code": "RIH1",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-3-21-rih1",
+    "child": 1
+  },
+  {
+    "id": 496220,
+    "name": "RTS-6.20(RIM0)",
+    "code": "RIM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-6-20-rim0",
+    "child": 1
+  },
+  {
+    "id": 892994,
+    "name": "RTS-6.20-9.20(RIM0RIU0)",
+    "code": "RIM0RIU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-6-20-9-20-rim0riu0_rim0riu0",
+    "child": 1
+  },
+  {
+    "id": 497614,
+    "name": "RTS-9.20(RIU0)",
+    "code": "RIU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-9-20-riu0",
+    "child": 1
+  },
+  {
+    "id": 909654,
+    "name": "RTS-9.20-12.20(RIU0RIZ0)",
+    "code": "RIU0RIZ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-9-20-12-20-riu0riz0_riu0riz0",
+    "child": 1
+  },
+  {
+    "id": 909470,
+    "name": "RTS-9.21(RIU1)",
+    "code": "RIU1",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rts-9-21-riu1_riu1",
+    "child": 1
+  },
+  {
+    "id": 22890,
+    "name": "RTSS",
+    "code": "RTSS",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtss",
+    "child": 1
+  },
+  {
+    "id": 909471,
+    "name": "RTSS-3.20(RSH0)",
+    "code": "RSH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtss-3-20-rsh0_rsh0",
+    "child": 1
+  },
+  {
+    "id": 578796,
+    "name": "RTSSTD",
+    "code": "RI.RTSSTD",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtsstd",
+    "child": 1
+  },
+  {
+    "id": 81013,
+    "name": "RTSVX",
+    "code": "RTSVX",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtsvx",
+    "child": 1
+  },
+  {
+    "id": 81014,
+    "name": "RTSc",
+    "code": "RTSc",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtsc",
+    "child": 1
+  },
+  {
+    "id": 81015,
+    "name": "RTSo",
+    "code": "RTSo",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rtso",
+    "child": 1
+  },
+  {
+    "id": 548875,
+    "name": "RUCHTR",
+    "code": "RI.RUCHTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruchtr",
+    "child": 1
+  },
+  {
+    "id": 548876,
+    "name": "RUCHTRN",
+    "code": "RI.RUCHTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruchtrn",
+    "child": 1
+  },
+  {
+    "id": 548877,
+    "name": "RUCHTRR",
+    "code": "RI.RUCHTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruchtrr",
+    "child": 1
+  },
+  {
+    "id": 548878,
+    "name": "RUCNTR",
+    "code": "RI.RUCNTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rucntr",
+    "child": 1
+  },
+  {
+    "id": 548879,
+    "name": "RUCNTRN",
+    "code": "RI.RUCNTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rucntrn",
+    "child": 1
+  },
+  {
+    "id": 548880,
+    "name": "RUCNTRR",
+    "code": "RI.RUCNTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rucntrr",
+    "child": 1
+  },
+  {
+    "id": 548881,
+    "name": "RUEUTR",
+    "code": "RI.RUEUTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rueutr",
+    "child": 1
+  },
+  {
+    "id": 548882,
+    "name": "RUEUTRN",
+    "code": "RI.RUEUTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rueutrn",
+    "child": 1
+  },
+  {
+    "id": 548883,
+    "name": "RUEUTRR",
+    "code": "RI.RUEUTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rueutrr",
+    "child": 1
+  },
+  {
+    "id": 548884,
+    "name": "RUFNTR",
+    "code": "RI.RUFNTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rufntr",
+    "child": 1
+  },
+  {
+    "id": 548885,
+    "name": "RUFNTRN",
+    "code": "RI.RUFNTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rufntrn",
+    "child": 1
+  },
+  {
+    "id": 548886,
+    "name": "RUFNTRR",
+    "code": "RI.RUFNTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rufntrr",
+    "child": 1
+  },
+  {
+    "id": 548887,
+    "name": "RUMMTR",
+    "code": "RI.RUMMTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rummtr",
+    "child": 1
+  },
+  {
+    "id": 548888,
+    "name": "RUMMTRN",
+    "code": "RI.RUMMTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rummtrn",
+    "child": 1
+  },
+  {
+    "id": 548889,
+    "name": "RUMMTRR",
+    "code": "RI.RUMMTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rummtrr",
+    "child": 1
+  },
+  {
+    "id": 548890,
+    "name": "RUOGTR",
+    "code": "RI.RUOGTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruogtr",
+    "child": 1
+  },
+  {
+    "id": 548891,
+    "name": "RUOGTRN",
+    "code": "RI.RUOGTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruogtrn",
+    "child": 1
+  },
+  {
+    "id": 548892,
+    "name": "RUOGTRR",
+    "code": "RI.RUOGTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruogtrr",
+    "child": 1
+  },
+  {
+    "id": 462159,
+    "name": "RUON",
+    "code": "RUON",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-ruon",
+    "child": 1
+  },
+  {
+    "id": 573244,
+    "name": "RUON-1.20(RRF0)",
+    "code": "RRF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-1-20-rrf0",
+    "child": 1
+  },
+  {
+    "id": 499782,
+    "name": "RUON-10.19(RRV9)",
+    "code": "RRV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-10-19-rrv9",
+    "child": 1
+  },
+  {
+    "id": 501982,
+    "name": "RUON-11.19(RRX9)",
+    "code": "RRX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-11-19-rrx9",
+    "child": 1
+  },
+  {
+    "id": 536525,
+    "name": "RUON-12.19(RRZ9)",
+    "code": "RRZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-12-19-rrz9",
+    "child": 1
+  },
+  {
+    "id": 581866,
+    "name": "RUON-2.20(RRG0)",
+    "code": "RRG0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-2-20-rrg0",
+    "child": 1
+  },
+  {
+    "id": 876252,
+    "name": "RUON-3.20(RRH0)",
+    "code": "RRH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-3-20-rrh0",
+    "child": 1
+  },
+  {
+    "id": 883781,
+    "name": "RUON-4.20(RRJ0)",
+    "code": "RRJ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-4-20-rrj0_rrj0",
+    "child": 1
+  },
+  {
+    "id": 889962,
+    "name": "RUON-5.20(RRK0)",
+    "code": "RRK0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-5-20-rrk0_rrk0",
+    "child": 1
+  },
+  {
+    "id": 898230,
+    "name": "RUON-6.20(RRM0)",
+    "code": "RRM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-6-20-rrm0_rrm0",
+    "child": 1
+  },
+  {
+    "id": 901423,
+    "name": "RUON-7.20(RRN0)",
+    "code": "RRN0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-7-20-rrn0_rrn0",
+    "child": 1
+  },
+  {
+    "id": 906368,
+    "name": "RUON-8.20(RRQ0)",
+    "code": "RRQ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-8-20-rrq0_rrq0",
+    "child": 1
+  },
+  {
+    "id": 910580,
+    "name": "RUON-9.20(RRU0)",
+    "code": "RRU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ruon-9-20-rru0_rru0",
+    "child": 1
+  },
+  {
+    "id": 883124,
+    "name": "RUSFAR",
+    "code": "RI.RUSFAR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfar",
+    "child": 1
+  },
+  {
+    "id": 883125,
+    "name": "RUSFAR1M",
+    "code": "RI.RUSFAR1M",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfar1m",
+    "child": 1
+  },
+  {
+    "id": 883126,
+    "name": "RUSFAR1W",
+    "code": "RI.RUSFAR1W",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfar1w",
+    "child": 1
+  },
+  {
+    "id": 883127,
+    "name": "RUSFAR2M",
+    "code": "RI.RUSFAR2M",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfar2m",
+    "child": 1
+  },
+  {
+    "id": 883128,
+    "name": "RUSFAR2W",
+    "code": "RI.RUSFAR2W",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfar2w",
+    "child": 1
+  },
+  {
+    "id": 883129,
+    "name": "RUSFAR3M",
+    "code": "RI.RUSFAR3M",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfar3m",
+    "child": 1
+  },
+  {
+    "id": 883587,
+    "name": "RUSFARON",
+    "code": "RI.RUSFARON",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfaron",
+    "child": 1
+  },
+  {
+    "id": 905873,
+    "name": "RUSFARUSD",
+    "code": "RI.RUSFARUSD",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusfarusd",
+    "child": 1
+  },
+  {
+    "id": 548893,
+    "name": "RUSMTR",
+    "code": "RI.RUSMTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusmtr",
+    "child": 1
+  },
+  {
+    "id": 548894,
+    "name": "RUSMTRN",
+    "code": "RI.RUSMTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusmtrn",
+    "child": 1
+  },
+  {
+    "id": 548895,
+    "name": "RUSMTRR",
+    "code": "RI.RUSMTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rusmtrr",
+    "child": 1
+  },
+  {
+    "id": 548896,
+    "name": "RUTLTR",
+    "code": "RI.RUTLTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rutltr",
+    "child": 1
+  },
+  {
+    "id": 548897,
+    "name": "RUTLTRN",
+    "code": "RI.RUTLTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rutltrn",
+    "child": 1
+  },
+  {
+    "id": 548898,
+    "name": "RUTLTRR",
+    "code": "RI.RUTLTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rutltrr",
+    "child": 1
+  },
+  {
+    "id": 548899,
+    "name": "RUTNTR",
+    "code": "RI.RUTNTR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rutntr",
+    "child": 1
+  },
+  {
+    "id": 548900,
+    "name": "RUTNTRN",
+    "code": "RI.RUTNTRN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rutntrn",
+    "child": 1
+  },
+  {
+    "id": 548901,
+    "name": "RUTNTRR",
+    "code": "RI.RUTNTRR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rutntrr",
+    "child": 1
+  },
+  {
+    "id": 398008,
+    "name": "RVI",
+    "code": "RVI",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rvi",
+    "child": 1
+  },
+  {
+    "id": 901456,
+    "name": "RVI-10.19(VIV9)",
+    "code": "VIV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rvi-10-19-viv9_viv9",
+    "child": 1
+  },
+  {
+    "id": 909107,
+    "name": "RVI-11.19(VIX9)",
+    "code": "VIX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rvi-11-19-vix9_vix9",
+    "child": 1
+  },
+  {
+    "id": 910980,
+    "name": "RVI-12.19(VIZ9)",
+    "code": "VIZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/rvi-12-19-viz9_viz9",
+    "child": 1
+  },
+  {
+    "id": 578669,
+    "name": "SBCBA",
+    "code": "SBCBA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbcba",
+    "child": 1
+  },
+  {
+    "id": 578670,
+    "name": "SBCBB",
+    "code": "SBCBB",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbcbb",
+    "child": 1
+  },
+  {
+    "id": 81170,
+    "name": "SBN",
+    "code": "SBN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbn",
+    "child": 1
+  },
+  {
+    "id": 175638,
+    "name": "SBNU",
+    "code": "SBNU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbnu",
+    "child": 1
+  },
+  {
+    "id": 81026,
+    "name": "SBPR",
+    "code": "SBPR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbpr",
+    "child": 1
+  },
+  {
+    "id": 892995,
+    "name": "SBPR-12.19(SPZ9)",
+    "code": "SPZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbpr-12-19-spz9_spz9",
+    "child": 1
+  },
+  {
+    "id": 909160,
+    "name": "SBPR-3.20(SPH0)",
+    "code": "SPH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbpr-3-20-sph0_sph0",
+    "child": 1
+  },
+  {
+    "id": 909030,
+    "name": "SBRBA",
+    "code": "RI.SBRBA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrba",
+    "child": 1
+  },
+  {
+    "id": 17456,
+    "name": "SBRF",
+    "code": "SBRF",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrf",
+    "child": 1
+  },
+  {
+    "id": 502309,
+    "name": "SBRF-12.19(SRZ9)",
+    "code": "SRZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrf-12-19-srz9",
+    "child": 1
+  },
+  {
+    "id": 909660,
+    "name": "SBRF-12.19-3.20(SRZ9SRH0)",
+    "code": "SRZ9SRH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrf-12-19-3-20-srz9srh0_srz9srh0",
+    "child": 1
+  },
+  {
+    "id": 581831,
+    "name": "SBRF-3.20(SRH0)",
+    "code": "SRH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrf-3-20-srh0",
+    "child": 1
+  },
+  {
+    "id": 892996,
+    "name": "SBRF-6.20(SRM0)",
+    "code": "SRM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrf-6-20-srm0_srm0",
+    "child": 1
+  },
+  {
+    "id": 909164,
+    "name": "SBRF-9.20(SRU0)",
+    "code": "SRU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbrf-9-20-sru0_sru0",
+    "child": 1
+  },
+  {
+    "id": 877963,
+    "name": "SBSPA",
+    "code": "SBSPA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbspa",
+    "child": 1
+  },
+  {
+    "id": 877964,
+    "name": "SBSPB",
+    "code": "SBSPB",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sbspb",
+    "child": 1
+  },
+  {
+    "id": 81164,
+    "name": "SEBM",
+    "code": "SEBM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sebm",
+    "child": 1
+  },
+  {
+    "id": 19902,
+    "name": "SILV",
+    "code": "SILV",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/silv",
+    "child": 1
+  },
+  {
+    "id": 502242,
+    "name": "SILV-12.19(SVZ9)",
+    "code": "SVZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/silv-12-19-svz9",
+    "child": 1
+  },
+  {
+    "id": 633984,
+    "name": "SILV-3.20(SVH0)",
+    "code": "SVH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/silv-3-20-svh0",
+    "child": 1
+  },
+  {
+    "id": 891340,
+    "name": "SILV-6.20(SVM0)",
+    "code": "SVM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/silv-6-20-svm0_svm0",
+    "child": 1
+  },
+  {
+    "id": 909111,
+    "name": "SILV-9.20(SVU0)",
+    "code": "SVU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/silv-9-20-svu0_svu0",
+    "child": 1
+  },
+  {
+    "id": 911240,
+    "name": "SLV-1.20(SLF0)",
+    "code": "SLF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/slv-1-20-slf0_slf0",
+    "child": 1
+  },
+  {
+    "id": 911241,
+    "name": "SLV-11.19(SLX9)",
+    "code": "SLX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/slv-11-19-slx9_slx9",
+    "child": 1
+  },
+  {
+    "id": 911242,
+    "name": "SLV-12.19(SLZ9)",
+    "code": "SLZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/slv-12-19-slz9_slz9",
+    "child": 1
+  },
+  {
+    "id": 81021,
+    "name": "SNGP",
+    "code": "SNGP",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sngp",
+    "child": 1
+  },
+  {
+    "id": 892998,
+    "name": "SNGP-12.19(SGZ9)",
+    "code": "SGZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sngp-12-19-sgz9_sgz9",
+    "child": 1
+  },
+  {
+    "id": 909158,
+    "name": "SNGP-3.20(SGH0)",
+    "code": "SGH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sngp-3-20-sgh0_sgh0",
+    "child": 1
+  },
+  {
+    "id": 17457,
+    "name": "SNGR",
+    "code": "SNGR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sngr",
+    "child": 1
+  },
+  {
+    "id": 892999,
+    "name": "SNGR-12.19(SNZ9)",
+    "code": "SNZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sngr-12-19-snz9_snz9",
+    "child": 1
+  },
+  {
+    "id": 909159,
+    "name": "SNGR-3.20(SNH0)",
+    "code": "SNH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sngr-3-20-snh0_snh0",
+    "child": 1
+  },
+  {
+    "id": 82708,
+    "name": "SNSX",
+    "code": "SNSX",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/snsx",
+    "child": 1
+  },
+  {
+    "id": 888184,
+    "name": "SPFB.1MFR",
+    "code": "SPFB.1MFR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-1mfr",
+    "child": 1
+  },
+  {
+    "id": 484309,
+    "name": "SPFB.AFLT",
+    "code": "AFLT",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-aflt",
+    "child": 1
+  },
+  {
+    "id": 501254,
+    "name": "SPFB.ALMN",
+    "code": "SPFB.ALMN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-almn",
+    "child": 1
+  },
+  {
+    "id": 499461,
+    "name": "SPFB.Al",
+    "code": "SPFB.Al",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-al",
+    "child": 1
+  },
+  {
+    "id": 494877,
+    "name": "SPFB.CL",
+    "code": "SPFB.CL",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-cl",
+    "child": 1
+  },
+  {
+    "id": 499462,
+    "name": "SPFB.Co",
+    "code": "SPFB.Co",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-co",
+    "child": 1
+  },
+  {
+    "id": 499038,
+    "name": "SPFB.GLD",
+    "code": "SPFB.GLD",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-gld",
+    "child": 1
+  },
+  {
+    "id": 874042,
+    "name": "SPFB.MAGN",
+    "code": "SPFB.MAGN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-magn",
+    "child": 1
+  },
+  {
+    "id": 499463,
+    "name": "SPFB.Nl",
+    "code": "SPFB.Nl",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-nl",
+    "child": 1
+  },
+  {
+    "id": 911243,
+    "name": "SPFB.SLV",
+    "code": "SPFB.SLV",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-slv",
+    "child": 1
+  },
+  {
+    "id": 496245,
+    "name": "SPFB.U500",
+    "code": "SPFB.U500",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-u500",
+    "child": 1
+  },
+  {
+    "id": 499237,
+    "name": "SPFB.UINR",
+    "code": "SPFB.UINR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-uinr",
+    "child": 1
+  },
+  {
+    "id": 499464,
+    "name": "SPFB.Zn",
+    "code": "SPFB.Zn",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-zn",
+    "child": 1
+  },
+  {
+    "id": 81159,
+    "name": "SUGR",
+    "code": "SUGR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sugr",
+    "child": 1
+  },
+  {
+    "id": 897965,
+    "name": "SUGR-3.20(SAH0)",
+    "code": "SAH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/sugr-3-20-sah0_sah0",
+    "child": 1
+  },
+  {
+    "id": 81165,
+    "name": "SWBM",
+    "code": "SWBM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/swbm",
+    "child": 1
+  },
+  {
+    "id": 19899,
+    "name": "Si",
+    "code": "Si",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si",
+    "child": 1
+  },
+  {
+    "id": 490857,
+    "name": "Si-12.19(SiZ9)",
+    "code": "SiZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-12-19-siz9",
+    "child": 1
+  },
+  {
+    "id": 893000,
+    "name": "Si-12.19-3.20(SiZ9SiH0)",
+    "code": "SiZ9SiH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-12-19-3-20-siz9sih0_siz9sih0",
+    "child": 1
+  },
+  {
+    "id": 502420,
+    "name": "Si-12.20(SiZ0)",
+    "code": "SiZ0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-12-20-siz0",
+    "child": 1
+  },
+  {
+    "id": 493382,
+    "name": "Si-3.20(SiH0)",
+    "code": "SiH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-3-20-sih0",
+    "child": 1
+  },
+  {
+    "id": 909652,
+    "name": "Si-3.20-6.20(SiH0SiM0)",
+    "code": "SiH0SiM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-3-20-6-20-sih0sim0_sih0sim0",
+    "child": 1
+  },
+  {
+    "id": 874140,
+    "name": "Si-3.21(SiH1)",
+    "code": "SiH1",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-3-21-sih1",
+    "child": 1
+  },
+  {
+    "id": 496222,
+    "name": "Si-6.20(SiM0)",
+    "code": "SiM0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-6-20-sim0",
+    "child": 1
+  },
+  {
+    "id": 497616,
+    "name": "Si-9.20(SiU0)",
+    "code": "SiU0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-9-20-siu0",
+    "child": 1
+  },
+  {
+    "id": 909980,
+    "name": "Si-9.21(SiU1)",
+    "code": "SiU1",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/si-9-21-siu1_siu1",
+    "child": 1
+  },
+  {
+    "id": 81024,
+    "name": "TATN",
+    "code": "TATN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/tatn",
+    "child": 1
+  },
+  {
+    "id": 893001,
+    "name": "TATN-12.19(TTZ9)",
+    "code": "TTZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/tatn-12-19-ttz9_ttz9",
+    "child": 1
+  },
+  {
+    "id": 909161,
+    "name": "TATN-3.20(TTH0)",
+    "code": "TTH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/tatn-3-20-tth0_tth0",
+    "child": 1
+  },
+  {
+    "id": 19901,
+    "name": "TRNF",
+    "code": "TRNF",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/trnf",
+    "child": 1
+  },
+  {
+    "id": 893002,
+    "name": "TRNF-12.19(TNZ9)",
+    "code": "TNZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/trnf-12-19-tnz9_tnz9",
+    "child": 1
+  },
+  {
+    "id": 909162,
+    "name": "TRNF-3.20(TNH0)",
+    "code": "TNH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/trnf-3-20-tnh0_tnh0",
+    "child": 1
+  },
+  {
+    "id": 891341,
+    "name": "U500-12.19(USZ9)",
+    "code": "USZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/u500-12-19-usz9_usz9",
+    "child": 1
+  },
+  {
+    "id": 909979,
+    "name": "U500-3.20(USH0)",
+    "code": "USH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/u500-3-20-ush0_ush0",
+    "child": 1
+  },
+  {
+    "id": 409339,
+    "name": "UCAD",
+    "code": "UCAD",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ucad",
+    "child": 1
+  },
+  {
+    "id": 891342,
+    "name": "UCAD-12.19(CAZ9)",
+    "code": "CAZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ucad-12-19-caz9_caz9",
+    "child": 1
+  },
+  {
+    "id": 909122,
+    "name": "UCAD-3.20(CAH0)",
+    "code": "CAH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ucad-3-20-cah0_cah0",
+    "child": 1
+  },
+  {
+    "id": 175907,
+    "name": "UCHF",
+    "code": "UCHF",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uchf",
+    "child": 1
+  },
+  {
+    "id": 891343,
+    "name": "UCHF-12.19(CFZ9)",
+    "code": "CFZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uchf-12-19-cfz9_cfz9",
+    "child": 1
+  },
+  {
+    "id": 909123,
+    "name": "UCHF-3.20(CFH0)",
+    "code": "CFH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uchf-3-20-cfh0_cfh0",
+    "child": 1
+  },
+  {
+    "id": 899117,
+    "name": "UINR-10.19(INV9)",
+    "code": "INV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uinr-10-19-inv9_inv9",
+    "child": 1
+  },
+  {
+    "id": 904318,
+    "name": "UINR-11.19(INX9)",
+    "code": "INX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uinr-11-19-inx9_inx9",
+    "child": 1
+  },
+  {
+    "id": 910081,
+    "name": "UINR-12.19(INZ9)",
+    "code": "INZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uinr-12-19-inz9_inz9",
+    "child": 1
+  },
+  {
+    "id": 175893,
+    "name": "UJPY",
+    "code": "UJPY",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ujpy",
+    "child": 1
+  },
+  {
+    "id": 891344,
+    "name": "UJPY-12.19(JPZ9)",
+    "code": "JPZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ujpy-12-19-jpz9_jpz9",
+    "child": 1
+  },
+  {
+    "id": 909121,
+    "name": "UJPY-3.20(JPH0)",
+    "code": "JPH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ujpy-3-20-jph0_jph0",
+    "child": 1
+  },
+  {
+    "id": 81167,
+    "name": "UR",
+    "code": "UR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/ur",
+    "child": 1
+  },
+  {
+    "id": 81022,
+    "name": "URKA",
+    "code": "URKA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/urka",
+    "child": 1
+  },
+  {
+    "id": 409337,
+    "name": "UTRY",
+    "code": "UTRY",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/utry",
+    "child": 1
+  },
+  {
+    "id": 891345,
+    "name": "UTRY-12.19(TRZ9)",
+    "code": "TRZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/utry-12-19-trz9_trz9",
+    "child": 1
+  },
+  {
+    "id": 909120,
+    "name": "UTRY-3.20(TRH0)",
+    "code": "TRH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/utry-3-20-trh0_trh0",
+    "child": 1
+  },
+  {
+    "id": 175922,
+    "name": "UUAH",
+    "code": "UUAH",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uuah",
+    "child": 1
+  },
+  {
+    "id": 891346,
+    "name": "UUAH-12.19(UUZ9)",
+    "code": "UUZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uuah-12-19-uuz9_uuz9",
+    "child": 1
+  },
+  {
+    "id": 909659,
+    "name": "UUAH-12.19-3.20(UUZ9UUH0)",
+    "code": "UUZ9UUH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uuah-12-19-3-20-uuz9uuh0_uuz9uuh0",
+    "child": 1
+  },
+  {
+    "id": 909119,
+    "name": "UUAH-3.20(UUH0)",
+    "code": "UUH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/uuah-3-20-uuh0_uuh0",
+    "child": 1
+  },
+  {
+    "id": 578857,
+    "name": "VTBBA",
+    "code": "VTBBA",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbba",
+    "child": 1
+  },
+  {
+    "id": 901193,
+    "name": "VTBEM",
+    "code": "RI.VTBEM",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbem",
+    "child": 1
+  },
+  {
+    "id": 901194,
+    "name": "VTBEM2",
+    "code": "RI.VTBEM2",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbem2",
+    "child": 1
+  },
+  {
+    "id": 901191,
+    "name": "VTBHY",
+    "code": "RI.VTBHY",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbhy",
+    "child": 1
+  },
+  {
+    "id": 901192,
+    "name": "VTBHY2",
+    "code": "RI.VTBHY2",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbhy2",
+    "child": 1
+  },
+  {
+    "id": 19891,
+    "name": "VTBR",
+    "code": "VTBR",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbr",
+    "child": 1
+  },
+  {
+    "id": 893004,
+    "name": "VTBR-12.19(VBZ9)",
+    "code": "VBZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbr-12-19-vbz9_vbz9",
+    "child": 1
+  },
+  {
+    "id": 909653,
+    "name": "VTBR-12.19-3.20(VBZ9VBH0)",
+    "code": "VBZ9VBH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbr-12-19-3-20-vbz9vbh0_vbz9vbh0",
+    "child": 1
+  },
+  {
+    "id": 892923,
+    "name": "VTBR-3.20(VBH0)",
+    "code": "VBH0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbr-3-20-vbh0_vbh0",
+    "child": 1
+  },
+  {
+    "id": 894596,
+    "name": "VTBSN",
+    "code": "VTBSN",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbsn_vtbsn",
+    "child": 1
+  },
+  {
+    "id": 899228,
+    "name": "VTBSN2",
+    "code": "VTBSN2",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/vtbsn2_vtbsn2",
+    "child": 1
+  },
+  {
+    "id": 152863,
+    "name": "W3EXU",
+    "code": "W3EXU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-w3exu",
+    "child": 1
+  },
+  {
+    "id": 152864,
+    "name": "W4EXU",
+    "code": "W4EXU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-w4exu",
+    "child": 1
+  },
+  {
+    "id": 152865,
+    "name": "W5EXU",
+    "code": "W5EXU",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/spfb-w5exu",
+    "child": 1
+  },
+  {
+    "id": 175860,
+    "name": "YNDX",
+    "code": "YNDX",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/v",
+    "child": 1
+  },
+  {
+    "id": 910981,
+    "name": "Zn-1.20(ZnF0)",
+    "code": "ZnF0",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/zn-1-20-znf0_znf0",
+    "child": 1
+  },
+  {
+    "id": 898588,
+    "name": "Zn-10.19(ZnV9)",
+    "code": "ZnV9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/zn-10-19-znv9_znv9",
+    "child": 1
+  },
+  {
+    "id": 901461,
+    "name": "Zn-11.19(ZnX9)",
+    "code": "ZnX9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/zn-11-19-znx9_znx9",
+    "child": 1
+  },
+  {
+    "id": 909977,
+    "name": "Zn-12.19(ZnZ9)",
+    "code": "ZnZ9",
+    "market": 14,
+    "url": "mosbirzha-fyuchersy/zn-12-19-znz9_znz9",
+    "child": 1
+  }
+]

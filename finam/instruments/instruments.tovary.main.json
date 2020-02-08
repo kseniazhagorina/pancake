@@ -1,0 +1,149 @@
+[
+  {
+    "id": 19473,
+    "name": "Brent",
+    "code": "BZ",
+    "market": 24,
+    "url": "tovary/brent",
+    "child": 1
+  },
+  {
+    "id": 18948,
+    "name": "Light",
+    "code": "CL",
+    "market": 24,
+    "url": "tovary/light",
+    "child": 1
+  },
+  {
+    "id": 18949,
+    "name": "Natural Gas",
+    "code": "NG",
+    "market": 24,
+    "url": "tovary/natural-gas",
+    "child": 1
+  },
+  {
+    "id": 18930,
+    "name": "Алюминий",
+    "code": "AH",
+    "market": 24,
+    "url": "tovary/aluminum",
+    "child": 1
+  },
+  {
+    "id": 18950,
+    "name": "Бензин",
+    "code": "RB",
+    "market": 24,
+    "url": "tovary/gasoline",
+    "child": 1
+  },
+  {
+    "id": 18953,
+    "name": "Золото",
+    "code": "GC",
+    "market": 24,
+    "decp": 4,
+    "url": "tovary/gold",
+    "child": 1
+  },
+  {
+    "id": 18951,
+    "name": "Мазут",
+    "code": "HO",
+    "market": 24,
+    "decp": 4,
+    "url": "tovary/heating-oil",
+    "child": 1
+  },
+  {
+    "id": 18931,
+    "name": "Медь",
+    "code": "CA",
+    "market": 24,
+    "decp": 5,
+    "url": "tovary/copper",
+    "child": 1
+  },
+  {
+    "id": 18932,
+    "name": "Никель",
+    "code": "NI",
+    "market": 24,
+    "decp": 3,
+    "url": "tovary/nickel",
+    "child": 1
+  },
+  {
+    "id": 18934,
+    "name": "Олово",
+    "code": "SN",
+    "market": 24,
+    "decp": 2,
+    "url": "tovary/tin",
+    "child": 1
+  },
+  {
+    "id": 18959,
+    "name": "Палладий",
+    "code": "PA",
+    "market": 24,
+    "decp": 4,
+    "url": "tovary/palladium",
+    "child": 1
+  },
+  {
+    "id": 18947,
+    "name": "Платина",
+    "code": "PL",
+    "market": 24,
+    "decp": 0,
+    "url": "tovary/platinum",
+    "child": 1
+  },
+  {
+    "id": 74453,
+    "name": "Пшеница",
+    "code": "ZW",
+    "market": 24,
+    "decp": 2,
+    "url": "tovary/zw",
+    "child": 1
+  },
+  {
+    "id": 74454,
+    "name": "Сахар",
+    "code": "YO",
+    "market": 24,
+    "decp": 4,
+    "url": "tovary/sb",
+    "child": 1
+  },
+  {
+    "id": 18933,
+    "name": "Свинец",
+    "code": "PB",
+    "market": 24,
+    "decp": 4,
+    "url": "tovary/lead",
+    "child": 1
+  },
+  {
+    "id": 18952,
+    "name": "Серебро",
+    "code": "SI",
+    "market": 24,
+    "url": "tovary/silver",
+    "child": 1
+  },
+  {
+    "id": 18935,
+    "name": "Цинк",
+    "code": "ZS",
+    "market": 24,
+    "decp": 2,
+    "url": "tovary/zinc",
+    "child": 1
+  }
+]

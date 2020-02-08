@@ -1,0 +1,50 @@
+[
+  {
+    "id": 182402,
+    "name": "CNYRUB_TOD",
+    "code": "CNY000000TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rubtod-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182406,
+    "name": "CNYRUB_TOM",
+    "code": "CNYRUB_TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/cny-rubtom-cny-rub",
+    "child": 1
+  },
+  {
+    "id": 182441,
+    "name": "EURRUB_TOD",
+    "code": "EUR_RUB__TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrubtod-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182398,
+    "name": "EURRUB_TOM",
+    "code": "EUR_RUB__TOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/eurrubtom-eur-rub",
+    "child": 1
+  },
+  {
+    "id": 182456,
+    "name": "USDRUB_TOD",
+    "code": "USD000000TOD",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubtod-usd-rub",
+    "child": 1
+  },
+  {
+    "id": 182400,
+    "name": "USDRUB_TOM",
+    "code": "USD000UTSTOM",
+    "market": 45,
+    "url": "mosbirzha-valyutnyj-rynok/usdrubtom-usd-rub",
+    "child": 1
+  }
+]

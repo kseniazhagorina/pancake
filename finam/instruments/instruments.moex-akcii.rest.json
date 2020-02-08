@@ -1,0 +1,1880 @@
+[
+  {
+    "id": 6,
+    "name": "+МосЭнерго",
+    "code": "MSNG",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mosenrg",
+    "child": 1
+  },
+  {
+    "id": 399716,
+    "name": "AGRO-гдр",
+    "code": "AGRO",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/gdr-ros-agro-plc-ord-shs",
+    "child": 1
+  },
+  {
+    "id": 489354,
+    "name": "ENPL-гдр",
+    "code": "ENPL",
+    "market": 1,
+    "url": "moex-akcii/gdr-enplus-group-plc-ord-shs",
+    "child": 1
+  },
+  {
+    "id": 491944,
+    "name": "FIVE-гдр",
+    "code": "FIVE",
+    "market": 1,
+    "url": "moex-akcii/gdr-x5-retailgroup-n-v-ord-shs",
+    "child": 1
+  },
+  {
+    "id": 498713,
+    "name": "Raven",
+    "code": "RAVN",
+    "market": 1,
+    "url": "moex-akcii/raven-property-group-limited",
+    "child": 1
+  },
+  {
+    "id": 181610,
+    "name": "iQIWI",
+    "code": "QIWI",
+    "market": 1,
+    "url": "moex-akcii/qiwi-plc",
+    "child": 1
+  },
+  {
+    "id": 74744,
+    "name": "iДонскЗР",
+    "code": "DZRD",
+    "market": 1,
+    "url": "moex-akcii/dzrd-ao",
+    "child": 1
+  },
+  {
+    "id": 74745,
+    "name": "iДонскЗР п",
+    "code": "DZRDP",
+    "market": 1,
+    "url": "moex-akcii/dzrd-pref",
+    "child": 1
+  },
+  {
+    "id": 17137,
+    "name": "iИСКЧ ао",
+    "code": "ISKJ",
+    "market": 1,
+    "url": "moex-akcii/hsci-ao",
+    "child": 1
+  },
+  {
+    "id": 901174,
+    "name": "iММЦБ ао",
+    "code": "GEMA",
+    "market": 1,
+    "url": "moex-akcii/imcb-pjsc_gema",
+    "child": 1
+  },
+  {
+    "id": 81992,
+    "name": "iНПОНаука",
+    "code": "NAUK",
+    "market": 1,
+    "url": "moex-akcii/npo-nauka-ao",
+    "child": 1
+  },
+  {
+    "id": 74584,
+    "name": "iФармсинтз",
+    "code": "LIFE",
+    "market": 1,
+    "url": "moex-akcii/farmsintez-ao",
+    "child": 1
+  },
+  {
+    "id": 81882,
+    "name": "АЛРОСА-Нюр",
+    "code": "ALNU",
+    "market": 1,
+    "url": "moex-akcii/alrosa-nurba-ao",
+    "child": 1
+  },
+  {
+    "id": 484229,
+    "name": "АСКО ао",
+    "code": "ACKO",
+    "market": 1,
+    "url": "moex-akcii/sk-yuzhural-asko-ao",
+    "child": 1
+  },
+  {
+    "id": 82460,
+    "name": "АбрауДюрсо",
+    "code": "ABRD",
+    "market": 1,
+    "url": "moex-akcii/abrau-durso-ao",
+    "child": 1
+  },
+  {
+    "id": 82843,
+    "name": "Авангрд-ао",
+    "code": "AVAN",
+    "market": 1,
+    "url": "moex-akcii/avangard",
+    "child": 1
+  },
+  {
+    "id": 13855,
+    "name": "Аптеки36и6",
+    "code": "APTK",
+    "market": 1,
+    "url": "moex-akcii/apteki-36-6",
+    "child": 1
+  },
+  {
+    "id": 19915,
+    "name": "Арсагера",
+    "code": "ARSA",
+    "market": 1,
+    "url": "moex-akcii/uk-arsagera",
+    "child": 1
+  },
+  {
+    "id": 16452,
+    "name": "АстрЭнСб",
+    "code": "ASSB",
+    "market": 1,
+    "url": "moex-akcii/astrakhan-energo-sbyt",
+    "child": 1
+  },
+  {
+    "id": 20702,
+    "name": "АшинскийМЗ",
+    "code": "AMEZ",
+    "market": 1,
+    "url": "moex-akcii/ashinckiy-metzavod-oao",
+    "child": 1
+  },
+  {
+    "id": 20066,
+    "name": "БСП ао",
+    "code": "BSPB",
+    "market": 1,
+    "url": "moex-akcii/bsp",
+    "child": 1
+  },
+  {
+    "id": 462599,
+    "name": "БУДУЩЕЕ ао",
+    "code": "FTRE",
+    "market": 1,
+    "url": "moex-akcii/fg-future-ao",
+    "child": 1
+  },
+  {
+    "id": 35242,
+    "name": "БашИнСв ао",
+    "code": "BISV",
+    "market": 1,
+    "url": "moex-akcii/bashinformsvyaz-ao",
+    "child": 1
+  },
+  {
+    "id": 35243,
+    "name": "БашИнСв ап",
+    "code": "BISVP",
+    "market": 1,
+    "url": "moex-akcii/bashinformsvyaz-ap",
+    "child": 1
+  },
+  {
+    "id": 21078,
+    "name": "Белон ао",
+    "code": "BLNG",
+    "market": 1,
+    "url": "moex-akcii/belon-ao",
+    "child": 1
+  },
+  {
+    "id": 19651,
+    "name": "Белуга ао",
+    "code": "BELU",
+    "market": 1,
+    "url": "moex-akcii/synergy-ao",
+    "child": 1
+  },
+  {
+    "id": 82616,
+    "name": "БестЭфБ ао",
+    "code": "ALBK",
+    "market": 1,
+    "url": "moex-akcii/best-efforts-bank-ao",
+    "child": 1
+  },
+  {
+    "id": 81901,
+    "name": "БурЗолото",
+    "code": "BRZL",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/buryatzoloto-ao",
+    "child": 1
+  },
+  {
+    "id": 17257,
+    "name": "ВХЗ-ао",
+    "code": "VLHZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/vhz",
+    "child": 1
+  },
+  {
+    "id": 16352,
+    "name": "ВЭК 01 ао",
+    "code": "VDSB",
+    "market": 1,
+    "url": "moex-akcii/vek-ao",
+    "child": 1
+  },
+  {
+    "id": 81954,
+    "name": "Варьеган",
+    "code": "VJGZ",
+    "market": 1,
+    "url": "moex-akcii/var-eganneftegaz-ao",
+    "child": 1
+  },
+  {
+    "id": 81955,
+    "name": "Варьеган-п",
+    "code": "VJGZP",
+    "market": 1,
+    "url": "moex-akcii/var-eganneftegaz-ap",
+    "child": 1
+  },
+  {
+    "id": 17068,
+    "name": "Возрожд-ао",
+    "code": "VZRZ",
+    "market": 1,
+    "url": "moex-akcii/vozrojdenie",
+    "child": 1
+  },
+  {
+    "id": 17067,
+    "name": "Возрожд-п",
+    "code": "VZRZP",
+    "market": 1,
+    "url": "moex-akcii/vozrojdenie-pref",
+    "child": 1
+  },
+  {
+    "id": 16456,
+    "name": "ВолгЭнСб",
+    "code": "VGSB",
+    "market": 1,
+    "url": "moex-akcii/volgograd-energo-sbyt",
+    "child": 1
+  },
+  {
+    "id": 16457,
+    "name": "ВолгЭнСб-п",
+    "code": "VGSBP",
+    "market": 1,
+    "url": "moex-akcii/volgograd-energo-sbyt-pref",
+    "child": 1
+  },
+  {
+    "id": 83251,
+    "name": "ВыбСудЗ ао",
+    "code": "VSYD",
+    "market": 1,
+    "url": "moex-akcii/viborgskii-sudostr-zavod-ao",
+    "child": 1
+  },
+  {
+    "id": 83252,
+    "name": "ВыбСудЗ ап",
+    "code": "VSYDP",
+    "market": 1,
+    "url": "moex-akcii/viborgskii-sudostr-zavod-ap",
+    "child": 1
+  },
+  {
+    "id": 81997,
+    "name": "ГАЗ ао",
+    "code": "GAZA",
+    "market": 1,
+    "url": "moex-akcii/gaz-ao",
+    "child": 1
+  },
+  {
+    "id": 81998,
+    "name": "ГАЗ ап",
+    "code": "GAZAP",
+    "market": 1,
+    "url": "moex-akcii/gaz-pref",
+    "child": 1
+  },
+  {
+    "id": 82115,
+    "name": "ГАЗ-Тек ао",
+    "code": "GAZT",
+    "market": 1,
+    "url": "moex-akcii/gaz-tek-oao-ao",
+    "child": 1
+  },
+  {
+    "id": 81399,
+    "name": "ГАЗ-сервис",
+    "code": "GAZS",
+    "market": 1,
+    "url": "moex-akcii/gaz-servis-ao",
+    "child": 1
+  },
+  {
+    "id": 81398,
+    "name": "ГАЗКОН-ао",
+    "code": "GAZC",
+    "market": 1,
+    "url": "moex-akcii/gazkon-ao",
+    "child": 1
+  },
+  {
+    "id": 436120,
+    "name": "ГЕОТЕК ао",
+    "code": "GTSS",
+    "market": 1,
+    "url": "moex-akcii/geotech-seismic-services-ao",
+    "child": 1
+  },
+  {
+    "id": 449114,
+    "name": "ГИТ ао",
+    "code": "GRNT",
+    "market": 1,
+    "url": "moex-akcii/cityinnovativetechnologies-ao",
+    "child": 1
+  },
+  {
+    "id": 488918,
+    "name": "ГТМ ао",
+    "code": "GTRK",
+    "market": 1,
+    "url": "moex-akcii/gtm",
+    "child": 1
+  },
+  {
+    "id": 152397,
+    "name": "ГазпРнД ао",
+    "code": "RTGZ",
+    "market": 1,
+    "url": "moex-akcii/gazprom-gazorasp-rostov-ao",
+    "child": 1
+  },
+  {
+    "id": 17698,
+    "name": "Галс-Девел",
+    "code": "HALS",
+    "market": 1,
+    "url": "moex-akcii/gals-development-ao",
+    "child": 1
+  },
+  {
+    "id": 20708,
+    "name": "ДВМП ао",
+    "code": "FESH",
+    "market": 1,
+    "url": "moex-akcii/dvmp-ao",
+    "child": 1
+  },
+  {
+    "id": 19724,
+    "name": "ДЭК ао",
+    "code": "DVEC",
+    "market": 1,
+    "url": "moex-akcii/dec",
+    "child": 1
+  },
+  {
+    "id": 16825,
+    "name": "ДагСб ао",
+    "code": "DASB",
+    "market": 1,
+    "url": "moex-akcii/dagestan-energosbyt-company",
+    "child": 1
+  },
+  {
+    "id": 473181,
+    "name": "ДетскийМир",
+    "code": "DSKY",
+    "market": 1,
+    "url": "moex-akcii/detsky-mir",
+    "child": 1
+  },
+  {
+    "id": 487432,
+    "name": "ЕвроЭлтех",
+    "code": "EELT",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/european-eltech",
+    "child": 1
+  },
+  {
+    "id": 82001,
+    "name": "ЗВЕЗДА ао",
+    "code": "ZVEZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/zvezda-ao",
+    "child": 1
+  },
+  {
+    "id": 81918,
+    "name": "ЗИЛ ао",
+    "code": "ZILL",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/zil-ao",
+    "child": 1
+  },
+  {
+    "id": 35363,
+    "name": "ЗаводДИОД",
+    "code": "DIOD",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/zavod-diod-ao",
+    "child": 1
+  },
+  {
+    "id": 81786,
+    "name": "ИКРУСС-ИНВ",
+    "code": "RUSI",
+    "market": 1,
+    "url": "moex-akcii/russ-invest-ic-ao",
+    "child": 1
+  },
+  {
+    "id": 20711,
+    "name": "ИНГРАД ао",
+    "code": "OPIN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/otkrytye-investicii-opin",
+    "child": 1
+  },
+  {
+    "id": 15547,
+    "name": "ИРКУТ-3",
+    "code": "IRKT",
+    "market": 1,
+    "url": "moex-akcii/irkut-3",
+    "child": 1
+  },
+  {
+    "id": 81887,
+    "name": "Ижсталь ап",
+    "code": "IGSTP",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/izhstal-ap",
+    "child": 1
+  },
+  {
+    "id": 81885,
+    "name": "Ижсталь2ао",
+    "code": "IGST",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/izhstal-2ao",
+    "child": 1
+  },
+  {
+    "id": 409486,
+    "name": "Инв-Девел",
+    "code": "IDVP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/pao-invest-development",
+    "child": 1
+  },
+  {
+    "id": 9,
+    "name": "ИркЭнерго",
+    "code": "IRGZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/irkutskenrg",
+    "child": 1
+  },
+  {
+    "id": 15544,
+    "name": "КАМАЗ",
+    "code": "KMAZ",
+    "market": 1,
+    "decp": 6,
+    "url": "moex-akcii/kamaz",
+    "child": 1
+  },
+  {
+    "id": 17359,
+    "name": "КЗМС ао",
+    "code": "KZMS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kzms-01",
+    "child": 1
+  },
+  {
+    "id": 22525,
+    "name": "КМЗ",
+    "code": "KMEZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kovrov-mech-zavod",
+    "child": 1
+  },
+  {
+    "id": 16284,
+    "name": "КСБ ао",
+    "code": "KTSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/ksb",
+    "child": 1
+  },
+  {
+    "id": 16285,
+    "name": "КСБ ап",
+    "code": "KTSBP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/ksb-ap",
+    "child": 1
+  },
+  {
+    "id": 81943,
+    "name": "КУЗОЦМ ао",
+    "code": "KUNF",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kuzocm-ao",
+    "child": 1
+  },
+  {
+    "id": 16329,
+    "name": "КалужскСК",
+    "code": "KLSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kalugsk-sbyt-company-ao",
+    "child": 1
+  },
+  {
+    "id": 20030,
+    "name": "КамчатЭ ао",
+    "code": "KCHE",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kamchatskenergo",
+    "child": 1
+  },
+  {
+    "id": 20498,
+    "name": "КамчатЭ ап",
+    "code": "KCHEP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kamchatskenergo-pref",
+    "child": 1
+  },
+  {
+    "id": 18310,
+    "name": "Квадра",
+    "code": "TGKD",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kvadra",
+    "child": 1
+  },
+  {
+    "id": 18391,
+    "name": "Квадра-п",
+    "code": "TGKDP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kvadra-pref",
+    "child": 1
+  },
+  {
+    "id": 75094,
+    "name": "Кокс ао",
+    "code": "KSGR",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/koks-ao",
+    "child": 1
+  },
+  {
+    "id": 20710,
+    "name": "КоршГОК ао",
+    "code": "KOGK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/korshunovskii-gok",
+    "child": 1
+  },
+  {
+    "id": 81903,
+    "name": "КосогМЗ ао",
+    "code": "KMTZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kgiw-ao",
+    "child": 1
+  },
+  {
+    "id": 511,
+    "name": "КрасОкт-1п",
+    "code": "KROTP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/krasnyioctabr-1-pr",
+    "child": 1
+  },
+  {
+    "id": 510,
+    "name": "КрасОкт-ао",
+    "code": "KROT",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/krasnyioctyabr",
+    "child": 1
+  },
+  {
+    "id": 20912,
+    "name": "Красэсб ао",
+    "code": "KRSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/krashojarskenergosbyt",
+    "child": 1
+  },
+  {
+    "id": 20913,
+    "name": "Красэсб ап",
+    "code": "KRSBP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/krashojarskenergosbyt-pref",
+    "child": 1
+  },
+  {
+    "id": 522,
+    "name": "Кубанэнр",
+    "code": "KUBE",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kubanenrg",
+    "child": 1
+  },
+  {
+    "id": 35285,
+    "name": "КузбТК ао",
+    "code": "KBTK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kuzbas-topl-kompaniya-ao",
+    "child": 1
+  },
+  {
+    "id": 83165,
+    "name": "КузнецкийБ",
+    "code": "KUZB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/bank-kuzneckiy",
+    "child": 1
+  },
+  {
+    "id": 81941,
+    "name": "Куйбазот",
+    "code": "KAZT",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kuib-azot-ao",
+    "child": 1
+  },
+  {
+    "id": 81942,
+    "name": "Куйбазот-п",
+    "code": "KAZTP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kuibishevazot-ap",
+    "child": 1
+  },
+  {
+    "id": 83261,
+    "name": "КурганГКао",
+    "code": "KGKC",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kurganskaja-gener-kompanija",
+    "child": 1
+  },
+  {
+    "id": 152350,
+    "name": "КурганГКап",
+    "code": "KGKCP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/kurganskaja-gener-kompanija-ap",
+    "child": 1
+  },
+  {
+    "id": 19736,
+    "name": "ЛСР ао",
+    "code": "LSRG",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lsr",
+    "child": 1
+  },
+  {
+    "id": 16276,
+    "name": "ЛЭСК ао",
+    "code": "LPSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lesk-ao",
+    "child": 1
+  },
+  {
+    "id": 152517,
+    "name": "Левенгук",
+    "code": "LVHK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/levenguk-ao",
+    "child": 1
+  },
+  {
+    "id": 22094,
+    "name": "Лензол. ап",
+    "code": "LNZLP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lenzoloto-pref",
+    "child": 1
+  },
+  {
+    "id": 21004,
+    "name": "Лензолото",
+    "code": "LNZL",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lenzoloto",
+    "child": 1
+  },
+  {
+    "id": 385792,
+    "name": "Лента др",
+    "code": "LNTA",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lenta-ltd-dr",
+    "child": 1
+  },
+  {
+    "id": 542,
+    "name": "Ленэнерг-п",
+    "code": "LSNGP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lenenrg-pref",
+    "child": 1
+  },
+  {
+    "id": 31,
+    "name": "Ленэнерго",
+    "code": "LSNG",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/lenenrg",
+    "child": 1
+  },
+  {
+    "id": 19737,
+    "name": "М.видео",
+    "code": "MVID",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/m-video",
+    "child": 1
+  },
+  {
+    "id": 20947,
+    "name": "МЕРИДИАН",
+    "code": "MERF",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/meridian-ao",
+    "child": 1
+  },
+  {
+    "id": 16917,
+    "name": "МОЭСК",
+    "code": "MSRS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/moesk",
+    "child": 1
+  },
+  {
+    "id": 20309,
+    "name": "МРСК СЗ",
+    "code": "MRKZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-severo-zapada",
+    "child": 1
+  },
+  {
+    "id": 20412,
+    "name": "МРСК СК",
+    "code": "MRKK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-severnogo-kavkaza-ao",
+    "child": 1
+  },
+  {
+    "id": 20402,
+    "name": "МРСК Ур",
+    "code": "MRKU",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-urala-ao",
+    "child": 1
+  },
+  {
+    "id": 20107,
+    "name": "МРСК ЦП",
+    "code": "MRKP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-cip",
+    "child": 1
+  },
+  {
+    "id": 20235,
+    "name": "МРСК Центр",
+    "code": "MRKC",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-centra",
+    "child": 1
+  },
+  {
+    "id": 20286,
+    "name": "МРСКВол",
+    "code": "MRKV",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-volgi",
+    "child": 1
+  },
+  {
+    "id": 20346,
+    "name": "МРСКСиб",
+    "code": "MRKS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-sibiri",
+    "child": 1
+  },
+  {
+    "id": 20681,
+    "name": "МРСКЮга ао",
+    "code": "MRKY",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mrsk-yuga",
+    "child": 1
+  },
+  {
+    "id": 74562,
+    "name": "МагадЭн ао",
+    "code": "MAGE",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/magadanenergo-ao",
+    "child": 1
+  },
+  {
+    "id": 74563,
+    "name": "МагадЭн ап",
+    "code": "MAGEP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/magadanenergo-ap",
+    "child": 1
+  },
+  {
+    "id": 30,
+    "name": "Мегион-ао",
+    "code": "MFGS",
+    "market": 1,
+    "decp": 5,
+    "url": "moex-akcii/megion",
+    "child": 1
+  },
+  {
+    "id": 51,
+    "name": "Мегион-ап",
+    "code": "MFGSP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/megion-pref",
+    "child": 1
+  },
+  {
+    "id": 20737,
+    "name": "Медиахолд",
+    "code": "ODVA",
+    "market": 1,
+    "decp": 5,
+    "url": "moex-akcii/mediaholding",
+    "child": 1
+  },
+  {
+    "id": 21018,
+    "name": "Мечел ао",
+    "code": "MTLR",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mechel",
+    "child": 1
+  },
+  {
+    "id": 80745,
+    "name": "Мечел ап",
+    "code": "MTLRP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mechel-pref",
+    "child": 1
+  },
+  {
+    "id": 16359,
+    "name": "МордЭнСб",
+    "code": "MRSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mordovskaya-energosbyt-comp",
+    "child": 1
+  },
+  {
+    "id": 81944,
+    "name": "Морион ао",
+    "code": "MORI",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/morion-ao",
+    "child": 1
+  },
+  {
+    "id": 82890,
+    "name": "МосОблБанк",
+    "code": "MOBB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/akb-moskovskii-oblastnoi-bank",
+    "child": 1
+  },
+  {
+    "id": 74549,
+    "name": "Мостотрест",
+    "code": "MSTT",
+    "market": 1,
+    "decp": 5,
+    "url": "moex-akcii/mostotrest",
+    "child": 1
+  },
+  {
+    "id": 152676,
+    "name": "МультиСис",
+    "code": "MSST",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/mul-tisistema-ao",
+    "child": 1
+  },
+  {
+    "id": 450432,
+    "name": "НКХП ао",
+    "code": "NKHP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/nkhp-ao",
+    "child": 1
+  },
+  {
+    "id": 81929,
+    "name": "НаукаСвяз",
+    "code": "NSVZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/nauka-svyaz-oao-ao",
+    "child": 1
+  },
+  {
+    "id": 81287,
+    "name": "Нефтекамск",
+    "code": "NFAZ",
+    "market": 1,
+    "decp": 3,
+    "url": "moex-akcii/neftekamskiy-avtozavod-oao-ao",
+    "child": 1
+  },
+  {
+    "id": 81947,
+    "name": "Нижкамшина",
+    "code": "NKSH",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/nizhnekamskshina-ao",
+    "child": 1
+  },
+  {
+    "id": 414560,
+    "name": "ОВК ао",
+    "code": "UWGN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/ovk-ao",
+    "child": 1
+  },
+  {
+    "id": 18684,
+    "name": "ОГК-2 ао",
+    "code": "OGKB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/ogk-2",
+    "child": 1
+  },
+  {
+    "id": 175781,
+    "name": "ОКС ао",
+    "code": "UCSS",
+    "market": 1,
+    "url": "moex-akcii/pao-oks-ao",
+    "child": 1
+  },
+  {
+    "id": 15844,
+    "name": "ОМЗ-ап",
+    "code": "OMZZP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/omz-pref",
+    "child": 1
+  },
+  {
+    "id": 488674,
+    "name": "ОР ао",
+    "code": "OBUV",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/or",
+    "child": 1
+  },
+  {
+    "id": 152876,
+    "name": "ПАОДжиТиЭл",
+    "code": "GTLC",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/oao-gtl-ao",
+    "child": 1
+  },
+  {
+    "id": 35247,
+    "name": "ПРОТЕК ао",
+    "code": "PRTK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/protek-ao",
+    "child": 1
+  },
+  {
+    "id": 81896,
+    "name": "ПавлАвт ао",
+    "code": "PAZA",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/pavlovo-bus-ao",
+    "child": 1
+  },
+  {
+    "id": 16909,
+    "name": "ПермьЭнС-п",
+    "code": "PMSBP",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/perm-energosbyt-pref",
+    "child": 1
+  },
+  {
+    "id": 16908,
+    "name": "ПермьЭнСб",
+    "code": "PMSB",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/perm-energosbyt",
+    "child": 1
+  },
+  {
+    "id": 81241,
+    "name": "Плазмек",
+    "code": "PLSM",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/plazmek-ao",
+    "child": 1
+  },
+  {
+    "id": 80818,
+    "name": "Приморье",
+    "code": "PRMB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/akb-primorye",
+    "child": 1
+  },
+  {
+    "id": 74779,
+    "name": "РБК ао",
+    "code": "RBCM",
+    "market": 1,
+    "decp": 1,
+    "url": "moex-akcii/rbk-ao",
+    "child": 1
+  },
+  {
+    "id": 181755,
+    "name": "РДБанк ао",
+    "code": "RDRB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rosdor-bank-ao",
+    "child": 1
+  },
+  {
+    "id": 81933,
+    "name": "РН-ЗапСиб",
+    "code": "CHGZ",
+    "market": 1,
+    "url": "moex-akcii/chernogorneft-ao",
+    "child": 1
+  },
+  {
+    "id": 20637,
+    "name": "РОСИНТЕРао",
+    "code": "ROST",
+    "market": 1,
+    "url": "moex-akcii/rosinter-restaurants-ao",
+    "child": 1
+  },
+  {
+    "id": 17713,
+    "name": "Распадская",
+    "code": "RASP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/raspadskaya",
+    "child": 1
+  },
+  {
+    "id": 152677,
+    "name": "Роллман",
+    "code": "RLMN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rollman-gk-ao",
+    "child": 1
+  },
+  {
+    "id": 388313,
+    "name": "Роллман-п",
+    "code": "RLMNP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rollman-gk-ap",
+    "child": 1
+  },
+  {
+    "id": 35238,
+    "name": "РусАква ао",
+    "code": "AQUA",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/russkaya-akvakul-tura",
+    "child": 1
+  },
+  {
+    "id": 66893,
+    "name": "Русгрэйн",
+    "code": "RUGR",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rusgrain-holding-ao",
+    "child": 1
+  },
+  {
+    "id": 181316,
+    "name": "Русолово",
+    "code": "ROLO",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rusolovo-oao-ao",
+    "child": 1
+  },
+  {
+    "id": 20712,
+    "name": "Русполимет",
+    "code": "RUSP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/ruspolimet-ao",
+    "child": 1
+  },
+  {
+    "id": 16455,
+    "name": "РязЭнСб",
+    "code": "RZSB",
+    "market": 1,
+    "decp": 0,
+    "url": "moex-akcii/ryazan-energo-sbyt",
+    "child": 1
+  },
+  {
+    "id": 491359,
+    "name": "САФМАР ао",
+    "code": "SFIN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/safmar-fin-invest-ao",
+    "child": 1
+  },
+  {
+    "id": 22401,
+    "name": "СЗПароход",
+    "code": "SZPR",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/severo-zapadnoe-parokhodstvo",
+    "child": 1
+  },
+  {
+    "id": 20892,
+    "name": "СМЗ-ао",
+    "code": "MGNZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/smz",
+    "child": 1
+  },
+  {
+    "id": 16080,
+    "name": "СОЛЛЕРС",
+    "code": "SVAV",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/sollers",
+    "child": 1
+  },
+  {
+    "id": 445,
+    "name": "СамарЭн-ао",
+    "code": "SAGO",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/samaraenergo-ao",
+    "child": 1
+  },
+  {
+    "id": 70,
+    "name": "СамарЭн-ап",
+    "code": "SAGOP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/samaraenergo-pref",
+    "child": 1
+  },
+  {
+    "id": 81891,
+    "name": "СаратНПЗ",
+    "code": "KRKN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/saratovskiy-npz-ao",
+    "child": 1
+  },
+  {
+    "id": 81892,
+    "name": "СаратНПЗ-п",
+    "code": "KRKNP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/saratovskiy-npz-ap",
+    "child": 1
+  },
+  {
+    "id": 11,
+    "name": "СаратЭн-ао",
+    "code": "SARE",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/saratovenergo-ao",
+    "child": 1
+  },
+  {
+    "id": 24,
+    "name": "СаратЭн-ап",
+    "code": "SAREP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/saratovenergo-pref",
+    "child": 1
+  },
+  {
+    "id": 473000,
+    "name": "Сахэнер ао",
+    "code": "SLEN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/sakhalinenergo-ao",
+    "child": 1
+  },
+  {
+    "id": 81360,
+    "name": "Селигдар",
+    "code": "SELG",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/seligdar",
+    "child": 1
+  },
+  {
+    "id": 82610,
+    "name": "Селигдар-п",
+    "code": "SELGP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/seligdar-ap",
+    "child": 1
+  },
+  {
+    "id": 436091,
+    "name": "СибГост ао",
+    "code": "SIBG",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/pao-sibirskiy-gostinec-ao",
+    "child": 1
+  },
+  {
+    "id": 15723,
+    "name": "Слав-ЯНОСп",
+    "code": "JNOSP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/slavneft-janos-pref",
+    "child": 1
+  },
+  {
+    "id": 15722,
+    "name": "Славн-ЯНОС",
+    "code": "JNOS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/slavneft-janos",
+    "child": 1
+  },
+  {
+    "id": 20087,
+    "name": "СтаврЭнСб",
+    "code": "STSB",
+    "market": 1,
+    "url": "moex-akcii/stavropolenergosbyt",
+    "child": 1
+  },
+  {
+    "id": 20088,
+    "name": "СтаврЭнСбп",
+    "code": "STSBP",
+    "market": 1,
+    "url": "moex-akcii/stavropolenergosbyt-pref",
+    "child": 1
+  },
+  {
+    "id": 81914,
+    "name": "ТАНТАЛ ао",
+    "code": "TANL",
+    "market": 1,
+    "url": "moex-akcii/tantal-ao",
+    "child": 1
+  },
+  {
+    "id": 81915,
+    "name": "ТАНТАЛ ап",
+    "code": "TANLP",
+    "market": 1,
+    "url": "moex-akcii/tantal-ap",
+    "child": 1
+  },
+  {
+    "id": 18382,
+    "name": "ТГК-1",
+    "code": "TGKA",
+    "market": 1,
+    "url": "moex-akcii/tgk-1",
+    "child": 1
+  },
+  {
+    "id": 18176,
+    "name": "ТГК-14",
+    "code": "TGKN",
+    "market": 1,
+    "url": "moex-akcii/tgk-14",
+    "child": 1
+  },
+  {
+    "id": 17597,
+    "name": "ТГК-2",
+    "code": "TGKB",
+    "market": 1,
+    "url": "moex-akcii/tgk-2",
+    "child": 1
+  },
+  {
+    "id": 18189,
+    "name": "ТГК-2 ап",
+    "code": "TGKBP",
+    "market": 1,
+    "url": "moex-akcii/tgk-2-pref",
+    "child": 1
+  },
+  {
+    "id": 20716,
+    "name": "ТЗА ао",
+    "code": "TUZA",
+    "market": 1,
+    "url": "moex-akcii/tuimaz-zavod-avtobetonovozov",
+    "child": 1
+  },
+  {
+    "id": 81905,
+    "name": "ТКЗКК ао",
+    "code": "KRKO",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tkz-krasny-kotelshchik-ao",
+    "child": 1
+  },
+  {
+    "id": 81906,
+    "name": "ТКЗКК ап",
+    "code": "KRKOP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tkz-krasny-kotelshchik-ap",
+    "child": 1
+  },
+  {
+    "id": 74746,
+    "name": "ТКСМ ао",
+    "code": "TUCH",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tuchkovsk-csm",
+    "child": 1
+  },
+  {
+    "id": 18441,
+    "name": "ТМК ао",
+    "code": "TRMK",
+    "market": 1,
+    "url": "moex-akcii/tmk-ao",
+    "child": 1
+  },
+  {
+    "id": 19916,
+    "name": "ТНСэКубань",
+    "code": "KBSB",
+    "market": 1,
+    "url": "moex-akcii/kuban-energosbyt-company",
+    "child": 1
+  },
+  {
+    "id": 16331,
+    "name": "ТНСэМаЭл-п",
+    "code": "MISBP",
+    "market": 1,
+    "url": "moex-akcii/marienergosbyt-pref",
+    "child": 1
+  },
+  {
+    "id": 16547,
+    "name": "ТНСэнВор-п",
+    "code": "VRSBP",
+    "market": 1,
+    "url": "moex-akcii/voronezh-energosbyt-comp-pref",
+    "child": 1
+  },
+  {
+    "id": 16546,
+    "name": "ТНСэнВорон",
+    "code": "VRSB",
+    "market": 1,
+    "url": "moex-akcii/voronezh-energosbyt-comp",
+    "child": 1
+  },
+  {
+    "id": 16330,
+    "name": "ТНСэнМарЭл",
+    "code": "MISB",
+    "market": 1,
+    "url": "moex-akcii/marienergosbyt-ao",
+    "child": 1
+  },
+  {
+    "id": 16615,
+    "name": "ТНСэнНН ао",
+    "code": "NNSB",
+    "market": 1,
+    "url": "moex-akcii/nizhegorodskaya-sbyt-comp",
+    "child": 1
+  },
+  {
+    "id": 16616,
+    "name": "ТНСэнНН ап",
+    "code": "NNSBP",
+    "market": 1,
+    "url": "moex-akcii/nizhegorodskaya-sbyt-comp-pref",
+    "child": 1
+  },
+  {
+    "id": 16783,
+    "name": "ТНСэнРст",
+    "code": "RTSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rostovenergosbyt-ao",
+    "child": 1
+  },
+  {
+    "id": 16784,
+    "name": "ТНСэнРст-п",
+    "code": "RTSBP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/rostovenergosbyt-pref",
+    "child": 1
+  },
+  {
+    "id": 16342,
+    "name": "ТНСэнЯр",
+    "code": "YRSB",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/yaroslav-sbyt-company-ao",
+    "child": 1
+  },
+  {
+    "id": 16343,
+    "name": "ТНСэнЯр-п",
+    "code": "YRSBP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/yaroslav-sbyt-company-pref",
+    "child": 1
+  },
+  {
+    "id": 420644,
+    "name": "ТНСэнрг ао",
+    "code": "TNSE",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/pao-gk-tns-energo-ao",
+    "child": 1
+  },
+  {
+    "id": 16797,
+    "name": "ТРК ао",
+    "code": "TORS",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tomsk-raspredelit-komp-ao",
+    "child": 1
+  },
+  {
+    "id": 16798,
+    "name": "ТРК ап",
+    "code": "TORSP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tomsk-raspredelit-komp-ap",
+    "child": 1
+  },
+  {
+    "id": 16265,
+    "name": "ТамбЭнСб",
+    "code": "TASB",
+    "market": 1,
+    "url": "moex-akcii/tambov-energosbyt-company",
+    "child": 1
+  },
+  {
+    "id": 16266,
+    "name": "ТамбЭнСб-п",
+    "code": "TASBP",
+    "market": 1,
+    "url": "moex-akcii/tambov-energosbyt-comp-pref",
+    "child": 1
+  },
+  {
+    "id": 18371,
+    "name": "Таттел. ао",
+    "code": "TTLK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/tattelekom",
+    "child": 1
+  },
+  {
+    "id": 21002,
+    "name": "Телеграф",
+    "code": "CNTL",
+    "market": 1,
+    "url": "moex-akcii/centrlnyi-telegraf",
+    "child": 1
+  },
+  {
+    "id": 81575,
+    "name": "Телеграф-п",
+    "code": "CNTLP",
+    "market": 1,
+    "url": "moex-akcii/centrlnyi-telegraf-ap",
+    "child": 1
+  },
+  {
+    "id": 497210,
+    "name": "ТрансФ ао",
+    "code": "TRFM",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/transfin-m",
+    "child": 1
+  },
+  {
+    "id": 82611,
+    "name": "УрКузница",
+    "code": "URKZ",
+    "market": 1,
+    "url": "moex-akcii/uralskaya-kuznica-ao",
+    "child": 1
+  },
+  {
+    "id": 81953,
+    "name": "УралСиб ао",
+    "code": "USBN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/bank-uralsib-ao",
+    "child": 1
+  },
+  {
+    "id": 81858,
+    "name": "Физика ао",
+    "code": "NPOF",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/npo-fizika-ao",
+    "child": 1
+  },
+  {
+    "id": 81939,
+    "name": "Химпром ао",
+    "code": "HIMC",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/himprom-ao",
+    "child": 1
+  },
+  {
+    "id": 81940,
+    "name": "Химпром ап",
+    "code": "HIMCP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/himprom-ap",
+    "child": 1
+  },
+  {
+    "id": 19095,
+    "name": "ЦМТ ао",
+    "code": "WTCM",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/cmt",
+    "child": 1
+  },
+  {
+    "id": 19096,
+    "name": "ЦМТ ап",
+    "code": "WTCMP",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/cmt-pref",
+    "child": 1
+  },
+  {
+    "id": 83121,
+    "name": "ЧЗПСН ао",
+    "code": "PRFN",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/czpsn-profnasteel",
+    "child": 1
+  },
+  {
+    "id": 21000,
+    "name": "ЧКПЗ ао",
+    "code": "CHKZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/ckpz",
+    "child": 1
+  },
+  {
+    "id": 21001,
+    "name": "ЧМК ао",
+    "code": "CHMK",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/cmk",
+    "child": 1
+  },
+  {
+    "id": 20999,
+    "name": "ЧТПЗ ао",
+    "code": "CHEP",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/chtpz",
+    "child": 1
+  },
+  {
+    "id": 20125,
+    "name": "ЧеркизГ-ао",
+    "code": "GCHE",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/gruppa-cherkizovo-ao",
+    "child": 1
+  },
+  {
+    "id": 81934,
+    "name": "Электрцинк",
+    "code": "ELTZ",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/elektrotsink-ao",
+    "child": 1
+  },
+  {
+    "id": 16440,
+    "name": "ЭнелРос ао",
+    "code": "ENRU",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/enel-russia",
+    "child": 1
+  },
+  {
+    "id": 20321,
+    "name": "ЭнергияРКК",
+    "code": "RKKE",
+    "market": 1,
+    "decp": 2,
+    "url": "moex-akcii/rkk-energia",
+    "child": 1
+  },
+  {
+    "id": 15522,
+    "name": "ЮТэйр ао",
+    "code": "UTAR",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/utair-aviacompany",
+    "child": 1
+  },
+  {
+    "id": 82493,
+    "name": "ЮУНК ао",
+    "code": "UNKL",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/uzhno-uralskiy-nikel-komb-ao",
+    "child": 1
+  },
+  {
+    "id": 20717,
+    "name": "ЮжКузб. ао",
+    "code": "UKUZ",
+    "market": 1,
+    "decp": 1,
+    "url": "moex-akcii/uzhnyi-kuzbass",
+    "child": 1
+  },
+  {
+    "id": 81917,
+    "name": "ЯТЭК ао",
+    "code": "YAKG",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/yatek-ao",
+    "child": 1
+  },
+  {
+    "id": 81769,
+    "name": "Якутскэн-п",
+    "code": "YKENP",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/yakutskenergo-ap",
+    "child": 1
+  },
+  {
+    "id": 81766,
+    "name": "Якутскэнрг",
+    "code": "YKEN",
+    "market": 1,
+    "decp": 4,
+    "url": "moex-akcii/yakutskenergo",
+    "child": 1
+  }
+]
