@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd
-
 from pandas import read_csv
+import os.path
 
 def read(filename):
     d = pd.read_csv(filename, 
@@ -11,9 +11,10 @@ def read(filename):
              parse_dates={'DATETIME': ['DATE', 'TIME']},
              index_col=['DATETIME'],
              infer_datetime_format=True)
+    d.name = os.path.splitext(os.path.basename(filename))[0].split('_', maxsplit=1)[1]  
+    return d
 
-
-def resample(data, period, dropna=False):
+def resample(data, period, dropna=True):
     params = {'rule': period, 'closed':'left', 'label':'left'}
     close = data.CLOSE.resample(**params).last()
     open = data.OPEN.resample(**params).first()
@@ -22,6 +23,7 @@ def resample(data, period, dropna=False):
     vol = data.VOL.resample(**params).sum()
     
     d = pd.concat([open, high, low, close, vol], axis=1)
+    d.name = data.name
     if dropna:
         d.dropna(inplace=True)
         return d
