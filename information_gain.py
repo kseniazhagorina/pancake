@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 '''
-https://towardsdatascience.com/four-ways-to-quantify-synchrony-between-time-series-data-b99136c4a9c9
 https://habr.com/ru/post/351610/
+https://habr.com/ru/company/ods/blog/327242/
 '''
 
 import finam.loader as fnm
@@ -15,7 +15,29 @@ import numpy as np
 import os
 import csv
 from sklearn.feature_selection import mutual_info_classif
-     
+from sklearn.metrics import mean_squared_error as sk_mean_squared_error
+from scipy.optimize import minimize
+import statsmodels.api as sm
+
+        
+
+# https://habr.com/ru/company/ods/blog/327242/
+# level: l[x] = a*s[x] + (1-a)(y[x-1])   
+# trend: t[x] = b*(l[x] - l[x-1]) + (1-b)*t[x-1]
+# y[x] = l[x] + t[x])
+def ewm2(series, alpha, beta):
+    level = [0]*len(series)
+    trend = [0]*len(series)
+    y = [0]*len(series)
+    y[0] = level[0] = series[0]
+    for x in range(1, len(series)):
+        s = y[x] if series.values[x] == np.nan else series.values[x]
+        level[x] = alpha*s + (1 - alpha)*y[x-1]
+        trend[x] = beta*(level[x] - level[x-1]) + (1-beta)*trend[x-1]
+        y[x] = level[x] + trend[x]
+    return pd.Series(y, index=series.index)
+
+
 
 def add_factors(d):
     change = (d.CLOSE - d.OPEN)/d.OPEN
@@ -30,62 +52,99 @@ def add_factors(d):
     change_1m = (d.CLOSE - open_1m_ago)/open_1m_ago
     change_3m = (d.CLOSE - open_3m_ago)/ open_3m_ago
     
-    avg5 = d.AVG.rolling(window=5).mean()
-    avg10 = d.AVG.rolling(window=10).mean()
-    avg20 = d.AVG.rolling(window=20).mean()
     # экспоненциальное скользящее среднее y^[i] = (1-alpha)*y^[i-1] + alpha*y[i]
     ewm04 = d.AVG.ewm(alpha=0.4).mean()
-    ewm02 = d.AVG.ewm(alpha=0.2).mean()
-    vlt5 = (d.AVG - ewm02).rolling(window=5).std()
-    vlt10 = (d.AVG - ewm02).rolling(window=10).std()
+    
+    
+
+    avgewm02 = d.AVG.ewm(alpha=0.2).mean()
+    openewm02 = d.OPEN.ewm(alpha=0.2).mean()
+    highewm02 = d.HIGH.ewm(alpha=0.2).mean()
+    closeewm02 = d.CLOSE.ewm(alpha=0.2).mean()
+    
+    vlt5 = (d.AVG - avgewm02.shift(1)).rolling(window=5).std()
+    vlt10 = (d.AVG - avgewm02.shift(1)).rolling(window=10).std()
+    vlt5p = ((d.AVG - avgewm02.shift(1))/d.AVG).rolling(window=5).std()
+    vlt10p = ((d.AVG - avgewm02.shift(1))/d.AVG).rolling(window=10).std()
+    
+    openewm2 = ewm2(d.OPEN, 0.2, 0.2)
+    avgewm2 = ewm2(d.AVG, 0.2, 0.2)
+    highewm2 = ewm2(d.HIGH, 0.2, 0.2)
+    lowewm2 = ewm2(d.LOW, 0.2, 0.2)
+    
+    dayofweek = pd.Series([date.dayofweek for date in d.index], index=d.index)
+    day = pd.Series([date.day for date in d.index], index=d.index)
+    month = pd.Series([date.month for date in d.index], index=d.index)
+    
     
     return pd.concat([
         change.rename('CHANGE'),
         change.shift(1).rename('CHANGE-1'),
         change.shift(2).rename('CHANGE-2'),
+        change.rolling(window=5).mean().rename('CHANGE5'),
         growth.rename('GROWTH'),
         growth.shift(1).rename('GROWTH-1'),
         growth.shift(2).rename('GROWTH-2'),
+        growth.rolling(window=5).mean().rename('GROWTH5'),
+        growth.rolling(window=5).max().rename('MAX_GROWTH5'),
+        growth.rolling(window=3).max().rename('MAX_GROWTH3'),
+        growth.rolling(window=5).min().rename('MIN_GROWTH5'),
+        growth.rolling(window=3).min().rename('MIN_GROWTH3'),
         change_1w.rename('CHANGE_1W'),
         change_2w.rename('CHANGE_2W'),
         change_1m.rename('CHANGE_1M'),
         change_3m.rename('CHANGE_3M'),
         
-        #avg5.rename('AVG5'),
-        #avg10.rename('AVG10'),
-        #avg20.rename('AVG20'),
-        #ewm04.rename('EWM04'), 
-        #ewm02.rename('EWM02'),
+        ((d.HIGH - d.LOW)/d.LOW).rename('HIGH_LOW_P'),
+        ((d.HIGH - d.LOW)/d.LOW).rolling(window=5).mean().rename('HIGH_LOW_P5'),
+        
+        ((avgewm02 - d.CLOSE)/d.CLOSE).rename('AVG_EWM02_CLOSE'),
+        ((highewm02 - d.CLOSE)/d.CLOSE).rename('HIGH_EWM02_CLOSE'),
+        ((highewm02 - openewm02)/openewm02).rename('HIGH_EWM02_OPEN_EWM02'),
         
         vlt5.rename('VLT5'),
         vlt10.rename('VLT10'),
+        
         (d.VLT/d.OPEN).rename('VLTP'),
-        (vlt5/d.OPEN).rename('VLT5P'),
-        (vlt10/d.OPEN).rename('VLT10P'),
+        vlt5p.rename('VLT5P'),
+        vlt10p.rename('VLT10P'),
         
         # пересечение границы ценового коридора вверх и вниз
-        (((ewm02 + 2*vlt10) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_2VLT10'),
-        ((d.AVG - (ewm02 - 2*vlt10))/d.AVG).rename('AVG_CROSS_DOWN_2VLT10'),
-        (((ewm02 + 3*vlt10) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_3VLT10'),
-        ((d.AVG - (ewm02 - 3*vlt10))/d.AVG).rename('AVG_CROSS_DOWN_3VLT10'),
-        (((ewm02 + 2*vlt5) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_2VLT5'),
-        ((d.AVG - (ewm02 - 2*vlt5))/d.AVG).rename('AVG_CROSS_DOWN_2VLT5'),
-        (((ewm02 + 3*vlt5) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_3VLT5'),
-        ((d.AVG - (ewm02 - 3*vlt5))/d.AVG).rename('AVG_CROSS_DOWN_3VLT5'),
+        (((avgewm02 + 2*vlt10) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_2VLT10'),
+        ((d.AVG - (avgewm02 - 2*vlt10))/d.AVG).rename('AVG_CROSS_DOWN_2VLT10'),
+        (((avgewm02 + 3*vlt10) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_3VLT10'),
+        ((d.AVG - (avgewm02 - 3*vlt10))/d.AVG).rename('AVG_CROSS_DOWN_3VLT10'),
+        (((avgewm02 + 2*vlt5) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_2VLT5'),
+        ((d.AVG - (avgewm02 - 2*vlt5))/d.AVG).rename('AVG_CROSS_DOWN_2VLT5'),
+        (((avgewm02 + 3*vlt5) - d.AVG)/d.AVG).rename('AVG_CROSS_UP_3VLT5'),
+        ((d.AVG - (avgewm02 - 3*vlt5))/d.AVG).rename('AVG_CROSS_DOWN_3VLT5'),
         
-        (((ewm02 + 2*vlt10) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_2VLT10'),
-        ((d.LOW - (ewm02 - 2*vlt10))/d.LOW).rename('LOW_CROSS_DOWN_2VLT10'),
-        (((ewm02 + 3*vlt10) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_3VLT10'),
-        ((d.LOW- (ewm02 - 3*vlt10))/d.LOW).rename('LOW_CROSS_DOWN_3VLT10'),
-        (((ewm02 + 2*vlt5) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_2VLT5'),
-        ((d.LOW - (ewm02 - 2*vlt5))/d.LOW).rename('LOW_CROSS_DOWN_2VLT5'),
-        (((ewm02 + 3*vlt5) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_3VLT5'),
-        ((d.LOW - (ewm02 - 3*vlt5))/d.LOW).rename('LOW_CROSS_DOWN_3VLT5')
+        (((avgewm02 + 2*vlt10) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_2VLT10'),
+        ((d.LOW - (avgewm02 - 2*vlt10))/d.LOW).rename('LOW_CROSS_DOWN_2VLT10'),
+        (((avgewm02 + 3*vlt10) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_3VLT10'),
+        ((d.LOW- (avgewm02 - 3*vlt10))/d.LOW).rename('LOW_CROSS_DOWN_3VLT10'),
+        (((avgewm02 + 2*vlt5) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_2VLT5'),
+        ((d.LOW - (avgewm02 - 2*vlt5))/d.LOW).rename('LOW_CROSS_DOWN_2VLT5'),
+        (((avgewm02 + 3*vlt5) - d.HIGH)/d.HIGH).rename('HIGH_CROSS_UP_3VLT5'),
+        ((d.LOW - (avgewm02 - 3*vlt5))/d.LOW).rename('LOW_CROSS_DOWN_3VLT5'),
         
+        openewm02.rename('OPEN_EWM02'),
+        openewm2.rename('OPEN_EWM2'),
+        d.OPEN.rolling(window=5).mean().rename('OPEN5'),
         
+        ((openewm2 - openewm02)/openewm02).rename('OPEN_EWM2_EWM02'),
+        ((avgewm2 - avgewm02)/avgewm02).rename('AVG_EWM2_EWM02'),
+        ((highewm2 - highewm02)/highewm02).rename('HIGH_EWM2_EWM02'),
+        dayofweek.rename('DAYOFWEEK'),
+        day.rename('day'),
+        month.rename('month')
         ],
         axis=1
     )
+    
+def mean_squared_error(y, y_pred):
+    df = pd.concat([y.rename('Y'), y_pred.rename('Y_PRED')], axis=1).dropna()
+    return sk_mean_squared_error(df.Y, df.Y_PRED)
 
 
 if __name__ == '__main__':
@@ -98,47 +157,89 @@ if __name__ == '__main__':
     target = a.GROWTH.apply(lambda x: int(x > 0.008)).shift(-1) # цель - рост на 0.8% в день    
     a1 = pd.concat([pd.concat([d, a], axis=1).fillna(100500), target.rename('TARGET')], axis=1).dropna()
     info = mutual_info_classif(a1, a1.TARGET.values)
-    for col, val in zip(a1.columns, info):
-        print(col, val)
+    for col, val in sorted(zip(a1.columns, info), key=lambda x: x[1], reverse=True):
+        print('{0}\t{1:.4f}'.format(col, val))
+        
+    '''
+    OPEN    0.0072
+    HIGH    0.0095
+    LOW     0.0029
+    CLOSE   0.0008
+    VOL     0.0190
+    AVG     0.0022
+    VLT     0.0254
+    CHANGE  0.0315
+    CHANGE-1        0.0352
+    CHANGE-2        0.0046
+    CHANGE5 0.0037
+    GROWTH  0.0232
+    GROWTH-1        0.0138
+    GROWTH-2        0.0118
+    GROWTH5 0.0272
+    CHANGE_1W       0.0219
+    CHANGE_2W       0.0000
+    CHANGE_1M       0.0218
+    CHANGE_3M       0.0144
+    AVG_EWM02_CLOSE 0.0138
+    HIGH_EWM02_CLOSE        0.0112
+    HIGH_EWM02_OPEN_EWM02   0.0199
+    VLT5    0.0229
+    VLT10   0.0236
+    VLTP    0.0363
+    VLT5P   0.0167
+    VLT10P  0.0163
+    AVG_CROSS_UP_2VLT10     0.0102
+    AVG_CROSS_DOWN_2VLT10   0.0060
+    AVG_CROSS_UP_3VLT10     0.0313
+    AVG_CROSS_DOWN_3VLT10   0.0232
+    AVG_CROSS_UP_2VLT5      0.0000
+    AVG_CROSS_DOWN_2VLT5    0.0241
+    AVG_CROSS_UP_3VLT5      0.0205
+    AVG_CROSS_DOWN_3VLT5    0.0202
+    HIGH_CROSS_UP_2VLT10    0.0219
+    LOW_CROSS_DOWN_2VLT10   0.0275
+    HIGH_CROSS_UP_3VLT10    0.0291
+    LOW_CROSS_DOWN_3VLT10   0.0130
+    HIGH_CROSS_UP_2VLT5     0.0166
+    LOW_CROSS_DOWN_2VLT5    0.0255
+    HIGH_CROSS_UP_3VLT5     0.0000
+    LOW_CROSS_DOWN_3VLT5    0.0231
+    OPEN_EWM02      0.0201
+    OPEN_EWM2       0.0129
+    OPEN_EWM2_EWM02 0.0000
+    AVG_EWM2_EWM02  0.0229
+    HIGH_EWM2_EWM02 0.0167
+    TARGET  0.6912
+    '''
+        
+    
+    v = d.AVG[0:-500]
+    error = lambda x: mean_squared_error(v, ewm2(v, *x).shift(1)) # https://en.wikipedia.org/wiki/Mean_absolute_percentage_error
+    opt = minimize(error, x0=[0.2, 0.2], method="TNC", bounds = ((0, 1), (0, 1)))
+    v = d.AVG[-500:]
+    print('ewm2: a=0.2 b=0.2: {}'.format(error([0.2, 0.2])))
+    print('ewm2: a={0:.3f} b={1:.3f}: {2}'.format(opt.x[0], opt.x[1], error(opt.x)))
+    print('ewm: a=0.2: {}'.format(mean_squared_error(v, v.ewm(alpha=0.2).mean().shift(1))))
+    # a=0.2 b=0.2: 5.625125988932227
+    # a=1.000 b=0.000: 2.829266273661487
+    # значит просто модель плохо предсказыает, так что оптимизация свелась просто к предсказанию "завтра будет как вчера"
+    
+    '''
+    https://ru.wikipedia.org/wiki/Стационарность
+    Стационарность или постоянство — свойство процесса не менять свои характеристики со временем.
+    Стационарный процесс — это стохастический процесс, у которого не изменяется распределение вероятности при смещении во времени.
+    Следовательно, такие параметры, как среднее значение и дисперсия.
+    '''
+    print('Dicket-Fuller test on stationarity: p-value < 0.01 mean that series is stationary') 
+    print('OPEN: p-value: {0:.3f}'.format(sm.tsa.stattools.adfuller(d.OPEN)[1]))
+    print('CHANGE: p-value: {0:.3f}'.format(sm.tsa.stattools.adfuller(a.CHANGE)[1]))
+    print('GROWTH: p-value: {0:.3f}'.format(sm.tsa.stattools.adfuller(a.GROWTH)[1]))
+    print('OPEN[x] - OPEN[x-1]: p-value: {0:.3f}'.format(sm.tsa.stattools.adfuller((d.OPEN - d.OPEN.shift(1)).dropna())[1]))
+    
 
-'''        
-OPEN 0.004359224837064524
-HIGH 0.008169738701871543
-LOW 0.0
-CLOSE 0.0001832821046225952
-VOL 0.019028172723636105
-AVG 0.002226366638127697
-VLT 0.025402566866148613
-CHANGE 0.0315656718156625
-CHANGE-1 0.03466452730194347
-CHANGE-2 0.004619166195846791
-GROWTH 0.02388404070372907
-GROWTH-1 0.01650179388913875
-GROWTH-2 0.009602215441460782
-CHANGE_1W 0.020300979235526206
-CHANGE_2W 0.007128797754013538
-CHANGE_1M 0.023095417982881727
-CHANGE_3M 0.014086878261797331
-VLT5 0.024129733405265696
-VLT10 0.020954120503821727
-VLTP 0.03620861217403637
-VLT5P 0.018856128228981195
-VLT10P 0.0029923080686760084
-AVG_CROSS_UP_2VLT10 0.013612526351780785
-AVG_CROSS_DOWN_2VLT10 0.016757426482836735
-AVG_CROSS_UP_3VLT10 0.015572206424085966
-AVG_CROSS_DOWN_3VLT10 0.017576537391149838
-AVG_CROSS_UP_2VLT5 0.016357391587655146
-AVG_CROSS_DOWN_2VLT5 0.014177588942060337
-AVG_CROSS_UP_3VLT5 0.002926770120636135
-AVG_CROSS_DOWN_3VLT5 0.01850323869840942
-HIGH_CROSS_UP_2VLT10 0.023636200178887234
-LOW_CROSS_DOWN_2VLT10 0.015431279997867975
-HIGH_CROSS_UP_3VLT10 0.019235195950511708
-LOW_CROSS_DOWN_3VLT10 0.014728620802308745
-HIGH_CROSS_UP_2VLT5 0.008663719811536241
-LOW_CROSS_DOWN_2VLT5 0.02084590830997257
-HIGH_CROSS_UP_3VLT5 0.023828374644657924
-LOW_CROSS_DOWN_3VLT5 0.009710234182474187
-TARGET 0.6916426399331562
-'''
+    d.OPEN.plot(color='black')
+    d.OPEN.shift(1).plot(color='blue') # предсказание завтра будет как вчера
+    a.OPEN5.shift(1).plot(color='red') # среднее по последним 5 дням
+    a.OPEN_EWM2.shift(1).plot(color='yellow') # экспоненциальное срденее с a=0.2 b=0.2
+    plt.show()
+

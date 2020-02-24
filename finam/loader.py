@@ -21,8 +21,13 @@ def resample(data, period, dropna=True):
     high = data.HIGH.resample(**params).max()
     low = data.LOW.resample(**params).min()
     vol = data.VOL.resample(**params).sum()
+    avg = data.OPEN.resample(**params).mean()
+    avg.name = 'AVG'
+    vlt = data.OPEN.resample(**params).std() # волатильность - стандатное отклонение цены от срдней за сутки
+    vlt.name = 'VLT'
+
     
-    d = pd.concat([open, high, low, close, vol], axis=1)
+    d = pd.concat([open, high, low, close, vol, avg, vlt], axis=1)
     d.name = data.name
     if dropna:
         d.dropna(inplace=True)
@@ -33,4 +38,7 @@ def resample(data, period, dropna=True):
         d.OPEN.fillna(d.CLOSE, inplace=True)
         d.HIGH.fillna(d.CLOSE, inplace=True)
         d.LOW.fillna(d.CLOSE, inplace=True)
+        d.AVG.fillna(d.CLOSE, inplace=True)
+        d.VLT.fillna(0, inplace=True)
+        
         return d
