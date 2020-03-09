@@ -42,6 +42,11 @@ def load_series(filenames, addf=False):
         series += [d[c].rename(d.name+'.'+d[c].name) for c in d.columns]    
     return series
 
+def load_extra(filename, series_name):
+    g = pd.read_csv(filename, names=['DATE', 'VALUE'], skiprows=1, index_col=['DATE'], infer_datetime_format=True, date_parser=lambda dt: pd.datetime.strptime(dt, '%Y-%m-%d')).VALUE
+    g = (g + (g/np.inf)).fillna(0)
+    return g.rename(series_name)
+    
 def trade(predict, growth, change):
     x = 1.0
     for p, g, c in zip(predict, growth, change):
@@ -53,9 +58,9 @@ def trade(predict, growth, change):
 if __name__ == '__main__':
     
     y = load_target('1_GAZP.csv')
-    g = pd.read_csv('gazp_best.csv', names=['DATE', 'VALUE'], skiprows=1, index_col=['DATE'], infer_datetime_format=True, date_parser=lambda dt: pd.datetime.strptime(dt, '%Y-%m-%d')).VALUE
-    g1 = pd.read_csv('gazp_other_best.csv', names=['DATE', 'OTHER_VALUE'], skiprows=1, index_col=['DATE'], infer_datetime_format=True, date_parser=lambda dt: pd.datetime.strptime(dt, '%Y-%m-%d')).OTHER_VALUE
-       
+    g = load_extra('gazp_best.csv', 'VALUE')
+    g1 = load_extra('gazp_other_best.csv','OTHER_VALUE')
+    
     s = load_series(['1_GAZP.csv'], False)
     x = pd.concat( [item for item in s if item.name in ['GAZP.VLT', 'GAZP.VOLR']] + [g] + [g1], axis=1)
     _, x = y.TARGET.align(x, join='left', fill_value=0)
@@ -75,7 +80,7 @@ if __name__ == '__main__':
        
     
     clf = DecisionTreeClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5)
-    clf = RandomForestClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5, n_estimators=150)
+    clf = RandomForestClassifier(random_state=0, min_samples_split=50, max_depth=13, min_samples_leaf=5, n_estimators=150)
     clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
     print('\nfeature importances:')
     for c, v in zip(x_train.columns, clf.feature_importances_):

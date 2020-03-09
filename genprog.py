@@ -250,7 +250,7 @@ def print_node(node, prefix='', intent=''):
 
     
 class GenProg:
-    def __init__(self, operations, series, target, n, p_series=None):    
+    def __init__(self, operations, series, target, n, p_series=None, max_node_size=None):    
         self.__operations = operations
         self.__series = [LeafNode(ValueType.SERIES, s) for s in series]
         self.__target = target
@@ -259,13 +259,24 @@ class GenProg:
         self.epoch = 0
         self.__last_epoch_inc_score = 0
         self.__p_series = p_series or [1.0]*len(series)
+        self.__max_node_size = max_node_size
     
     @property
     def best(self):
         return self.__items[0][0]
     
     def start(self):
-        self.__items = self.eval_all([self.generate() for i in range(self.__count)])
+        hash = set()
+        self.__items = []
+        for i in range(self.__count*3):
+            item = self.generate()
+            s = print_node(item)
+            if s not in hash:
+               value = self.eval(item)
+               if value != -np.inf:
+                   self.__items.append((item, value))
+                   if len(self.__items) == self.__count:
+                       break
         
     def print_state(self):
         print('epoch: {}'.format(self.epoch))
@@ -416,12 +427,17 @@ class GenProg:
         return best, bestv
         
     def eval(self, node):
-        if node.value is None:
-            return -np.inf
+        
         # бесполезное прибавление числа и умножение на число в корне дерева ничего не меняет
         if isinstance(node, FuncNode) and node.func.name in [NSUM.name, NMUL.name, SABS.name]:
             return -np.inf
-        
+            
+        if self.__max_node_size is not None and node.size > self.__max_node_size:
+            return -np.inf
+
+        if node.value is None:
+            return -np.inf    
+       
         v = node.value
         v = v + v/np.inf  # v/np.inf = 0 или inf/inf = NaN        
         v, t = v.align(self.__target, join='right', fill_value = 0)
@@ -435,22 +451,15 @@ class GenProg:
             sys.stderr.write('{}'.format(e))
             return -np.inf      
 
-    def eval_all(self, items):
-        r = [(item, self.eval(item)) for item in items]
-        return list(sorted(r, key=lambda x: x[1], reverse=True))
-                 
-    def next_epoch(self):
-        '''3 лучших переходят в следующую эпоху как есть'''
-        
-        prev_best_score = self.__items[0][1]
-        next = [x for x, v in self.__items[0:3]]
-        nexthash = set(print_node(x) for x in next)
-        
-        p = [v for x, v in self.__items]
-        m = min([v for v in p if v != -np.inf])
-        p = [max(v - m, 0) for v in p]
-        p = [v*v for v in p]
 
+    def next_epoch(self):
+
+        prev_best_score = self.__items[0][1]
+        next = self.__items[0:3]   # 3 лучших переходят в следующую эпоху как есть
+        nexthash = set(print_node(x[0]) for x in next)
+        
+        p = np.array([v for x, v in self.__items])
+        p = (p - p.min())**2
         
         while len(next) < 3*self.__count:
             rnd = np.random.random()
@@ -463,15 +472,17 @@ class GenProg:
             if new is not None and new.value is not None:
                 hash = print_node(new)
                 if hash not in nexthash:
-                    next.append(new)
-                    nexthash.add(hash)
+                    value = self.eval(new)
+                    if value != -np.inf:
+                        next.append((new, value))
+                        nexthash.add(hash)
         
         self.epoch += 1
         # 25% результата займут лучшие 75% - просто случайные
-        evaluated = self.eval_all(next)
+        next = list(sorted(next, key=lambda x: x[1], reverse=True))
         n_best = self.__count//3
-        top = evaluated[0:n_best]
-        rest = evaluated[n_best:]
+        top = next[0:n_best]
+        rest = next[n_best:]
         np.random.shuffle(rest)     
         self.__items = top + rest[0:self.__count-n_best]
  
@@ -506,7 +517,7 @@ def run(start, end, target_filename, series_filenames, n, max_epoch, save_as):
     series = load_series(series_filenames)
     p_series = [P_SERIES[s.name] if s.name in P_SERIES else 0.02 for s in series]
     
-    g = GenProg(ALL_OPERATIONS, series, target, n, p_series=p_series)
+    g = GenProg(ALL_OPERATIONS, series, target, n, p_series=p_series, max_node_size=200)
     g.start()
     g.print_state()
     while max_epoch is None or g.epoch < max_epoch:
