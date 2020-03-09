@@ -21,11 +21,13 @@ def resample(data, period, dropna=True):
     high = data.HIGH.resample(**params).max()
     low = data.LOW.resample(**params).min()
     vol = data.VOL.resample(**params).sum()
-    avg = data.OPEN.resample(**params).mean()
+    # data.OPEN.filter(data.VOL > 0).resample(**params).mean() работает очень медленно
+    vol_filter = lambda s: s + ((data.VOL-data.VOL)/data.VOL) # 0 или NaN
+    avg = vol_filter(data.OPEN).resample(**params).mean()
     avg.name = 'AVG'
     volr = (data.VOL * data.OPEN).resample(**params).sum()  # объем в рублях
     volr.name = 'VOLR'
-    vlt = data.OPEN.resample(**params).std() # волатильность - стандатное отклонение цены от срдней за сутки
+    vlt = vol_filter(data.OPEN).resample(**params).std() # волатильность - стандатное отклонение цены от срдней за сутки (тогда когда были продажи)
     vlt.name = 'VLT'
 
     

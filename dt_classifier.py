@@ -13,6 +13,7 @@ import os
 import csv
 import information_gain as ig
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import mutual_info_classif
         
 def load_target(filename):
@@ -37,25 +38,23 @@ def load_series(filenames, addf=False):
 if __name__ == '__main__':
     
     y = load_target('1_GAZP.csv')
-    g = pd.read_csv('gazp_best.csv', names=['DATE', 'VALUE'], index_col=['DATE'], infer_datetime_format=True)
+    g = pd.read_csv('gazp_best.csv', names=['DATE', 'VALUE'], skiprows=1, index_col=['DATE'], infer_datetime_format=True, date_parser=lambda dt: pd.datetime.strptime(dt, '%Y-%m-%d')).VALUE
+    g1 = pd.read_csv('gazp_other_best.csv', names=['DATE', 'OTHER_VALUE'], skiprows=1, index_col=['DATE'], infer_datetime_format=True, date_parser=lambda dt: pd.datetime.strptime(dt, '%Y-%m-%d')).OTHER_VALUE
+       
     s = load_series(['1_GAZP.csv'], False)
-    x = pd.concat( s + [g.VALUE], axis=1).fillna(0)
-    
+    x = pd.concat( [item for item in s if item.name in ['GAZP.VLT', 'GAZP.VOLR']] + [g], axis=1)
+    y, x = y.align(x, join='left', fill_value=0)
+   
     
     y_train = y['2009-01-01':'2018-12-31']
     x_train = x['2009-01-01':'2018-12-31']
-    y_train, x_train = y_train.align(x_train, join='left')
-    print('\nmutual_info_classif:')
-    mi = mutual_info_classif(x_train, y_train, n_neighbors=5, random_state=4838474)
-    for c, v in zip(x_train.columns, mi):
-        print('{0}: {1:.4f}'.format(c, v))
-    
     
     y_test = y['2019-01-01':]
     x_test = x['2019-01-01':]
-    y_test, x_test = y_test.align(x_test, join='left')
+    print(y_test.mean())
     
-    clf = DecisionTreeClassifier(random_state=0, min_samples_split=50, max_depth=15)
+    clf = DecisionTreeClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5)
+    clf = RandomForestClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5, n_estimators=100)
     clf.fit(x_train, y_train)
     print('\nfeature importances:')
     for c, v in zip(x_train.columns, clf.feature_importances_):

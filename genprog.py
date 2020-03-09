@@ -92,8 +92,8 @@ def series_op(name, calc):
 SSUM = series_op('sum', lambda x1, x2: x1 + x2)
 SSUB = series_op('sub', lambda x1, x2: x1 - x2)
 SMUL = series_op('mul', lambda x1, x2: x1 * x2)
-SDIV = series_op('div', lambda x1, x2: x1 / x2)
-SPCNT = series_op('pct', lambda x1, x2: (x1 - x2)/x1)
+SDIV = series_op('div', lambda x1, x2: x1 / x2) # x2/x2 = 1 или NaN чтобы не возникало деления на 0
+SPCNT = series_op('pct', lambda x1, x2: (x1 - x2) / x1)
 SMAX = series_op('max', lambda x1, x2: (x1.gt(x2)).astype(int)*x1 + (x1.lt(x2)).astype(int)*x2)
 SMIN = series_op('min', lambda x1, x2: (x1.gt(x2)).astype(int)*x2 + (x1.lt(x2)).astype(int)*x1)
 SLT = series_op('lt', lambda x1, x2: (x1.lt(x2)).astype(int))
@@ -115,12 +115,14 @@ SLOG = series_unary_op('log', lambda x: x.apply(lambda v: math.log(v) if v > 0 e
 CUMSUM = series_unary_op('cumsum', lambda x: x.cumsum())
 CUMMIN = series_unary_op('cummin', lambda x: x.cummax())
 CUMMAX = series_unary_op('cummax', lambda x: x.cummin())
+FFILLNA = series_unary_op('ffill', lambda x: x.fillna(method='ffill'))
+FILLNA0 = series_unary_op('fill0', lambda x: x.fillna(value=0))
 
 
 def series_num_op(name, calc):
     return  Func('sc.{}'.format(name),
             arguments=[Argument('x', ValueType.SERIES),
-                       Argument('c', ValueType.FLOAT)],
+                       Argument('c', ValueType.INT, interval=pd.Interval(left=-5, right=5, closed='both'))],
             result_type=ValueType.SERIES,
             calc = calc)
 
@@ -145,7 +147,7 @@ EWM2 = Func('sf.ewm2',
 ALL_OPERATIONS = [ROLLING_MEAN, ROLLING_MIN, ROLLING_MAX, ROLLING_STD, ROLLING_VAR, ROLLING_SUM, ROLLING_CORR,
                   SSUM, SSUB, SMUL, SDIV, SPCNT, SMAX, SMIN, SLT, SAND, SOR, SXOR,
                   SNOT, SABS, SQRT, SQR, SLOG, CUMMIN, CUMMAX, NSUM, NMUL, NLT, NGT, # CUMSUM
-                  EWM, EWM2, SHIFT, CHANGE]
+                  EWM, EWM2, SHIFT, CHANGE, FFILLNA, FILLNA0]
 
 
                            
@@ -153,12 +155,15 @@ class Node:
     def __init__(self):
         self.size = 0
         self.height = 0
-        self.value = None
         self.value_type = ValueType.NONE
         
     @property
     def children(self):
         return []
+    
+    @property
+    def value(self):
+        return None
         
     def get_child(self, path):
         if len(path) == 0:
@@ -179,7 +184,13 @@ class FuncNode(Node):
         self.size = sum(c.size for c in self.__children) + 1
         self.height = max(c.height for c in self.__children) + 1
         self.value_type = self.func.result_type
-    
+        self.__value = None
+        
+    @property
+    def value(self):
+        if self.__value is not None:
+            return self.__value
+
         values = [c.value for c in self.__children]
         all_valid = True
         for i, c in enumerate(self.__children):
@@ -191,13 +202,14 @@ class FuncNode(Node):
             if argument.interval and c.value is not None and c.value not in argument.interval:
                 all_valid = False
                 
-        self.value = None
         if all_valid:
             try:
-                self.value = self.func.calc(*values)
+                self.__value = self.func.calc(*values)
             except Exception as e:
                 sys.stderr.write('{}\n{}\n'.format(e, print_node(self)))
-
+        return self.__value
+        
+        
     @property
     def children(self):
         return self.__children
@@ -205,10 +217,13 @@ class FuncNode(Node):
 class LeafNode(Node):
     def __init__(self, value_type, value):
         self.value_type = value_type
-        self.value = value
+        self.__value = value
         self.size = 1
         self.height = 1
 
+    @property
+    def value(self):
+        return self.__value
 
 def replace(node, path, replacement):
     if len(path) == 0:
@@ -238,11 +253,11 @@ class GenProg:
     def __init__(self, operations, series, target, n):    
         self.__operations = operations
         self.__series = [LeafNode(ValueType.SERIES, s) for s in series]
-        self.__multi = [s for s in self.__series if '.' in s.value.name]
         self.__target = target
         self.__count = n
         self.__items = []
         self.epoch = 0
+        self.__last_epoch_inc_score = 0
     
     @property
     def best(self):
@@ -253,39 +268,34 @@ class GenProg:
         
     def print_state(self):
         print('epoch: {}'.format(self.epoch))
-        best = self.__items[0]
-        
-        print('    avg: {}'.format(np.mean([x[1] for x in self.__items])))
-        print('    avg size: {}'.format(np.mean([x[0].size for x in self.__items])))
-        print('    best: {} (height:{} size:{})'.format(best[1], best[0].height, best[0].size))
-        print(print_node(best[0], intent='    '))
-        if self.epoch % 10 == 0:
-            print('    top10:')
-            for i,item in enumerate(self.__items[1:9]):
-                print(print_node(item[0], intent='    {}---'.format(i)))
-                print('\n')
+        best, score = self.__items[0]
+        if self.__last_epoch_inc_score == self.epoch:
+            print(print_node(best, intent='    '))
         print('\n')
-        
-    def find_similar_operation(self, func):
-        return [f for f in self.__operations if f.signature == func.signature]
-       
-        
-    def get_random_subtree_path(self, node):
+        print('epoch: {}'.format(self.epoch))
+        print('    avg: {}'.format(np.mean([x[1] for x in self.__items if x[1] != -np.inf])))
+        print('    avg size: {}'.format(np.mean([x[0].size for x in self.__items])))
+        print('    last inc score at: {}'.format(self.__last_epoch_inc_score))
+        print('    best: {} (height:{} size:{})'.format(score, best.height, best.size))
+        print('\n')
+
+           
+    def get_random_subtree_path(self, node, max_len=None):
         '''return: path to subtree, [] mean self'''
         rnd = np.random.random()
         p_i = 0
-        for i in range(len(node.children)):
-            p_i += float(node.children[i].size)/node.size
-            if rnd < p_i:
-                return [i] + self.get_random_subtree_path(node.children[i])
+        if max_len is None or max_len > 0:
+            for i in range(len(node.children)):
+                p_i += float(node.children[i].size)/node.size
+                if rnd < p_i:
+                    return [i] + self.get_random_subtree_path(node.children[i], max_len-1 if max_len is not None else None)
         return []
         
     def cross(self, a, b):
         '''случайное поддерево в a заменяется на случайное поддерево в b'''
-
-        patha = self.get_random_subtree_path(a)
-        node_a = a.get_child(patha)
-        for i in range(100):
+        for _ in range(100):
+            patha = self.get_random_subtree_path(a)
+            node_a = a.get_child(patha)
             pathb = self.get_random_subtree_path(b)
             node_b = b.get_child(pathb)
             if node_a.value_type == node_b.value_type:
@@ -293,7 +303,7 @@ class GenProg:
         return None
 
     def mutate_node_on_similar_func(self, node):
-        similar = self.find_similar_operation(node.func)
+        similar = [f for f in self.__operations if f.signature == node.func.signature and f.name != node.func.name]
         if similar:
             new_node = FuncNode(random_choice(similar), node.children)
             return new_node
@@ -302,33 +312,27 @@ class GenProg:
     def mutate_node_on_child(self, node):
         path = self.get_random_subtree_path(node)
         if path:
-            child = node.get_child(path)
+            child = node.get_child(path, max_len=2)
             if child.value_type == node.value_type:
-                return child   
+                return child
         return None
         
-    def mutate_node_on_random_node(self, node):
+    def mutate_node_on_extra_node(self, node):
         if node.value_type == ValueType.SERIES:
-            return self.generate()
+            new = self.generate(h=2)
+            children = [i for i, a in enumerate(new.func.arguments) if a.value_type == ValueType.SERIES]
+            if children:
+                return replace(new, [i], node)
         return None
         
     def mutate_node_on_leaf_node(self, node):
         if node.value_type == ValueType.SERIES:
             return random_choice(self.__series)
         return None
+        
     
     def mutate_leaf(self, node, argument):
         if node.value_type == ValueType.SERIES:
-            if '.' in node.value.name:
-                prefix, suffix = node.value.name.split('.')[0:2]
-                same_prefix = [s for s in self.__multi if s.value.name != node.value.name and s.value.name.split('.')[0] == prefix]
-                same_suffix = [s for s in self.__multi if s.value.name != node.value.name and s.value.name.split('.')[1] == suffix]
-                rnd = np.random.random()
-                if len(same_prefix) > 0 and rnd < 0.3:
-                    return random_choice(same_prefix)
-                if len(same_suffix) > 0 and rnd > 0.7:
-                    return random_choice(same_suffix)
-             
             return random_choice(self.__series)
     
         if node.value_type == ValueType.INT or node.value_type == ValueType.FLOAT:
@@ -365,57 +369,70 @@ class GenProg:
                     
                     value = np.random.random()*(right - left) + left
                     return LeafNode(argument.value_type, value)
-            value = np.random.normal() * 1000000
+            value = np.random.normal() * 100000
             if argument.value_type == ValueType.INT:
                 value = round(value, 0)
-            return LeafNode(argument.value_type, value)                
+            return LeafNode(argument.value_type, value)
                                 
              
     def mutate(self, a):
         patha = self.get_random_subtree_path(a)
         node = a.get_child(patha)
-        new_node = None
-        
-        
-        rnd = np.random.random()
-        if isinstance(node, FuncNode):
-            new_node = (self.mutate_node_on_similar_func(node) if rnd < 0.6 else
-                    self.mutate_node_on_child(node) if rnd < 0.8 else
-                    self.mutate_node_on_random_node(node) if rnd < 0.95 else                    
-                    self.mutate_node_on_leaf_node(node))
-            
-        elif isinstance(node, LeafNode):
-            argument = a.get_argument(patha)
-            new_node = self.mutate_leaf(node, argument) if rnd < 0.95 else self.random_leaf(argument)
-                
-        if new_node and node.value_type == new_node.value_type:
-            return replace(a, patha, new_node) 
+        for _ in range(100):
+            new_node = None
+            rnd = np.random.random()
+            if isinstance(node, FuncNode):
+                new_node = (self.mutate_node_on_similar_func(node) if rnd < 0.33 else
+                            self.mutate_node_on_child(node) if rnd < 0.33 else
+                            self.mutate_node_on_extra_node(node) if rnd < 0.33 else
+                            self.mutate_node_on_leaf_node(node))
+            elif isinstance(node, LeafNode):
+                argument = a.get_argument(patha)
+                new_node = (self.mutate_leaf(node, argument) if rnd < 0.66 else
+                            self.mutate_node_on_extra_node(node) if rnd < 0.33 else
+                            self.random_leaf(argument))
+                    
+            if new_node and node.value_type == new_node.value_type:
+                return replace(a, patha, new_node) 
         return None
 
         
-    def generate(self):
+    def generate(self, h=3):
         func = random_choice(self.__operations)
-        values = [self.random_leaf(a) for a in func.arguments]
-        values = [self.generate() if a.value_type == ValueType.SERIES and np.random.random() < 0.5 else self.random_leaf(a)
-                  for a in func.arguments]
+        values = [self.generate(h-1) if a.value_type == ValueType.SERIES and h > 2 else self.random_leaf(a) for a in func.arguments]
         return FuncNode(func, values)
+        
+    def select_best_child(self, node):
+        if node.value is None or node.value_type != ValueType.SERIES:
+            return None, -np.inf
+        bestv = self.eval(node)
+        best = node
+        for c in node.children:
+            bc, bv = self.select_best_child(c)
+            if bv > bestv:
+                bestv = bv
+                best = bc
+        return best, bestv
         
     def eval(self, node):
         if node.value is None:
-            return 0
+            return -np.inf
         # бесполезное прибавление числа и умножение на число в корне дерева ничего не меняет
         if isinstance(node, FuncNode) and node.func.name in [NSUM.name, NMUL.name, SABS.name]:
-            return 0 
-            
-        v, t = node.value.align(self.__target, join='right', fill_value = 0) 
+            return -np.inf
+        
+        v = node.value
+        v = v + v/np.inf  # v/np.inf = 0 или inf/inf = NaN        
+        v, t = node.value.align(self.__target, join='right', fill_value = 0)
+               
         try:
             v = v.values.reshape(-1, 1)
             info = mutual_info_classif(v, self.__target, n_neighbors=5, random_state=4838474)[0]
-            # return info - 0.0002 * node.height - 0.000002 * node.size
+            # return info - 0.0002 * node.height # - 0.000002 * node.size
             return info - 0.00001 * node.size
         except Exception as e:
             sys.stderr.write('{}'.format(e))
-            return 0            
+            return -np.inf      
 
     def eval_all(self, items):
         r = [(item, self.eval(item)) for item in items]
@@ -424,35 +441,47 @@ class GenProg:
     def next_epoch(self):
         '''3 лучших переходят в следующую эпоху как есть'''
         
+        prev_best_score = self.__items[0][1]
         next = [x for x, v in self.__items[0:3]]
         nexthash = set(print_node(x) for x in next)
         
-        
         p = [v for x, v in self.__items]
-        m = min(p)
-        p = [v - m for v in p]
+        m = min([v for v in p if v != -np.inf])
+        p = [max(v - m, 0) for v in p]
         p = [v*v for v in p]
 
         
         while len(next) < 3*self.__count:
             rnd = np.random.random()
             x, _ = random_choice(self.__items, p=p)
-            new = None
-            # 2/3 это дети успешных
-            if len(next) < 2*self.__count:
-                y, _ = random_choice(self.__items)
-                new = self.cross(x, y) if rnd < 0.5 else self.cross(y, x)           
-            # 1/3 это мутации успешных
-            else:
-                new = self.mutate(x)
+            y, _ = random_choice(self.__items)
+            new = self.cross(x, y) if rnd < 0.5 else self.cross(y, x)
+            for i in range(random_choice([1,2,3], p=[0.5, 0.25, 0.1])):
+                if new:
+                    new = self.mutate(new)
             if new is not None and new.value is not None:
                 hash = print_node(new)
                 if hash not in nexthash:
                     next.append(new)
                     nexthash.add(hash)
-                
-        self.__items = self.eval_all(next)[0:self.__count]
+        
         self.epoch += 1
+        # 25% результата займут лучшие 75% - просто случайные
+        evaluated = self.eval_all(next)
+        n_best = self.__count//4
+        top = evaluated[0:n_best]
+        rest = evaluated[n_best:]
+        np.random.shuffle(rest)     
+        self.__items = top + rest[0:self.__count-n_best]
+ 
+        if self.__items[0][1] != prev_best_score:
+            self.__last_epoch_inc_score = self.epoch
+        elif self.epoch - self.__last_epoch_inc_score > 10:
+            c, v = self.select_best_child(self.__items[0][0])        
+            if v > prev_best_score:
+                print('We crop best to its best child')
+                self.__items.push((c, v))
+                self.__last_epoch_inc_score = self.epoch
         
 def load_target(filename):
     d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
@@ -480,6 +509,75 @@ def run(start, end, target_filename, series_filenames, n, max_epoch, save_as):
         g.next_epoch()
         g.print_state()
         g.best.value.to_csv(save_as)
+        
+def calcstat(start, end, target_filename, series_filenames):
+    target = load_target(target_filename)[start:end]
+    series = load_series(series_filenames)
+    g = GenProg(ALL_OPERATIONS, series, target, 100)
+    
+    from collections import defaultdict
+    individual = defaultdict(list)
+    mutual = defaultdict(list)
+    
+    def get_child_series(node):
+        if isinstance(node, LeafNode) and node.value_type == ValueType.SERIES:
+            return [node.value.name]
+        result = []
+        for c in node.children:
+            result += get_child_series(c)
+        return result
+    
+    uniq = set()    
+        
+    for i in range(10000):
+        if i%100 == 0:
+            print(i)
+        node = g.generate(h=3)
+        s = print_node(node)
+        if s in uniq:
+            continue
+        uniq.add(s)
+        children = get_child_series(node)
+        uniq_children = set(children)
+        v = g.eval(node)
+        if v == -np.inf:
+            print(s)
+            continue
+        for c in uniq_children:
+            individual[c].append(v)
+            for c1 in uniq_children:
+                if c != c1 or children.count(c) > 1:
+                    mutual[(c,c1)].append(v)
+                    
+    individual_mean = list(sorted([(s, np.mean(v)) for s, v in individual.items()], key=lambda x: x[1], reverse=True))
+    individual_top10 = list(
+        sorted([
+           (s, np.mean(list(sorted(v, reverse=True))[0:10]))
+           for s, v in individual.items()
+        ], key=lambda x: x[1], reverse=True))
+   
+    print('individual mean:')
+    for s, v in individual_mean:
+        print('{0:.4f} {1}'.format(v, s))
+    print('individual top10 mean:')
+    for s, v in individual_top10:
+        print('{0:.4f} {1}'.format(v, s))
+
+    mutual_mean = list(sorted([(s, np.mean(v)) for s, v in mutual.items()], key=lambda x: x[1], reverse=True))
+    mutual_top10 = list(
+        sorted([
+           (s, np.mean(list(sorted(v, reverse=True))[0:10]))
+           for s, v in mutual.items()
+        ], key=lambda x: x[1], reverse=True))
+
+    print('mutual mean:')
+    for s, v in mutual_mean[0:20]:
+        print('{0:.4f} {1}'.format(v, s))
+    print('mutual top10 mean:')
+    for s, v in mutual_top10[0:20]:
+        print('{0:.4f} {1}'.format(v, s))        
+    
+
     
 def main1():
     run('2009-01-01',
@@ -500,6 +598,14 @@ def main2():
         n=150,
         max_epoch=500,
         save_as='gazp_other_best.csv')
+        
+def main_calcstat():
+    calcstat('2009-01-01',
+        '2018-12-31',
+        '1_GAZP.csv', 
+       ['1_GAZP.csv', '1_LKOH.csv', '1_ROSN.csv',
+        '1_VTBR.csv', '1_GMKN.csv', '1_NVTK.csv',
+        '1_SIBN.csv', '24_NG.csv', '24_BZ.csv'])
 
     
     
@@ -507,7 +613,7 @@ if __name__ == '__main__':
     #instruments = json.loads(codecs.open('finam/instruments/instruments.json', 'r', 'utf-8').read())
     #markets = json.loads(codecs.open('finam/markets.json', 'r', 'utf-8').read())
 
-    main2()
+    main_calcstat()
     
     '''
 Только газпром
