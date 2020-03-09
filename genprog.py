@@ -122,7 +122,7 @@ FILLNA0 = series_unary_op('fill0', lambda x: x.fillna(value=0))
 def series_num_op(name, calc):
     return  Func('sc.{}'.format(name),
             arguments=[Argument('x', ValueType.SERIES),
-                       Argument('c', ValueType.INT, interval=pd.Interval(left=-5, right=5, closed='both'))],
+                       Argument('c', ValueType.FLOAT)],
             result_type=ValueType.SERIES,
             calc = calc)
 
@@ -250,7 +250,7 @@ def print_node(node, prefix='', intent=''):
 
     
 class GenProg:
-    def __init__(self, operations, series, target, n):    
+    def __init__(self, operations, series, target, n, p_series=None):    
         self.__operations = operations
         self.__series = [LeafNode(ValueType.SERIES, s) for s in series]
         self.__target = target
@@ -258,6 +258,7 @@ class GenProg:
         self.__items = []
         self.epoch = 0
         self.__last_epoch_inc_score = 0
+        self.__p_series = p_series or [1.0]*len(series)
     
     @property
     def best(self):
@@ -327,13 +328,13 @@ class GenProg:
         
     def mutate_node_on_leaf_node(self, node):
         if node.value_type == ValueType.SERIES:
-            return random_choice(self.__series)
+            return random_choice(self.__series, p=self.__p_series)
         return None
         
     
     def mutate_leaf(self, node, argument):
         if node.value_type == ValueType.SERIES:
-            return random_choice(self.__series)
+            return random_choice(self.__series, p=self.__p_series)
     
         if node.value_type == ValueType.INT or node.value_type == ValueType.FLOAT:
             for _ in range(100):
@@ -349,7 +350,7 @@ class GenProg:
     
     def random_leaf(self, argument):
         if argument.value_type == ValueType.SERIES:
-            return random_choice(self.__series)
+            return random_choice(self.__series, p=self.__p_series)
         if argument.value_type == ValueType.INT or argument.value_type == ValueType.FLOAT:
             if argument.interval:
                 left = argument.interval.left if argument.interval.left != -math.inf else 100000*(np.random.power(1) - 1.0)
@@ -423,7 +424,7 @@ class GenProg:
         
         v = node.value
         v = v + v/np.inf  # v/np.inf = 0 или inf/inf = NaN        
-        v, t = node.value.align(self.__target, join='right', fill_value = 0)
+        v, t = v.align(self.__target, join='right', fill_value = 0)
                
         try:
             v = v.values.reshape(-1, 1)
@@ -456,7 +457,7 @@ class GenProg:
             x, _ = random_choice(self.__items, p=p)
             y, _ = random_choice(self.__items)
             new = self.cross(x, y) if rnd < 0.5 else self.cross(y, x)
-            for i in range(random_choice([1,2,3], p=[0.5, 0.25, 0.1])):
+            for i in range(random_choice([0,1,2,3], p=[0.5, 0.25, 0.125, 0.1])):
                 if new:
                     new = self.mutate(new)
             if new is not None and new.value is not None:
@@ -468,7 +469,7 @@ class GenProg:
         self.epoch += 1
         # 25% результата займут лучшие 75% - просто случайные
         evaluated = self.eval_all(next)
-        n_best = self.__count//4
+        n_best = self.__count//3
         top = evaluated[0:n_best]
         rest = evaluated[n_best:]
         np.random.shuffle(rest)     
@@ -497,15 +498,18 @@ def load_series(filenames):
         series += [d[c].rename(d.name+'.'+d[c].name) for c in d.columns]    
     return series
         
+P_SERIES = {}  # заполним позже
+        
 def run(start, end, target_filename, series_filenames, n, max_epoch, save_as): 
  
     target = load_target(target_filename)[start:end]
     series = load_series(series_filenames)
+    p_series = [P_SERIES[s.name] if s.name in P_SERIES else 0.02 for s in series]
     
-    g = GenProg(ALL_OPERATIONS, series, target, n)
+    g = GenProg(ALL_OPERATIONS, series, target, n, p_series=p_series)
     g.start()
     g.print_state()
-    while(g.epoch < max_epoch):
+    while max_epoch is None or g.epoch < max_epoch:
         g.next_epoch()
         g.print_state()
         g.best.value.to_csv(save_as)
@@ -578,6 +582,105 @@ def calcstat(start, end, target_filename, series_filenames):
         print('{0:.4f} {1}'.format(v, s))        
     
 
+p = [
+(0.0389,'SIBN.CLOSE'),
+(0.0352,'NVTK.CLOSE'),
+(0.0341,'LKOH.CLOSE'),
+(0.0339,'GAZP.VOL'),
+(0.0339,'GAZP.VLT'),
+(0.0338,'LKOH.VOL'),
+(0.0335,'NVTK.AVG'),
+(0.0331,'LKOH.VLT'),
+(0.0330,'LKOH.HIGH'),
+(0.0323,'BZ.VOLR'),
+(0.0323,'ROSN.OPEN'),
+(0.0322,'VTBR.CLOSE'),
+(0.0321,'SIBN.LOW'),
+(0.0321,'VTBR.VOL'),
+(0.0320,'LKOH.VOLR'),
+(0.0319,'VTBR.OPEN'),
+(0.0318,'GMKN.LOW'),
+(0.0318,'GMKN.HIGH'),
+(0.0311,'SIBN.VLT'),
+(0.0310,'GAZP.HIGH'),
+(0.0308,'SIBN.OPEN'),
+(0.0306,'SIBN.VOL'),
+(0.0306,'ROSN.VOLR'),
+(0.0304,'NVTK.VOLR'),
+(0.0304,'GMKN.AVG'),
+(0.0303,'NVTK.LOW'),
+(0.0301,'NVTK.VLT'),
+(0.0300,'BZ.AVG'),
+(0.0298,'ROSN.AVG'),
+(0.0298,'ROSN.HIGH'),
+(0.0298,'ROSN.CLOSE'),
+(0.0297,'VTBR.VLT'),
+(0.0297,'LKOH.LOW'),
+(0.0295,'GMKN.CLOSE'),
+(0.0292,'GMKN.VOL'),
+(0.0290,'NVTK.HIGH'),
+(0.0290,'SIBN.HIGH'),
+(0.0290,'GAZP.CLOSE'),
+(0.0289,'BZ.HIGH'),
+(0.0289,'VTBR.LOW'),
+(0.0288,'GAZP.VOLR'),
+(0.0286,'VTBR.VOLR'),
+(0.0286,'LKOH.OPEN'),
+(0.0286,'GAZP.OPEN'),
+(0.0284,'GMKN.VLT'),
+(0.0284,'LKOH.AVG'),
+(0.0281,'NG.CLOSE'),
+(0.0281,'SIBN.AVG'),
+(0.0281,'SIBN.VOLR'),
+(0.0280,'VTBR.AVG'),
+(0.0280,'GAZP.LOW'),
+(0.0279,'NVTK.VOL'),
+(0.0278,'VTBR.HIGH'),
+(0.0276,'NG.VLT'),
+(0.0271,'NVTK.OPEN'),
+(0.0271,'ROSN.VOL'),
+(0.0270,'ROSN.LOW'),
+(0.0269,'GMKN.OPEN'),
+(0.0268,'GMKN.VOLR'),
+(0.0267,'BZ.CLOSE'),
+(0.0264,'NG.VOLR'),
+(0.0262,'BZ.VLT'),
+(0.0261,'ROSN.VLT'),
+(0.0261,'NG.LOW'),
+(0.0257,'BZ.OPEN'),
+(0.0255,'BZ.VOL'),
+(0.0246,'NG.OPEN'),
+(0.0244,'NG.VOL'),
+(0.0241,'BZ.LOW'),
+(0.0235,'NG.AVG'),
+(0.0234,'GAZP.AVG'),
+(0.0226,'NG.HIGH'),
+(0.0451,'NG.LOW'),
+(0.0451,'VTBR.VOL'),
+(0.0390,'SIBN.VOL'),
+(0.0390,'SIBN.CLOSE'),
+(0.0331,'VTBR.CLOSE'),
+(0.0331,'NVTK.HIGH'),
+(0.0301,'SIBN.VLT'),
+(0.0301,'BZ.VOLR'),
+(0.0288,'GMKN.AVG'),
+(0.0288,'LKOH.HIGH'),
+(0.0262,'SIBN.LOW'),
+(0.0262,'VTBR.AVG'),
+(0.0256,'LKOH.OPEN'),
+(0.0256,'NVTK.VOLR'),
+(0.0255,'NG.OPEN'),
+(0.0255,'GMKN.LOW'),
+(0.0247,'GAZP.OPEN'),
+(0.0247,'GAZP.VOL'),
+(0.0246,'GMKN.CLOSE'),
+(0.0246,'LKOH.VLT')
+]
+
+for v, name in p:
+    if name not in P_SERIES:
+        P_SERIES[name] = 0
+    P_SERIES[name] += v
     
 def main1():
     run('2009-01-01',
@@ -596,7 +699,7 @@ def main2():
         '1_VTBR.csv', '1_GMKN.csv', '1_NVTK.csv',
         '1_SIBN.csv', '24_NG.csv', '24_BZ.csv'],
         n=150,
-        max_epoch=500,
+        max_epoch=None,
         save_as='gazp_other_best.csv')
         
 def main_calcstat():
@@ -613,9 +716,202 @@ if __name__ == '__main__':
     #instruments = json.loads(codecs.open('finam/instruments/instruments.json', 'r', 'utf-8').read())
     #markets = json.loads(codecs.open('finam/markets.json', 'r', 'utf-8').read())
 
-    main_calcstat()
+    main2()
+
+'''
+individual mean:
+0.0090 SIBN.CLOSE
+0.0080 NVTK.AVG
+0.0078 NVTK.CLOSE
+0.0077 GAZP.VOL
+0.0075 SIBN.OPEN
+0.0071 NVTK.OPEN
+0.0070 SIBN.LOW
+0.0069 ROSN.CLOSE
+0.0068 SIBN.VOLR
+0.0066 ROSN.OPEN
+0.0065 LKOH.HIGH
+0.0064 SIBN.HIGH
+0.0064 LKOH.CLOSE
+0.0063 GMKN.LOW
+0.0062 NVTK.LOW
+0.0062 NVTK.HIGH
+0.0062 LKOH.VOL
+0.0062 ROSN.LOW
+0.0059 LKOH.OPEN
+0.0059 GMKN.VOL
+0.0059 GAZP.VLT
+0.0058 GMKN.HIGH
+0.0058 LKOH.LOW
+0.0057 BZ.AVG
+0.0056 GMKN.AVG
+0.0056 ROSN.AVG
+0.0056 GAZP.HIGH
+0.0056 VTBR.OPEN
+0.0056 SIBN.AVG
+0.0056 VTBR.HIGH
+0.0055 GMKN.CLOSE
+0.0055 LKOH.AVG
+0.0054 VTBR.VOLR
+0.0054 VTBR.AVG
+0.0054 NVTK.VOLR
+0.0054 BZ.HIGH
+0.0054 ROSN.HIGH
+0.0053 GAZP.OPEN
+0.0053 ROSN.VOLR
+0.0053 LKOH.VLT
+0.0052 SIBN.VLT
+0.0052 BZ.OPEN
+0.0052 GMKN.OPEN
+0.0051 VTBR.LOW
+0.0051 VTBR.CLOSE
+0.0050 GAZP.CLOSE
+0.0049 NG.VOL
+0.0048 ROSN.VLT
+0.0048 ROSN.VOL
+0.0047 NG.CLOSE
+0.0047 SIBN.VOL
+0.0047 NG.OPEN
+0.0047 BZ.CLOSE
+0.0046 GMKN.VOLR
+0.0046 GAZP.AVG
+0.0046 GAZP.LOW
+0.0046 VTBR.VOL
+0.0045 GAZP.VOLR
+0.0044 NVTK.VLT
+0.0044 NVTK.VOL
+0.0044 VTBR.VLT
+0.0042 LKOH.VOLR
+0.0042 GMKN.VLT
+0.0041 BZ.LOW
+0.0040 BZ.VLT
+0.0040 NG.LOW
+0.0040 BZ.VOL
+0.0039 BZ.VOLR
+0.0038 NG.VLT
+0.0037 NG.VOLR
+0.0033 NG.AVG
+0.0032 NG.HIGH
+
+individual top10 mean:
+0.0389 SIBN.CLOSE
+0.0352 NVTK.CLOSE
+0.0341 LKOH.CLOSE
+0.0339 GAZP.VOL
+0.0339 GAZP.VLT
+0.0338 LKOH.VOL
+0.0335 NVTK.AVG
+0.0331 LKOH.VLT
+0.0330 LKOH.HIGH
+0.0323 BZ.VOLR
+0.0323 ROSN.OPEN
+0.0322 VTBR.CLOSE
+0.0321 SIBN.LOW
+0.0321 VTBR.VOL
+0.0320 LKOH.VOLR
+0.0319 VTBR.OPEN
+0.0318 GMKN.LOW
+0.0318 GMKN.HIGH
+0.0311 SIBN.VLT
+0.0310 GAZP.HIGH
+0.0308 SIBN.OPEN
+0.0306 SIBN.VOL
+0.0306 ROSN.VOLR
+0.0304 NVTK.VOLR
+0.0304 GMKN.AVG
+0.0303 NVTK.LOW
+0.0301 NVTK.VLT
+0.0300 BZ.AVG
+0.0298 ROSN.AVG
+0.0298 ROSN.HIGH
+0.0298 ROSN.CLOSE
+0.0297 VTBR.VLT
+0.0297 LKOH.LOW
+0.0295 GMKN.CLOSE
+0.0292 GMKN.VOL
+0.0290 NVTK.HIGH
+0.0290 SIBN.HIGH
+0.0290 GAZP.CLOSE
+0.0289 BZ.HIGH
+0.0289 VTBR.LOW
+0.0288 GAZP.VOLR
+0.0286 VTBR.VOLR
+0.0286 LKOH.OPEN
+0.0286 GAZP.OPEN
+0.0284 GMKN.VLT
+0.0284 LKOH.AVG
+0.0281 NG.CLOSE
+0.0281 SIBN.AVG
+0.0281 SIBN.VOLR
+0.0280 VTBR.AVG
+0.0280 GAZP.LOW
+0.0279 NVTK.VOL
+0.0278 VTBR.HIGH
+0.0276 NG.VLT
+0.0271 NVTK.OPEN
+0.0271 ROSN.VOL
+0.0270 ROSN.LOW
+0.0269 GMKN.OPEN
+0.0268 GMKN.VOLR
+0.0267 BZ.CLOSE
+0.0264 NG.VOLR
+0.0262 BZ.VLT
+0.0261 ROSN.VLT
+0.0261 NG.LOW
+0.0257 BZ.OPEN
+0.0255 BZ.VOL
+0.0246 NG.OPEN
+0.0244 NG.VOL
+0.0241 BZ.LOW
+0.0235 NG.AVG
+0.0234 GAZP.AVG
+0.0226 NG.HIGH
+mutual mean:
+0.0451 ('NG.LOW', 'VTBR.VOL')
+0.0451 ('VTBR.VOL', 'NG.LOW')
+0.0390 ('SIBN.VOL', 'SIBN.CLOSE')
+0.0390 ('SIBN.CLOSE', 'SIBN.VOL')
+0.0331 ('VTBR.CLOSE', 'NVTK.HIGH')
+0.0331 ('NVTK.HIGH', 'VTBR.CLOSE')
+0.0301 ('SIBN.VLT', 'BZ.VOLR')
+0.0301 ('BZ.VOLR', 'SIBN.VLT')
+0.0288 ('GMKN.AVG', 'LKOH.HIGH')
+0.0288 ('LKOH.HIGH', 'GMKN.AVG')
+0.0262 ('SIBN.LOW', 'VTBR.AVG')
+0.0262 ('VTBR.AVG', 'SIBN.LOW')
+0.0256 ('LKOH.OPEN', 'NVTK.VOLR')
+0.0256 ('NVTK.VOLR', 'LKOH.OPEN')
+0.0255 ('NG.OPEN', 'GMKN.LOW')
+0.0255 ('GMKN.LOW', 'NG.OPEN')
+0.0247 ('GAZP.OPEN', 'GAZP.VOL')
+0.0247 ('GAZP.VOL', 'GAZP.OPEN')
+0.0246 ('GMKN.CLOSE', 'LKOH.VLT')
+0.0246 ('LKOH.VLT', 'GMKN.CLOSE')
+mutual top10 mean:
+0.0451 ('NG.LOW', 'VTBR.VOL')
+0.0451 ('VTBR.VOL', 'NG.LOW')
+0.0390 ('SIBN.VOL', 'SIBN.CLOSE')
+0.0390 ('SIBN.CLOSE', 'SIBN.VOL')
+0.0331 ('VTBR.CLOSE', 'NVTK.HIGH')
+0.0331 ('NVTK.HIGH', 'VTBR.CLOSE')
+0.0301 ('SIBN.VLT', 'BZ.VOLR')
+0.0301 ('BZ.VOLR', 'SIBN.VLT')
+0.0288 ('GMKN.AVG', 'LKOH.HIGH')
+0.0288 ('LKOH.HIGH', 'GMKN.AVG')
+0.0262 ('SIBN.LOW', 'VTBR.AVG')
+0.0262 ('VTBR.AVG', 'SIBN.LOW')
+0.0256 ('LKOH.OPEN', 'NVTK.VOLR')
+0.0256 ('NVTK.VOLR', 'LKOH.OPEN')
+0.0255 ('NG.OPEN', 'GMKN.LOW')
+0.0255 ('GMKN.LOW', 'NG.OPEN')
+0.0247 ('GAZP.OPEN', 'GAZP.VOL')
+0.0247 ('GAZP.VOL', 'GAZP.OPEN')
+0.0246 ('GMKN.CLOSE', 'LKOH.VLT')
+0.0246 ('LKOH.VLT', 'GMKN.CLOSE')
+'''    
     
-    '''
+    
+'''
 Только газпром
 epoch: 300
     avg: 0.08875966711771097
