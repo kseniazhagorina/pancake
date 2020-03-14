@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 import os
 import csv
+from datetime import datetime, timedelta
 from sklearn.feature_selection import mutual_info_classif
 from scipy.optimize import minimize
 import statsmodels.api as sm
@@ -18,16 +19,12 @@ import statsmodels.api as sm
 import information_gain as ig
 from correlation import time_series_rolling_corr
 
+import gc
+
 np.random.seed(838373)
 
 def random_choice(x, p=None):
-    if p is None:
-        return x[np.random.randint(low=0, high=len(x))]
-    else:
-        s = sum(p)
-        p = [v/s for v in p] 
-        ids = [i for i in range(len(x))]
-        return x[np.random.choice(ids, p=p)]
+    return x[np.random.choice(len(x), p=p)]
 
 class ValueType:
     SERIES = 'SERIES'
@@ -65,6 +62,12 @@ ROLLING_MAX = rolling('max', lambda x, window: x.rolling(window=window).max())
 ROLLING_STD = rolling('std', lambda x, window: x.rolling(window=window).std())
 ROLLING_VAR = rolling('var', lambda x, window: x.rolling(window=window).var())
 ROLLING_SUM = rolling('sum', lambda x, window: x.rolling(window=window).sum())
+def minmax(x, window): # изменение в сравнении с min/max предыдущего периода
+    minx = x.rolling(window=window).min().shift(1).ffill()
+    maxx = x.rolling(window=window).max().shift(1).ffill()
+    diff = maxx - minx
+    return (x - minx)/diff * (diff/diff) 
+MINMAX = rolling('minmax', lambda x, window: minmax(x, window))
 
 ROLLING_CORR = Func('rolling.corr',
             arguments=[Argument('x', ValueType.SERIES),
@@ -82,6 +85,7 @@ def shift(name, calc):
 SHIFT = shift('shift', lambda x, periods: x.shift(periods))
 CHANGE = shift('change', lambda x, periods: x.pct_change(periods))
 
+
 def series_op(name, calc):
     return  Func('ss.{}'.format(name),
             arguments=[Argument('x1', ValueType.SERIES),
@@ -92,14 +96,14 @@ def series_op(name, calc):
 SSUM = series_op('sum', lambda x1, x2: x1 + x2)
 SSUB = series_op('sub', lambda x1, x2: x1 - x2)
 SMUL = series_op('mul', lambda x1, x2: x1 * x2)
-SDIV = series_op('div', lambda x1, x2: x1 / x2) # x2/x2 = 1 или NaN чтобы не возникало деления на 0
-SPCNT = series_op('pct', lambda x1, x2: (x1 - x2) / x1)
-SMAX = series_op('max', lambda x1, x2: (x1.gt(x2)).astype(int)*x1 + (x1.lt(x2)).astype(int)*x2)
-SMIN = series_op('min', lambda x1, x2: (x1.gt(x2)).astype(int)*x2 + (x1.lt(x2)).astype(int)*x1)
-SLT = series_op('lt', lambda x1, x2: (x1.lt(x2)).astype(int))
-SAND = series_op('and', lambda x1, x2: (((x1 > 0).astype(int) + (x2 > 0).astype(int)) > 1).astype(int))
-SOR = series_op('or', lambda x1, x2: (((x1 > 0).astype(int) + (x2 > 0).astype(int)) > 0).astype(int))
-SXOR = series_op('xor', lambda x1, x2: (((x1 > 0).astype(int) + (x2 > 0).astype(int)) == 1).astype(int))
+SDIV = series_op('div', lambda x1, x2: x1 / x2 * (x2/x2)) # x2/x2 = 1 или NaN чтобы не возникало деления на 0
+SPCNT = series_op('pct', lambda x1, x2: (x1 - x2) / x1 * (x1/x1))
+SMAX = series_op('max', lambda x1, x2: (x1.gt(x2)).astype(float)*x1 + (x1.lt(x2)).astype(float)*x2)
+SMIN = series_op('min', lambda x1, x2: (x1.gt(x2)).astype(float)*x2 + (x1.lt(x2)).astype(float)*x1)
+SLT = series_op('lt', lambda x1, x2: (x1.lt(x2)).astype(float))
+SAND = series_op('and', lambda x1, x2: ((x1 > 0) & (x2 > 0)).astype(float))
+SOR = series_op('or', lambda x1, x2: ((x1 > 0) | (x2 > 0)).astype(float))
+SXOR = series_op('xor', lambda x1, x2: ((x1 > 0) ^ (x2 > 0)).astype(float))
 
 def series_unary_op(name, calc):
     return  Func('s.{}'.format(name),
@@ -107,9 +111,9 @@ def series_unary_op(name, calc):
             result_type=ValueType.SERIES,
             calc = calc)
 
-SNOT = series_unary_op('not', lambda x: (x <= 0).astype(int))
+SNOT = series_unary_op('not', lambda x: (x <= 0).astype(float))
 SABS = series_unary_op('abs', lambda x: x.abs())
-SQRT = series_unary_op('sqrt', lambda x: x.apply(lambda v: math.sqrt(v) if v >= 0 else np.nan))
+SQRT = series_unary_op('sqrt', lambda x: np.sqrt(x))
 SQR = series_unary_op('square', lambda x: x * x)
 SLOG = series_unary_op('log', lambda x: x.apply(lambda v: math.log(v) if v > 0 else np.nan))
 CUMSUM = series_unary_op('cumsum', lambda x: x.cumsum())
@@ -128,8 +132,8 @@ def series_num_op(name, calc):
 
 NSUM = series_num_op('sum', lambda x, c: x + c)
 NMUL = series_num_op('mul', lambda x, c: x * c)
-NLT = series_num_op('lt', lambda x, c: (x < c).astype(int))
-NGT = series_num_op('gt', lambda x, c: (x > c).astype(int))
+NLT = series_num_op('lt', lambda x, c: (x < c).astype(float))
+NGT = series_num_op('gt', lambda x, c: (x > c).astype(float))
 
 EWM = Func('sf.ewm',
             arguments=[Argument('x', ValueType.SERIES),
@@ -144,10 +148,10 @@ EWM2 = Func('sf.ewm2',
             calc = lambda x, a, b: ig.ewm2(x, a, b))
 
 
-ALL_OPERATIONS = [ROLLING_MEAN, ROLLING_MIN, ROLLING_MAX, ROLLING_STD, ROLLING_VAR, ROLLING_SUM, ROLLING_CORR,
+ALL_OPERATIONS = [ROLLING_MEAN, ROLLING_MIN, ROLLING_MAX, ROLLING_STD, ROLLING_VAR, ROLLING_SUM, #ROLLING_CORR,
                   SSUM, SSUB, SMUL, SDIV, SPCNT, SMAX, SMIN, SLT, SAND, SOR, SXOR,
                   SNOT, SABS, SQRT, SQR, SLOG, CUMMIN, CUMMAX, NSUM, NMUL, NLT, NGT, # CUMSUM
-                  EWM, EWM2, SHIFT, CHANGE, FFILLNA, FILLNA0]
+                  EWM, EWM2, SHIFT, CHANGE, MINMAX, FFILLNA, FILLNA0]
 
 
                            
@@ -191,7 +195,6 @@ class FuncNode(Node):
         if self.__value is not None:
             return self.__value
 
-        values = [c.value for c in self.__children]
         all_valid = True
         for i, c in enumerate(self.__children):
             argument = self.func.arguments[i]
@@ -204,6 +207,7 @@ class FuncNode(Node):
                 
         if all_valid:
             try:
+                values = (c.value for c in self.__children)
                 self.__value = self.func.calc(*values)
             except Exception as e:
                 sys.stderr.write('{}\n{}\n'.format(e, print_node(self)))
@@ -250,15 +254,19 @@ def print_node(node, prefix='', intent=''):
 
     
 class GenProg:
-    def __init__(self, operations, series, target, n, p_series=None, max_node_size=None):    
+    def __init__(self, operations, series, target, n, p_series=None, max_node_size=None, max_n=None, best_n=None):    
         self.__operations = operations
         self.__series = [LeafNode(ValueType.SERIES, s) for s in series]
         self.__target = target
         self.__count = n
+        self.__max_count = max_n or n*3
+        self.__best_count = best_n or n//3
         self.__items = []
         self.epoch = 0
         self.__last_epoch_inc_score = 0
-        self.__p_series = p_series or [1.0]*len(series)
+        self.__last_epoch_elapsed_time = timedelta(0)
+        p = np.array(p_series or [1.0]*len(series))
+        self.__p_series = p/p.sum()
         self.__max_node_size = max_node_size
     
     @property
@@ -279,14 +287,16 @@ class GenProg:
                        break
         
     def print_state(self):
-        print('epoch: {}'.format(self.epoch))
+        
         best, score = self.__items[0]
         if self.__last_epoch_inc_score == self.epoch:
             print(print_node(best, intent='    '))
+
         print('\n')
         print('epoch: {}'.format(self.epoch))
-        print('    avg: {}'.format(np.mean([x[1] for x in self.__items if x[1] != -np.inf])))
-        print('    avg size: {}'.format(np.mean([x[0].size for x in self.__items])))
+        print('    finished at: {}   elapsed: {}'.format(datetime.now(), self.__last_epoch_elapsed_time))
+        print('    avg: {}'.format(sum(x[1] for x in self.__items)/len(self.__items)))
+        print('    avg size: {}'.format(sum(x[0].size for x in self.__items)/len(self.__items)))
         print('    last inc score at: {}'.format(self.__last_epoch_inc_score))
         print('    best: {} (height:{} size:{})'.format(score, best.height, best.size))
         print('\n')
@@ -439,7 +449,7 @@ class GenProg:
             return -np.inf    
        
         v = node.value
-        v = v + v/np.inf  # v/np.inf = 0 или inf/inf = NaN        
+        v = (v + v/np.inf).fillna(0)  # v/np.inf = 0 или inf/inf = NaN        
         v, t = v.align(self.__target, join='right', fill_value = 0)
                
         try:
@@ -452,21 +462,24 @@ class GenProg:
             return -np.inf      
 
 
+    
     def next_epoch(self):
 
+        epoch_start = datetime.now()
         prev_best_score = self.__items[0][1]
         next = self.__items[0:3]   # 3 лучших переходят в следующую эпоху как есть
         nexthash = set(print_node(x[0]) for x in next)
-        
-        p = np.array([v for x, v in self.__items])
+            
+        p = np.fromiter((v for x, v in self.__items), float, len(self.__items))
         p = (p - p.min())**2
+        p = p/p.sum()
         
-        while len(next) < 3*self.__count:
+        while len(next) < self.__max_count:
             rnd = np.random.random()
             x, _ = random_choice(self.__items, p=p)
             y, _ = random_choice(self.__items)
             new = self.cross(x, y) if rnd < 0.5 else self.cross(y, x)
-            for i in range(random_choice([0,1,2,3], p=[0.5, 0.25, 0.125, 0.1])):
+            for i in range(np.random.choice(4, p=[0.5, 0.25, 0.125, 0.125])):
                 if new:
                     new = self.mutate(new)
             if new is not None and new.value is not None:
@@ -479,26 +492,29 @@ class GenProg:
         
         self.epoch += 1
         # 25% результата займут лучшие 75% - просто случайные
-        next = list(sorted(next, key=lambda x: x[1], reverse=True))
-        n_best = self.__count//3
-        top = next[0:n_best]
-        rest = next[n_best:]
-        np.random.shuffle(rest)     
-        self.__items = top + rest[0:self.__count-n_best]
+        inds = np.array(sorted(range(len(next)), key=lambda ind: next[ind][1], reverse=True))
+        n_best = self.__best_count
+        rest = np.random.choice(len(next) - n_best, self.__count - n_best, replace=False) + n_best # индексы случайных элементов next[n_best:] 
+        self.__items = [next[inds[i]] for i in range(n_best)] + [next[inds[i]] for i in rest]
  
         if self.__items[0][1] != prev_best_score:
             self.__last_epoch_inc_score = self.epoch
-        elif self.epoch - self.__last_epoch_inc_score > 10:
-            c, v = self.select_best_child(self.__items[0][0])        
-            if v > prev_best_score:
-                print('We crop best to its best child')
-                self.__items.push((c, v))
-                self.__last_epoch_inc_score = self.epoch
+        #elif self.epoch - self.__last_epoch_inc_score > 10:
+        #    c, v = self.select_best_child(self.__items[0][0])        
+        #    if v > prev_best_score:
+        #        print('We crop best to its best child')
+        #        self.__items.push((c, v))
+        #        self.__last_epoch_inc_score = self.epoch
+        self.__last_epoch_elapsed_time = datetime.now() - epoch_start
         
 def load_target(filename):
     d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
     growth = (d.HIGH - d.OPEN)/d.OPEN
-    target = growth.apply(lambda x: int(x > 0.008)).shift(-1).dropna() # цель - рост на 0.8% в день
+    change = (d.CLOSE - d.OPEN)/d.OPEN
+    
+    target = ((growth > 0.008) & (change > 0.002)).astype(float).shift(-1).dropna()
+    #target = (growth > 0.008).astype(float).shift(-1).dropna() # цель - рост на 0.8% в день
+    #target = growth.apply(lambda x: np.round(x)).shift(-1).dropna() # с шагом 0.5%
     return target
     
 def load_series(filenames):
@@ -509,22 +525,26 @@ def load_series(filenames):
         series += [d[c].rename(d.name+'.'+d[c].name) for c in d.columns]    
     return series
         
-P_SERIES = {}  # заполним позже
         
-def run(start, end, target_filename, series_filenames, n, max_epoch, save_as): 
+def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_series=None): 
  
     target = load_target(target_filename)[start:end]
     series = load_series(series_filenames)
-    p_series = [P_SERIES[s.name] if s.name in P_SERIES else 0.02 for s in series]
+    ps = [p_series[s.name] if s.name in p_series else min(p_series) for s in series] if p_series else None
     
-    g = GenProg(ALL_OPERATIONS, series, target, n, p_series=p_series, max_node_size=200)
+    # при N = max_node_size * max_n затраты памяти будут примерно N*100 Кб
+    g = GenProg(ALL_OPERATIONS, series, target, n, p_series=ps, max_n=n*2, max_node_size=120)
     g.start()
     g.print_state()
     while max_epoch is None or g.epoch < max_epoch:
         g.next_epoch()
         g.print_state()
         g.best.value.to_csv(save_as)
+        if g.epoch % 20 == 0:
+            gc.collect()
         
+   
+    
 def calcstat(start, end, target_filename, series_filenames):
     target = load_target(target_filename)[start:end]
     series = load_series(series_filenames)
@@ -688,6 +708,7 @@ p = [
 (0.0246,'LKOH.VLT')
 ]
 
+P_SERIES = {}
 for v, name in p:
     if name not in P_SERIES:
         P_SERIES[name] = 0
@@ -699,8 +720,8 @@ def main1():
         '1_GAZP.csv', 
        ['1_GAZP.csv'],
         n=100,
-        max_epoch=300,
-        save_as='gazp_best.csv')
+        max_epoch=None,
+        save_as='gazp_best_new_target.csv')
         
 def main2():
     run('2009-01-01',
@@ -709,9 +730,22 @@ def main2():
        ['1_GAZP.csv', '1_LKOH.csv', '1_ROSN.csv',
         '1_VTBR.csv', '1_GMKN.csv', '1_NVTK.csv',
         '1_SIBN.csv', '24_NG.csv', '24_BZ.csv'],
-        n=150,
+        n=100,
         max_epoch=None,
-        save_as='gazp_other_best.csv')
+        save_as='gazp_other_best.csv',
+        p_series=P_SERIES)
+        
+def main3():
+    run('2009-01-01',
+        '2018-12-31',
+        '1_GAZP.csv', 
+       ['1_LKOH.csv', '1_ROSN.csv', '1_NVTK.csv', '1_SIBN.csv'],
+        n=100,
+        max_epoch=None,
+        save_as='gazp_similar_best.csv',
+        p_series=P_SERIES)
+
+
         
 def main_calcstat():
     calcstat('2009-01-01',
@@ -727,7 +761,7 @@ if __name__ == '__main__':
     #instruments = json.loads(codecs.open('finam/instruments/instruments.json', 'r', 'utf-8').read())
     #markets = json.loads(codecs.open('finam/markets.json', 'r', 'utf-8').read())
 
-    main2()
+    main1()
 
 '''
 individual mean:
@@ -1461,6 +1495,116 @@ epoch: 946
 
 
 
-'''   
-    
+'''
+
+'''
+газпром и сопутствующие ограничение размера дерева до 120
+epoch: 1602
+    finished at: 2020-03-14 12:24:49.964017   elapsed: 0:00:20.419167
+    avg: 0.05785171442154114
+    avg size: 92.78
+    last inc score at: 1504
+    best: 0.09179499040414311 (height:14 size:99)
+
+
+    ss.sum
+      x1=ss.sum
+        x1=ss.sum
+          x1=ss.sum
+            x1=ss.sum
+              x1=VTBR.AVG
+              x2=VTBR.CLOSE
+            x2=ss.xor
+              x1=sc.gt
+                x=ss.sum
+                  x1=SIBN.CLOSE
+                  x2=BZ.VOLR
+                c=999986.7344603252
+              x2=ss.lt
+                x1=NG.LOW
+                x2=GMKN.VLT
+          x2=ss.sum
+            x1=ss.sum
+              x1=ss.sum
+                x1=VTBR.HIGH
+                x2=ss.sum
+                  x1=rolling.max
+                    x=GAZP.VOL
+                    window=13
+                  x2=rolling.std
+                    x=sc.gt
+                      x=ss.sum
+                        x1=BZ.VOLR
+                        x2=GAZP.VOL
+                      c=723669.9362119874
+                    window=6
+              x2=sc.sum
+                x=ss.xor
+                  x1=ss.sum
+                    x1=BZ.VOLR
+                    x2=LKOH.OPEN
+                  x2=sp.shift
+                    x=sc.sum
+                      x=ss.pct
+                        x1=LKOH.OPEN
+                        x2=ss.sum
+                          x1=GAZP.VOL
+                          x2=sc.mul
+                            x=ss.lt
+                              x1=NG.LOW
+                              x2=GMKN.VLT
+                            c=-28690.401637805506
+                      c=38079.206067580024
+                    periods=11
+                c=-15435.197996019233
+            x2=ss.sum
+              x1=ss.sum
+                x1=rolling.max
+                  x=GAZP.VOL
+                  window=13
+                x2=rolling.std
+                  x=sc.gt
+                    x=ss.sum
+                      x1=SIBN.CLOSE
+                      x2=BZ.VOLR
+                    c=723669.9362119874
+                  window=7
+              x2=rolling.sum
+                x=VTBR.AVG
+                window=11
+        x2=ss.sum
+          x1=sc.sum
+            x=ss.xor
+              x1=rolling.std
+                x=ss.lt
+                  x1=NG.LOW
+                  x2=SIBN.CLOSE
+                window=6
+              x2=sp.shift
+                x=sc.sum
+                  x=ss.pct
+                    x1=LKOH.OPEN
+                    x2=ss.sum
+                      x1=GAZP.VOL
+                      x2=sc.sum
+                        x=rolling.max
+                          x=GAZP.VOL
+                          window=11
+                        c=723669.9362119874
+                  c=38079.206067580024
+                periods=11
+            c=118581.11310185694
+          x2=rolling.sum
+            x=sc.gt
+              x=ss.sum
+                x1=BZ.VOLR
+                x2=LKOH.OPEN
+              c=160335.1386053733
+            window=11
+      x2=ss.xor
+        x1=NG.LOW
+        x2=ss.sum
+          x1=BZ.VOLR
+          x2=VTBR.CLOSE
+'''    
     

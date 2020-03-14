@@ -15,14 +15,15 @@ import information_gain as ig
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import mutual_info_classif
-        
+
+
 def load_target(filename):
     d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
     d = d.shift(-1)
     growth = (d.HIGH - d.OPEN)/d.OPEN
     change = (d.CLOSE - d.OPEN)/d.OPEN
 
-    target = growth.apply(lambda x: 1 if x > 0.008 else 0) # цель - рост на 0.8% в день
+    target = (growth > 0.008).astype(float) # цель - рост на 0.8% в день
     # weight = change.apply(lambda x: 3.0 if x > 0.008 else 1.0 if x > 0.002 else 2.0 if x > -0.008 else 3.0)
     weight = change.apply(lambda x: 1.0)
     
@@ -60,27 +61,35 @@ if __name__ == '__main__':
     y = load_target('1_GAZP.csv')
     g = load_extra('gazp_best.csv', 'VALUE')
     g1 = load_extra('gazp_other_best.csv','OTHER_VALUE')
+    g2 = load_extra('gazp_similar_best.csv','SIMILAR_VALUE')
     
-    s = load_series(['1_GAZP.csv'], False)
-    x = pd.concat( [item for item in s if item.name in ['GAZP.VLT', 'GAZP.VOLR']] + [g] + [g1], axis=1)
+    s = load_series(['1_GAZP.csv'], True)
+    #x = pd.concat(s, axis=1)
+    #x = pd.concat( s + [g] + [g1] + [g2] , axis=1)
+    x = pd.concat( [x for x in s if x.name in ['GAZP.VOL', 'GAZP.VLT', 'GAZP.VOLR']] + [g] + [g1] + [g2] , axis=1)
+    x = x + x/np.inf
+
     _, x = y.TARGET.align(x, join='left', fill_value=0)
+    _, y = y.TARGET.align(y, join='left', fill_value=0)
+    x = x.fillna(0)
     
     y_train = y['2009-01-01':'2018-12-31']
     x_train = x['2009-01-01':'2018-12-31']
-  
+
     y_test = y['2019-01-01':]
     x_test = x['2019-01-01':]
+    
     
     print('\nmutual information:')
     for c in x_train.columns:
         v = x_train[c]
-        v = v + v/np.inf  # v/np.inf = 0 или inf/inf = NaN        
+        v = (v + v/np.inf).fillna(0)  # v/np.inf = 0 или inf/inf = NaN        
         info = mutual_info_classif(v.values.reshape(-1,1), y_train.TARGET, n_neighbors=5, random_state=4838474)[0]
         print('{}: {}'.format(c, info))
        
     
-    clf = DecisionTreeClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5)
-    clf = RandomForestClassifier(random_state=0, min_samples_split=50, max_depth=13, min_samples_leaf=5, n_estimators=150)
+    #clf = DecisionTreeClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5)
+    clf = RandomForestClassifier(random_state=0, min_samples_split=150, min_samples_leaf=50, n_estimators=250)
     clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
     print('\nfeature importances:')
     for c, v in zip(x_train.columns, clf.feature_importances_):
