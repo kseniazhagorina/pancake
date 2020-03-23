@@ -1,0 +1,1571 @@
+[
+    {
+        "id": 501923,
+        "name": "AKNXA",
+        "code": "AKNXA",
+        "market": 91,
+        "decp": 4,
+        "url": "moex-indeksy/aknxa",
+        "child": 1
+    },
+    {
+        "id": 420447,
+        "name": "CNYFIX",
+        "code": "CNYFIX",
+        "market": 91,
+        "url": "moex-indeksy/cnyfix",
+        "child": 1
+    },
+    {
+        "id": 420581,
+        "name": "CNYFIXME",
+        "code": "CNYFIXME",
+        "market": 91,
+        "url": "moex-indeksy/cnyfixme",
+        "child": 1
+    },
+    {
+        "id": 420569,
+        "name": "CNYRUBSFIX",
+        "code": "CNYRUBSFIX",
+        "market": 91,
+        "url": "moex-indeksy/cnyrubsfix",
+        "child": 1
+    },
+    {
+        "id": 420448,
+        "name": "EURFIX",
+        "code": "EURFIX",
+        "market": 91,
+        "url": "moex-indeksy/eurfix",
+        "child": 1
+    },
+    {
+        "id": 420582,
+        "name": "EURFIXME",
+        "code": "EURFIXME",
+        "market": 91,
+        "url": "moex-indeksy/eurfixme",
+        "child": 1
+    },
+    {
+        "id": 420570,
+        "name": "EURSFIX",
+        "code": "EURSFIX",
+        "market": 91,
+        "url": "moex-indeksy/eursfix",
+        "child": 1
+    },
+    {
+        "id": 420449,
+        "name": "EURUSDFIX",
+        "code": "EURUSDFIX",
+        "market": 91,
+        "url": "moex-indeksy/eurusdfix",
+        "child": 1
+    },
+    {
+        "id": 420583,
+        "name": "EURUSDFIXME",
+        "code": "EURUSDFIXME",
+        "market": 91,
+        "url": "moex-indeksy/eurusdfixme",
+        "child": 1
+    },
+    {
+        "id": 420571,
+        "name": "EURUSDSFIX",
+        "code": "EURUSDSFIX",
+        "market": 91,
+        "url": "moex-indeksy/eurusdsfix",
+        "child": 1
+    },
+    {
+        "id": 420450,
+        "name": "IMOEX",
+        "code": "IMOEX",
+        "market": 91,
+        "url": "moex-indeksy/micex",
+        "child": 1
+    },
+    {
+        "id": 450622,
+        "name": "M?XCBICP",
+        "code": "M?XCBICP",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbicp",
+        "child": 1
+    },
+    {
+        "id": 450623,
+        "name": "M?XCBICP3Y",
+        "code": "M?XCBICP3Y",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbicp3y",
+        "child": 1
+    },
+    {
+        "id": 450624,
+        "name": "M?XCBICP5Y",
+        "code": "M?XCBICP5Y",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbicp5y",
+        "child": 1
+    },
+    {
+        "id": 450619,
+        "name": "M?XCBIGP",
+        "code": "M?XCBIGP",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbigp",
+        "child": 1
+    },
+    {
+        "id": 450620,
+        "name": "M?XCBIGP3Y",
+        "code": "M?XCBIGP3Y",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbigp3y",
+        "child": 1
+    },
+    {
+        "id": 450621,
+        "name": "M?XCBIGP5Y",
+        "code": "M?XCBIGP5Y",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbigp5y",
+        "child": 1
+    },
+    {
+        "id": 450625,
+        "name": "M?XCBITR",
+        "code": "M?XCBITR",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbitr",
+        "child": 1
+    },
+    {
+        "id": 450626,
+        "name": "M?XCBITR3Y",
+        "code": "M?XCBITR3Y",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbitr3y",
+        "child": 1
+    },
+    {
+        "id": 450627,
+        "name": "M?XCBITR5Y",
+        "code": "M?XCBITR5Y",
+        "market": 91,
+        "url": "moex-indeksy/m-xcbitr5y",
+        "child": 1
+    },
+    {
+        "id": 465340,
+        "name": "MCFTR",
+        "code": "MCFTR",
+        "market": 91,
+        "url": "moex-indeksy/mcftr",
+        "child": 1
+    },
+    {
+        "id": 465341,
+        "name": "MCFTRN",
+        "code": "MCFTRN",
+        "market": 91,
+        "url": "moex-indeksy/mcftrn",
+        "child": 1
+    },
+    {
+        "id": 465342,
+        "name": "MCFTRR",
+        "code": "MCFTRR",
+        "market": 91,
+        "url": "moex-indeksy/mcftrr",
+        "child": 1
+    },
+    {
+        "id": 420574,
+        "name": "MCXCBIGP",
+        "code": "MCXCBIGP",
+        "market": 91,
+        "url": "moex-indeksy/msxcbigp",
+        "child": 1
+    },
+    {
+        "id": 420575,
+        "name": "MCXCBIGP3Y",
+        "code": "MCXCBIGP3Y",
+        "market": 91,
+        "url": "moex-indeksy/msxcbigp3y",
+        "child": 1
+    },
+    {
+        "id": 420576,
+        "name": "MCXCBIGP5Y",
+        "code": "MCXCBIGP5Y",
+        "market": 91,
+        "url": "moex-indeksy/msxcbigp5y",
+        "child": 1
+    },
+    {
+        "id": 453689,
+        "name": "MCXSM",
+        "code": "MCXSM",
+        "market": 91,
+        "url": "moex-indeksy/mcxsm",
+        "child": 1
+    },
+    {
+        "id": 465343,
+        "name": "MEBCTR",
+        "code": "MEBCTR",
+        "market": 91,
+        "url": "moex-indeksy/rtsstdtr",
+        "child": 1
+    },
+    {
+        "id": 465344,
+        "name": "MEBCTRN",
+        "code": "MEBCTRN",
+        "market": 91,
+        "url": "moex-indeksy/rtsstdtrn",
+        "child": 1
+    },
+    {
+        "id": 465345,
+        "name": "MEBCTRR",
+        "code": "MEBCTRR",
+        "market": 91,
+        "url": "moex-indeksy/rtsstdtrr",
+        "child": 1
+    },
+    {
+        "id": 420568,
+        "name": "MICEX LC",
+        "code": "MICEX LC",
+        "market": 91,
+        "url": "moex-indeksy/micex-lc",
+        "child": 1
+    },
+    {
+        "id": 420572,
+        "name": "MICEX MC",
+        "code": "MICEX MC",
+        "market": 91,
+        "url": "moex-indeksy/micex-mc",
+        "child": 1
+    },
+    {
+        "id": 420506,
+        "name": "MICEXBORR1W",
+        "code": "MICEXBORR1W",
+        "market": 91,
+        "url": "moex-indeksy/mcx-bo-1w",
+        "child": 1
+    },
+    {
+        "id": 420586,
+        "name": "MICEXBORR2W",
+        "code": "MICEXBORR2W",
+        "market": 91,
+        "url": "moex-indeksy/mcx-bo-2w",
+        "child": 1
+    },
+    {
+        "id": 420507,
+        "name": "MICEXBORRON",
+        "code": "MICEXBORRON",
+        "market": 91,
+        "url": "moex-indeksy/mcx-bo-on",
+        "child": 1
+    },
+    {
+        "id": 453864,
+        "name": "MICEXCBICP3Y",
+        "code": "MICEXCBICP3Y",
+        "market": 91,
+        "url": "moex-indeksy/mcxcbicp3y",
+        "child": 1
+    },
+    {
+        "id": 420485,
+        "name": "MICEXCBITR3Y",
+        "code": "MICEXCBITR3Y",
+        "market": 91,
+        "url": "moex-indeksy/msxcbitr3y",
+        "child": 1
+    },
+    {
+        "id": 420508,
+        "name": "MICEXEQRR1W",
+        "code": "MICEXEQRR1W",
+        "market": 91,
+        "url": "moex-indeksy/mcx-eq-1w",
+        "child": 1
+    },
+    {
+        "id": 420587,
+        "name": "MICEXEQRR2W",
+        "code": "MICEXEQRR2W",
+        "market": 91,
+        "url": "moex-indeksy/mcx-eq-2w",
+        "child": 1
+    },
+    {
+        "id": 420505,
+        "name": "MICEXEQRRON",
+        "code": "MICEXEQRRON",
+        "market": 91,
+        "url": "moex-indeksy/mcx-eq-on",
+        "child": 1
+    },
+    {
+        "id": 420573,
+        "name": "MICEXMBIGP",
+        "code": "MICEXMBIGP",
+        "market": 91,
+        "url": "moex-indeksy/micexmbigp",
+        "child": 1
+    },
+    {
+        "id": 420476,
+        "name": "MICEXMNF",
+        "code": "MICEXMNF",
+        "market": 91,
+        "url": "moex-indeksy/micex-mnf",
+        "child": 1
+    },
+    {
+        "id": 420460,
+        "name": "MICEXSC",
+        "code": "MICEXSC",
+        "market": 91,
+        "url": "moex-indeksy/micex-sc",
+        "child": 1
+    },
+    {
+        "id": 420451,
+        "name": "MOEX10",
+        "code": "MOEX10",
+        "market": 91,
+        "url": "moex-indeksy/micex-10",
+        "child": 1
+    },
+    {
+        "id": 420446,
+        "name": "MOEXBC",
+        "code": "MOEXBC",
+        "market": 91,
+        "url": "moex-indeksy/rtsstd",
+        "child": 1
+    },
+    {
+        "id": 420453,
+        "name": "MOEXBMI",
+        "code": "MOEXBMI",
+        "market": 91,
+        "url": "moex-indeksy/micex-bmi",
+        "child": 1
+    },
+    {
+        "id": 420455,
+        "name": "MOEXCH",
+        "code": "MOEXCH",
+        "market": 91,
+        "url": "moex-indeksy/micex-chm",
+        "child": 1
+    },
+    {
+        "id": 420454,
+        "name": "MOEXCN",
+        "code": "MOEXCN",
+        "market": 91,
+        "url": "moex-indeksy/micex-cgs",
+        "child": 1
+    },
+    {
+        "id": 420459,
+        "name": "MOEXEU",
+        "code": "MOEXEU",
+        "market": 91,
+        "url": "moex-indeksy/micex-pwr",
+        "child": 1
+    },
+    {
+        "id": 420456,
+        "name": "MOEXFN",
+        "code": "MOEXFN",
+        "market": 91,
+        "url": "moex-indeksy/micex-fnl",
+        "child": 1
+    },
+    {
+        "id": 420486,
+        "name": "MOEXINN",
+        "code": "MOEXINN",
+        "market": 91,
+        "url": "moex-indeksy/micexinnov",
+        "child": 1
+    },
+    {
+        "id": 420457,
+        "name": "MOEXMM",
+        "code": "MOEXMM",
+        "market": 91,
+        "url": "moex-indeksy/micex-m-m",
+        "child": 1
+    },
+    {
+        "id": 420458,
+        "name": "MOEXOG",
+        "code": "MOEXOG",
+        "market": 91,
+        "url": "moex-indeksy/micex-o-g",
+        "child": 1
+    },
+    {
+        "id": 420599,
+        "name": "MOEXREPO",
+        "code": "MOEXREPO",
+        "market": 91,
+        "url": "moex-indeksy/mxrepo",
+        "child": 1
+    },
+    {
+        "id": 455850,
+        "name": "MOEXREPO1W",
+        "code": "MOEXREPO1W",
+        "market": 91,
+        "url": "moex-indeksy/moexrepo1w",
+        "child": 1
+    },
+    {
+        "id": 455851,
+        "name": "MOEXREPO1WE",
+        "code": "MOEXREPO1WE",
+        "market": 91,
+        "url": "moex-indeksy/moexrepo1we",
+        "child": 1
+    },
+    {
+        "id": 420509,
+        "name": "MOEXREPOE",
+        "code": "MOEXREPOE",
+        "market": 91,
+        "url": "moex-indeksy/mxrepoe",
+        "child": 1
+    },
+    {
+        "id": 420600,
+        "name": "MOEXREPOEQ",
+        "code": "MOEXREPOEQ",
+        "market": 91,
+        "url": "moex-indeksy/mxrepoeq",
+        "child": 1
+    },
+    {
+        "id": 420510,
+        "name": "MOEXREPOEQE",
+        "code": "MOEXREPOEQE",
+        "market": 91,
+        "url": "moex-indeksy/mxrepoeqe",
+        "child": 1
+    },
+    {
+        "id": 455855,
+        "name": "MOEXREPOUSD",
+        "code": "MOEXREPOUSD",
+        "market": 91,
+        "url": "moex-indeksy/moexrepousd",
+        "child": 1
+    },
+    {
+        "id": 455856,
+        "name": "MOEXREPOUSDE",
+        "code": "MOEXREPOUSDE",
+        "market": 91,
+        "url": "moex-indeksy/moexrepousde",
+        "child": 1
+    },
+    {
+        "id": 420461,
+        "name": "MOEXTL",
+        "code": "MOEXTL",
+        "market": 91,
+        "url": "moex-indeksy/micex-tlc",
+        "child": 1
+    },
+    {
+        "id": 420475,
+        "name": "MOEXTN",
+        "code": "MOEXTN",
+        "market": 91,
+        "url": "moex-indeksy/micex-trn",
+        "child": 1
+    },
+    {
+        "id": 455252,
+        "name": "MXREPO1W",
+        "code": "MXREPO1W",
+        "market": 91,
+        "url": "moex-indeksy/mxrepo1w",
+        "child": 1
+    },
+    {
+        "id": 455253,
+        "name": "MXREPO1WE",
+        "code": "MXREPO1WE",
+        "market": 91,
+        "url": "moex-indeksy/mxrepo1we",
+        "child": 1
+    },
+    {
+        "id": 455254,
+        "name": "MXREPOUSD",
+        "code": "MXREPOUSD",
+        "market": 91,
+        "url": "moex-indeksy/mxrepousd",
+        "child": 1
+    },
+    {
+        "id": 455255,
+        "name": "MXREPOUSDE",
+        "code": "MXREPOUSDE",
+        "market": 91,
+        "url": "moex-indeksy/mxrepousde",
+        "child": 1
+    },
+    {
+        "id": 420478,
+        "name": "RGBI",
+        "code": "RGBI",
+        "market": 91,
+        "url": "moex-indeksy/rgbi",
+        "child": 1
+    },
+    {
+        "id": 420577,
+        "name": "RGBI-g",
+        "code": "RGBI-g",
+        "market": 91,
+        "url": "moex-indeksy/rgbi-g",
+        "child": 1
+    },
+    {
+        "id": 420479,
+        "name": "RGBITR",
+        "code": "RGBITR",
+        "market": 91,
+        "url": "moex-indeksy/rgbi-tr",
+        "child": 1
+    },
+    {
+        "id": 491517,
+        "name": "RPGCC",
+        "code": "RPGCC",
+        "market": 91,
+        "url": "moex-indeksy/rpgcc",
+        "child": 1
+    },
+    {
+        "id": 491518,
+        "name": "RPGCC1W",
+        "code": "RPGCC1W",
+        "market": 91,
+        "url": "moex-indeksy/rpgcc1w",
+        "child": 1
+    },
+    {
+        "id": 491519,
+        "name": "RPGCC1WE",
+        "code": "RPGCC1WE",
+        "market": 91,
+        "url": "moex-indeksy/rpgcc1we",
+        "child": 1
+    },
+    {
+        "id": 491520,
+        "name": "RPGCCE",
+        "code": "RPGCCE",
+        "market": 91,
+        "url": "moex-indeksy/rpgcce",
+        "child": 1
+    },
+    {
+        "id": 420464,
+        "name": "RTS2",
+        "code": "RTS2",
+        "market": 91,
+        "url": "moex-indeksy/rts2",
+        "child": 1
+    },
+    {
+        "id": 420465,
+        "name": "RTSCH",
+        "code": "RTSCH",
+        "market": 91,
+        "url": "moex-indeksy/rtsch",
+        "child": 1
+    },
+    {
+        "id": 420466,
+        "name": "RTSCR",
+        "code": "RTSCR",
+        "market": 91,
+        "url": "moex-indeksy/rtscr",
+        "child": 1
+    },
+    {
+        "id": 420467,
+        "name": "RTSEU",
+        "code": "RTSEU",
+        "market": 91,
+        "url": "moex-indeksy/rtseu",
+        "child": 1
+    },
+    {
+        "id": 420468,
+        "name": "RTSFN",
+        "code": "RTSFN",
+        "market": 91,
+        "url": "moex-indeksy/rtsfn",
+        "child": 1
+    },
+    {
+        "id": 420445,
+        "name": "RTSI",
+        "code": "RTSI",
+        "market": 91,
+        "url": "moex-indeksy/rtsi",
+        "child": 1
+    },
+    {
+        "id": 420469,
+        "name": "RTSIN",
+        "code": "RTSIN",
+        "market": 91,
+        "url": "moex-indeksy/rtsin",
+        "child": 1
+    },
+    {
+        "id": 420470,
+        "name": "RTSMM",
+        "code": "RTSMM",
+        "market": 91,
+        "url": "moex-indeksy/rtsmm",
+        "child": 1
+    },
+    {
+        "id": 420471,
+        "name": "RTSOG",
+        "code": "RTSOG",
+        "market": 91,
+        "url": "moex-indeksy/rtsog",
+        "child": 1
+    },
+    {
+        "id": 420477,
+        "name": "RTSSIB",
+        "code": "RTSSIB",
+        "market": 91,
+        "url": "moex-indeksy/rtssib",
+        "child": 1
+    },
+    {
+        "id": 453690,
+        "name": "RTSSM",
+        "code": "RTSSM",
+        "market": 91,
+        "url": "moex-indeksy/rtssm",
+        "child": 1
+    },
+    {
+        "id": 420472,
+        "name": "RTSTL",
+        "code": "RTSTL",
+        "market": 91,
+        "url": "moex-indeksy/rtstl",
+        "child": 1
+    },
+    {
+        "id": 420473,
+        "name": "RTSTN",
+        "code": "RTSTN",
+        "market": 91,
+        "url": "moex-indeksy/rtstn",
+        "child": 1
+    },
+    {
+        "id": 465346,
+        "name": "RTSTR",
+        "code": "RTSTR",
+        "market": 91,
+        "url": "moex-indeksy/rtstr",
+        "child": 1
+    },
+    {
+        "id": 465347,
+        "name": "RTSTRN",
+        "code": "RTSTRN",
+        "market": 91,
+        "url": "moex-indeksy/rtstrn",
+        "child": 1
+    },
+    {
+        "id": 465348,
+        "name": "RTSTRR",
+        "code": "RTSTRR",
+        "market": 91,
+        "url": "moex-indeksy/rtstrr",
+        "child": 1
+    },
+    {
+        "id": 454563,
+        "name": "RTSUSDCUR",
+        "code": "RTSUSDCUR",
+        "market": 91,
+        "url": "moex-indeksy/rtsusdcur",
+        "child": 1
+    },
+    {
+        "id": 420462,
+        "name": "RTSVX",
+        "code": "RTSVX",
+        "market": 91,
+        "url": "moex-indeksy/rtsvx",
+        "child": 1
+    },
+    {
+        "id": 420525,
+        "name": "RUABICP",
+        "code": "RUABICP",
+        "market": 91,
+        "url": "moex-indeksy/ruabicp",
+        "child": 1
+    },
+    {
+        "id": 420514,
+        "name": "RUABITR",
+        "code": "RUABITR",
+        "market": 91,
+        "url": "moex-indeksy/ruabitr",
+        "child": 1
+    },
+    {
+        "id": 420474,
+        "name": "RUBMI",
+        "code": "RUBMI",
+        "market": 91,
+        "url": "moex-indeksy/rubmi",
+        "child": 1
+    },
+    {
+        "id": 548841,
+        "name": "RUCBCP3Y",
+        "code": "RUCBCP3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbcp3y",
+        "child": 1
+    },
+    {
+        "id": 420487,
+        "name": "RUCBCP5Y",
+        "code": "RUCBCP5Y",
+        "market": 91,
+        "url": "moex-indeksy/msxcbicp5y",
+        "child": 1
+    },
+    {
+        "id": 420482,
+        "name": "RUCBICP",
+        "code": "RUCBICP",
+        "market": 91,
+        "url": "moex-indeksy/msxcbicp",
+        "child": 1
+    },
+    {
+        "id": 420540,
+        "name": "RUCBICP1Y",
+        "code": "RUCBICP1Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbicp1y",
+        "child": 1
+    },
+    {
+        "id": 420526,
+        "name": "RUCBICP3+",
+        "code": "RUCBICP3+",
+        "market": 91,
+        "url": "moex-indeksy/rucbicp3plus",
+        "child": 1
+    },
+    {
+        "id": 420541,
+        "name": "RUCBICPB",
+        "code": "RUCBICPB",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpb",
+        "child": 1
+    },
+    {
+        "id": 420527,
+        "name": "RUCBICPB3Y",
+        "code": "RUCBICPB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpb3y",
+        "child": 1
+    },
+    {
+        "id": 420515,
+        "name": "RUCBICPBB",
+        "code": "RUCBICPBB",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbb",
+        "child": 1
+    },
+    {
+        "id": 420555,
+        "name": "RUCBICPBB3+",
+        "code": "RUCBICPBB3+",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbb3plus",
+        "child": 1
+    },
+    {
+        "id": 420516,
+        "name": "RUCBICPBB3Y",
+        "code": "RUCBICPBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbb3y",
+        "child": 1
+    },
+    {
+        "id": 420542,
+        "name": "RUCBICPBB5Y",
+        "code": "RUCBICPBB5Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbb5y",
+        "child": 1
+    },
+    {
+        "id": 420543,
+        "name": "RUCBICPBBB",
+        "code": "RUCBICPBBB",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbbb",
+        "child": 1
+    },
+    {
+        "id": 420544,
+        "name": "RUCBICPBBB3+",
+        "code": "RUCBICPBBB3+",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbbb3plus",
+        "child": 1
+    },
+    {
+        "id": 420556,
+        "name": "RUCBICPBBB3Y",
+        "code": "RUCBICPBBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbbb3y",
+        "child": 1
+    },
+    {
+        "id": 420517,
+        "name": "RUCBICPBBB5Y",
+        "code": "RUCBICPBBB5Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpbbb5y",
+        "child": 1
+    },
+    {
+        "id": 436445,
+        "name": "RUCBICPL1",
+        "code": "RUCBICPL1",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpl1",
+        "child": 1
+    },
+    {
+        "id": 436449,
+        "name": "RUCBICPL2",
+        "code": "RUCBICPL2",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpl2",
+        "child": 1
+    },
+    {
+        "id": 436451,
+        "name": "RUCBICPL3",
+        "code": "RUCBICPL3",
+        "market": 91,
+        "url": "moex-indeksy/rucbicpl3",
+        "child": 1
+    },
+    {
+        "id": 420484,
+        "name": "RUCBITR",
+        "code": "RUCBITR",
+        "market": 91,
+        "url": "moex-indeksy/msxcbitr",
+        "child": 1
+    },
+    {
+        "id": 420528,
+        "name": "RUCBITR1Y",
+        "code": "RUCBITR1Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbitr1y",
+        "child": 1
+    },
+    {
+        "id": 420557,
+        "name": "RUCBITR3+",
+        "code": "RUCBITR3+",
+        "market": 91,
+        "url": "moex-indeksy/rucbitr3plus",
+        "child": 1
+    },
+    {
+        "id": 420558,
+        "name": "RUCBITRB",
+        "code": "RUCBITRB",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrb",
+        "child": 1
+    },
+    {
+        "id": 420518,
+        "name": "RUCBITRB3Y",
+        "code": "RUCBITRB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrb3y",
+        "child": 1
+    },
+    {
+        "id": 420545,
+        "name": "RUCBITRBB",
+        "code": "RUCBITRBB",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbb",
+        "child": 1
+    },
+    {
+        "id": 420546,
+        "name": "RUCBITRBB3+",
+        "code": "RUCBITRBB3+",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbb3plus",
+        "child": 1
+    },
+    {
+        "id": 420559,
+        "name": "RUCBITRBB3Y",
+        "code": "RUCBITRBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbb3y",
+        "child": 1
+    },
+    {
+        "id": 420519,
+        "name": "RUCBITRBB5Y",
+        "code": "RUCBITRBB5Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbb5y",
+        "child": 1
+    },
+    {
+        "id": 420529,
+        "name": "RUCBITRBBB",
+        "code": "RUCBITRBBB",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbbb",
+        "child": 1
+    },
+    {
+        "id": 420530,
+        "name": "RUCBITRBBB3+",
+        "code": "RUCBITRBBB3+",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbbb3plus",
+        "child": 1
+    },
+    {
+        "id": 420531,
+        "name": "RUCBITRBBB3Y",
+        "code": "RUCBITRBBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbbb3y",
+        "child": 1
+    },
+    {
+        "id": 420560,
+        "name": "RUCBITRBBB5Y",
+        "code": "RUCBITRBBB5Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrbbb5y",
+        "child": 1
+    },
+    {
+        "id": 436453,
+        "name": "RUCBITRL1",
+        "code": "RUCBITRL1",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrl1",
+        "child": 1
+    },
+    {
+        "id": 436446,
+        "name": "RUCBITRL2",
+        "code": "RUCBITRL2",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrl2",
+        "child": 1
+    },
+    {
+        "id": 436452,
+        "name": "RUCBITRL3",
+        "code": "RUCBITRL3",
+        "market": 91,
+        "url": "moex-indeksy/rucbitrl3",
+        "child": 1
+    },
+    {
+        "id": 548842,
+        "name": "RUCBTR3Y",
+        "code": "RUCBTR3Y",
+        "market": 91,
+        "url": "moex-indeksy/rucbtr3y",
+        "child": 1
+    },
+    {
+        "id": 420488,
+        "name": "RUCBTR5Y",
+        "code": "RUCBTR5Y",
+        "market": 91,
+        "url": "moex-indeksy/msxcbitr5y",
+        "child": 1
+    },
+    {
+        "id": 536455,
+        "name": "RUEU10",
+        "code": "RUEU10",
+        "market": 91,
+        "url": "moex-indeksy/rueu10",
+        "child": 1
+    },
+    {
+        "id": 420547,
+        "name": "RUGBICP10Y",
+        "code": "RUGBICP10Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbicp10y",
+        "child": 1
+    },
+    {
+        "id": 420548,
+        "name": "RUGBICP1Y",
+        "code": "RUGBICP1Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbicp1y",
+        "child": 1
+    },
+    {
+        "id": 420532,
+        "name": "RUGBICP3Y",
+        "code": "RUGBICP3Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbicp3y",
+        "child": 1
+    },
+    {
+        "id": 420533,
+        "name": "RUGBICP5+",
+        "code": "RUGBICP5+",
+        "market": 91,
+        "url": "moex-indeksy/rugbicp5plus",
+        "child": 1
+    },
+    {
+        "id": 420561,
+        "name": "RUGBICP5Y",
+        "code": "RUGBICP5Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbicp5y",
+        "child": 1
+    },
+    {
+        "id": 420534,
+        "name": "RUGBITR10Y",
+        "code": "RUGBITR10Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbitr10y",
+        "child": 1
+    },
+    {
+        "id": 420520,
+        "name": "RUGBITR1Y",
+        "code": "RUGBITR1Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbitr1y",
+        "child": 1
+    },
+    {
+        "id": 420562,
+        "name": "RUGBITR3Y",
+        "code": "RUGBITR3Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbitr3y",
+        "child": 1
+    },
+    {
+        "id": 420549,
+        "name": "RUGBITR5+",
+        "code": "RUGBITR5+",
+        "market": 91,
+        "url": "moex-indeksy/rugbitr5plus",
+        "child": 1
+    },
+    {
+        "id": 420550,
+        "name": "RUGBITR5Y",
+        "code": "RUGBITR5Y",
+        "market": 91,
+        "url": "moex-indeksy/rugbitr5y",
+        "child": 1
+    },
+    {
+        "id": 420480,
+        "name": "RUMBICP",
+        "code": "RUMBICP",
+        "market": 91,
+        "url": "moex-indeksy/micexmbicp",
+        "child": 1
+    },
+    {
+        "id": 420551,
+        "name": "RUMBICP1Y",
+        "code": "RUMBICP1Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbicp1y",
+        "child": 1
+    },
+    {
+        "id": 420563,
+        "name": "RUMBICP3+",
+        "code": "RUMBICP3+",
+        "market": 91,
+        "url": "moex-indeksy/rumbicp3plus",
+        "child": 1
+    },
+    {
+        "id": 420535,
+        "name": "RUMBICP3Y",
+        "code": "RUMBICP3Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbicp3y",
+        "child": 1
+    },
+    {
+        "id": 420521,
+        "name": "RUMBICPBB",
+        "code": "RUMBICPBB",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpbb",
+        "child": 1
+    },
+    {
+        "id": 420552,
+        "name": "RUMBICPBB3Y",
+        "code": "RUMBICPBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpbb3y",
+        "child": 1
+    },
+    {
+        "id": 420564,
+        "name": "RUMBICPBBB",
+        "code": "RUMBICPBBB",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpbbb",
+        "child": 1
+    },
+    {
+        "id": 420536,
+        "name": "RUMBICPBBB3+",
+        "code": "RUMBICPBBB3+",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpbbb3plus",
+        "child": 1
+    },
+    {
+        "id": 420537,
+        "name": "RUMBICPBBB3Y",
+        "code": "RUMBICPBBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpbbb3y",
+        "child": 1
+    },
+    {
+        "id": 436447,
+        "name": "RUMBICPL1",
+        "code": "RUMBICPL1",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpl1",
+        "child": 1
+    },
+    {
+        "id": 436450,
+        "name": "RUMBICPL3",
+        "code": "RUMBICPL3",
+        "market": 91,
+        "url": "moex-indeksy/rumbicpl3",
+        "child": 1
+    },
+    {
+        "id": 420481,
+        "name": "RUMBITR",
+        "code": "RUMBITR",
+        "market": 91,
+        "url": "moex-indeksy/micexmbitr",
+        "child": 1
+    },
+    {
+        "id": 420522,
+        "name": "RUMBITR1Y",
+        "code": "RUMBITR1Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbitr1y",
+        "child": 1
+    },
+    {
+        "id": 420553,
+        "name": "RUMBITR3+",
+        "code": "RUMBITR3+",
+        "market": 91,
+        "url": "moex-indeksy/rumbitr3plus",
+        "child": 1
+    },
+    {
+        "id": 420565,
+        "name": "RUMBITR3Y",
+        "code": "RUMBITR3Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbitr3y",
+        "child": 1
+    },
+    {
+        "id": 420554,
+        "name": "RUMBITRBB",
+        "code": "RUMBITRBB",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrbb",
+        "child": 1
+    },
+    {
+        "id": 420538,
+        "name": "RUMBITRBB3Y",
+        "code": "RUMBITRBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrbb3y",
+        "child": 1
+    },
+    {
+        "id": 420539,
+        "name": "RUMBITRBBB",
+        "code": "RUMBITRBBB",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrbbb",
+        "child": 1
+    },
+    {
+        "id": 420523,
+        "name": "RUMBITRBBB3+",
+        "code": "RUMBITRBBB3+",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrbbb3plus",
+        "child": 1
+    },
+    {
+        "id": 420524,
+        "name": "RUMBITRBBB3Y",
+        "code": "RUMBITRBBB3Y",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrbbb3y",
+        "child": 1
+    },
+    {
+        "id": 436454,
+        "name": "RUMBITRL1",
+        "code": "RUMBITRL1",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrl1",
+        "child": 1
+    },
+    {
+        "id": 436448,
+        "name": "RUMBITRL3",
+        "code": "RUMBITRL3",
+        "market": 91,
+        "url": "moex-indeksy/rumbitrl3",
+        "child": 1
+    },
+    {
+        "id": 420512,
+        "name": "RUPAI",
+        "code": "RUPAI",
+        "market": 91,
+        "url": "moex-indeksy/rupai",
+        "child": 1
+    },
+    {
+        "id": 420511,
+        "name": "RUPCI",
+        "code": "RUPCI",
+        "market": 91,
+        "url": "moex-indeksy/rupci",
+        "child": 1
+    },
+    {
+        "id": 420513,
+        "name": "RUPMI",
+        "code": "RUPMI",
+        "market": 91,
+        "url": "moex-indeksy/rupmi",
+        "child": 1
+    },
+    {
+        "id": 420463,
+        "name": "RVI",
+        "code": "RVI",
+        "market": 91,
+        "url": "moex-indeksy/rvi",
+        "child": 1
+    },
+    {
+        "id": 502416,
+        "name": "SBGBA",
+        "code": "SBGBA",
+        "market": 91,
+        "url": "moex-indeksy/sbgba",
+        "child": 1
+    },
+    {
+        "id": 497317,
+        "name": "SBMXA",
+        "code": "SBMXA",
+        "market": 91,
+        "url": "moex-indeksy/sbmxa",
+        "child": 1
+    },
+    {
+        "id": 420588,
+        "name": "SRATE_CNY_ON",
+        "code": "SRATE_CNY_ON",
+        "market": 91,
+        "url": "moex-indeksy/sratecnyon",
+        "child": 1
+    },
+    {
+        "id": 420589,
+        "name": "SRATE_ED_ON",
+        "code": "SRATE_ED_ON",
+        "market": 91,
+        "url": "moex-indeksy/srateedon",
+        "child": 1
+    },
+    {
+        "id": 420590,
+        "name": "SRATE_EUR_ON",
+        "code": "SRATE_EUR_ON",
+        "market": 91,
+        "url": "moex-indeksy/srateeuron",
+        "child": 1
+    },
+    {
+        "id": 420591,
+        "name": "SRATE_USD_1M",
+        "code": "SRATE_USD_1M",
+        "market": 91,
+        "url": "moex-indeksy/srateusd1m",
+        "child": 1
+    },
+    {
+        "id": 420584,
+        "name": "SRATE_USD_1W",
+        "code": "SRATE_USD_1W",
+        "market": 91,
+        "url": "moex-indeksy/srateusd1w",
+        "child": 1
+    },
+    {
+        "id": 420592,
+        "name": "SRATE_USD_1Y",
+        "code": "SRATE_USD_1Y",
+        "market": 91,
+        "url": "moex-indeksy/srateusd1y",
+        "child": 1
+    },
+    {
+        "id": 420593,
+        "name": "SRATE_USD_2M",
+        "code": "SRATE_USD_2M",
+        "market": 91,
+        "url": "moex-indeksy/srateusd2m",
+        "child": 1
+    },
+    {
+        "id": 420594,
+        "name": "SRATE_USD_2W",
+        "code": "SRATE_USD_2W",
+        "market": 91,
+        "url": "moex-indeksy/srateusd2w",
+        "child": 1
+    },
+    {
+        "id": 420595,
+        "name": "SRATE_USD_3M",
+        "code": "SRATE_USD_3M",
+        "market": 91,
+        "url": "moex-indeksy/srateusd3m",
+        "child": 1
+    },
+    {
+        "id": 420596,
+        "name": "SRATE_USD_6M",
+        "code": "SRATE_USD_6M",
+        "market": 91,
+        "url": "moex-indeksy/srateusd6m",
+        "child": 1
+    },
+    {
+        "id": 420597,
+        "name": "SRATE_USD_9M",
+        "code": "SRATE_USD_9M",
+        "market": 91,
+        "url": "moex-indeksy/srateusd9m",
+        "child": 1
+    },
+    {
+        "id": 420598,
+        "name": "SRATE_USD_ON",
+        "code": "SRATE_USD_ON",
+        "market": 91,
+        "url": "moex-indeksy/srateusdon",
+        "child": 1
+    },
+    {
+        "id": 491057,
+        "name": "TESTNAV",
+        "code": "TESTNAV",
+        "market": 91,
+        "url": "moex-indeksy/testnav",
+        "child": 1
+    },
+    {
+        "id": 475678,
+        "name": "USD1MFIX",
+        "code": "USD1MFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd1mfix",
+        "child": 1
+    },
+    {
+        "id": 475679,
+        "name": "USD1WFIX",
+        "code": "USD1WFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd1wfix",
+        "child": 1
+    },
+    {
+        "id": 475680,
+        "name": "USD1YFIX",
+        "code": "USD1YFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd1yfix",
+        "child": 1
+    },
+    {
+        "id": 475681,
+        "name": "USD2MFIX",
+        "code": "USD2MFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd2mfix",
+        "child": 1
+    },
+    {
+        "id": 475682,
+        "name": "USD2WFIX",
+        "code": "USD2WFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd2wfix",
+        "child": 1
+    },
+    {
+        "id": 475683,
+        "name": "USD3MFIX",
+        "code": "USD3MFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd3mfix",
+        "child": 1
+    },
+    {
+        "id": 475684,
+        "name": "USD6MFIX",
+        "code": "USD6MFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd6mfix",
+        "child": 1
+    },
+    {
+        "id": 475685,
+        "name": "USD9MFIX",
+        "code": "USD9MFIX",
+        "market": 91,
+        "url": "moex-indeksy/usd9mfix",
+        "child": 1
+    },
+    {
+        "id": 420452,
+        "name": "USDFIX",
+        "code": "USDFIX",
+        "market": 91,
+        "url": "moex-indeksy/usdfix",
+        "child": 1
+    },
+    {
+        "id": 420585,
+        "name": "USDFIXME",
+        "code": "USDFIXME",
+        "market": 91,
+        "url": "moex-indeksy/usdfixme",
+        "child": 1
+    },
+    {
+        "id": 420578,
+        "name": "USDSFIX",
+        "code": "USDSFIX",
+        "market": 91,
+        "url": "moex-indeksy/usdsfix",
+        "child": 1
+    },
+    {
+        "id": 420579,
+        "name": "UX",
+        "code": "UX",
+        "market": 91,
+        "url": "moex-indeksy/ux",
+        "child": 1
+    },
+    {
+        "id": 420580,
+        "name": "UXAG",
+        "code": "UXAG",
+        "market": 91,
+        "url": "moex-indeksy/uxag",
+        "child": 1
+    }
+]

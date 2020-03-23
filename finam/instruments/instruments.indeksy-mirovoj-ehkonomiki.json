@@ -1,0 +1,194 @@
+[
+    {
+        "id": 20452,
+        "name": "Americas Consumer Goods",
+        "code": "A1NCY",
+        "market": 30,
+        "decp": 2,
+        "url": "indeksy-mirovoj-ehkonomiki/americas-consumer-goods-index",
+        "child": 1
+    },
+    {
+        "id": 20460,
+        "name": "Americas Financials",
+        "code": "A1FIN",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/americas-financials-index",
+        "child": 1
+    },
+    {
+        "id": 20448,
+        "name": "Americas Industrials",
+        "code": "A1IDU",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/americas-industrials-index",
+        "child": 1
+    },
+    {
+        "id": 20444,
+        "name": "Americas Oil & Gas",
+        "code": "A1ENE",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/americas-oil-gas-index",
+        "child": 1
+    },
+    {
+        "id": 20464,
+        "name": "Americas Technology",
+        "code": "A1TEC",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/americas-technology-index",
+        "child": 1
+    },
+    {
+        "id": 20456,
+        "name": "Americas Telecommunications",
+        "code": "A1TLS",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/americas-telecommunications-index",
+        "child": 1
+    },
+    {
+        "id": 20454,
+        "name": "Asia/P. Consumer Goods",
+        "code": "P1NCY",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/asia-pacific-consumer-goods-index",
+        "child": 1
+    },
+    {
+        "id": 20462,
+        "name": "Asia/P. Financials",
+        "code": "P1FIN",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/asia-pacific-financials-index",
+        "child": 1
+    },
+    {
+        "id": 20450,
+        "name": "Asia/P. Industrials",
+        "code": "P1IDU",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/asia-pacific-industrials-index",
+        "child": 1
+    },
+    {
+        "id": 20466,
+        "name": "Asia/P. Technology",
+        "code": "P1TEC",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/asia-pacific-technology-index",
+        "child": 1
+    },
+    {
+        "id": 20458,
+        "name": "Asia/P. Telecommunications",
+        "code": "P1TLS",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/asia-pacific-telecommunications-index",
+        "child": 1
+    },
+    {
+        "id": 20446,
+        "name": "Asia/Pacific Oil & Gas",
+        "code": "P1ENE",
+        "market": 30,
+        "decp": 4,
+        "url": "indeksy-mirovoj-ehkonomiki/asia-pacific-oil-gas-index",
+        "child": 1
+    },
+    {
+        "id": 20453,
+        "name": "Europe Consumer Goods",
+        "code": "E1NCY",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/europe-consumer-goods-index",
+        "child": 1
+    },
+    {
+        "id": 20461,
+        "name": "Europe Financials",
+        "code": "E1FIN",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/europe-financials-index",
+        "child": 1
+    },
+    {
+        "id": 20449,
+        "name": "Europe Industrials",
+        "code": "E1IDU",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/europe-industrials-index",
+        "child": 1
+    },
+    {
+        "id": 20445,
+        "name": "Europe Oil & Gas",
+        "code": "E1ENE",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/europe-oil-gas-index",
+        "child": 1
+    },
+    {
+        "id": 20465,
+        "name": "Europe Technology",
+        "code": "E1TEC",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/europe-technology-index",
+        "child": 1
+    },
+    {
+        "id": 20457,
+        "name": "Europe Telecommunications",
+        "code": "E1TLS",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/europe-telecommunications-index",
+        "child": 1
+    },
+    {
+        "id": 20451,
+        "name": "World Consumer Goods",
+        "code": "W1NCY",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/world-consumer-goods-index",
+        "child": 1
+    },
+    {
+        "id": 20459,
+        "name": "World Financials",
+        "code": "W1FIN",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/world-financials-index",
+        "child": 1
+    },
+    {
+        "id": 20447,
+        "name": "World Industrials",
+        "code": "W1IDU",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/world-industrials-index",
+        "child": 1
+    },
+    {
+        "id": 20463,
+        "name": "World Technology",
+        "code": "W1TEC",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/world-technology-index",
+        "child": 1
+    },
+    {
+        "id": 20455,
+        "name": "World Telecommunications",
+        "code": "W1TLS",
+        "market": 30,
+        "url": "indeksy-mirovoj-ehkonomiki/world-telecommunications-index",
+        "child": 1
+    }
+]

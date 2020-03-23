@@ -1,0 +1,138 @@
+[
+    {
+        "id": 181753,
+        "name": "FXAU ETF",
+        "code": "FXAU",
+        "market": 515,
+        "url": "moex-etf/finex-msci-australia-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 385054,
+        "name": "FXCN ETF",
+        "code": "FXCN",
+        "market": 515,
+        "url": "moex-etf/finex-msci-china-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 181749,
+        "name": "FXDE ETF",
+        "code": "FXDE",
+        "market": 515,
+        "url": "moex-etf/finex-msci-germany-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 181675,
+        "name": "FXGD ETF",
+        "code": "FXGD",
+        "market": 515,
+        "url": "moex-etf/finex-gold-etf-usd",
+        "child": 1
+    },
+    {
+        "id": 181751,
+        "name": "FXJP ETF",
+        "code": "FXJP",
+        "market": 515,
+        "url": "moex-etf/finex-mcsi-japan-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 499200,
+        "name": "FXKZ ETF",
+        "code": "FXKZ",
+        "market": 515,
+        "url": "moex-etf/finex-ffin-kzt-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 388329,
+        "name": "FXMM ETF",
+        "code": "FXMM",
+        "market": 515,
+        "url": "moex-etf/finex-cash-equivalents-usits",
+        "child": 1
+    },
+    {
+        "id": 175671,
+        "name": "FXRB ETF",
+        "code": "FXRB",
+        "market": 515,
+        "url": "moex-etf/finex-rus-eurobonds-etf-rub",
+        "child": 1
+    },
+    {
+        "id": 453885,
+        "name": "FXRL ETF",
+        "code": "FXRL",
+        "market": 515,
+        "url": "moex-etf/finex-rts-ucits-etf-usd",
+        "child": 1
+    },
+    {
+        "id": 182346,
+        "name": "FXRU ETF",
+        "code": "FXRU",
+        "market": 515,
+        "url": "moex-etf/finex-rus-eurobonds-etf-usd",
+        "child": 1
+    },
+    {
+        "id": 878188,
+        "name": "FXTB ETF",
+        "code": "FXTB",
+        "market": 515,
+        "url": "moex-etf/finex-usd-cash-equivalents-etf",
+        "child": 1
+    },
+    {
+        "id": 181752,
+        "name": "FXUK ETF",
+        "code": "FXUK",
+        "market": 515,
+        "url": "moex-etf/finex-msci-uk-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 181754,
+        "name": "FXUS ETF",
+        "code": "FXUS",
+        "market": 515,
+        "url": "moex-etf/finex-msci-usa-ucits-etf",
+        "child": 1
+    },
+    {
+        "id": 494666,
+        "name": "RUSB ETF",
+        "code": "RUSB",
+        "market": 515,
+        "url": "moex-etf/iti-funds-russia-focused-usd",
+        "child": 1
+    },
+    {
+        "id": 494667,
+        "name": "RUSE ETF",
+        "code": "RUSE",
+        "market": 515,
+        "url": "moex-etf/iti-funds-rts-equity-etf",
+        "child": 1
+    },
+    {
+        "id": 497675,
+        "name": "SBMX ETF",
+        "code": "SBMX",
+        "market": 515,
+        "url": "moex-etf/bpif-brutto-sberbank-am",
+        "child": 1
+    },
+    {
+        "id": 181750,
+        "name": "iFXIT ETF",
+        "code": "FXIT",
+        "market": 515,
+        "url": "moex-etf/finex-msci-usa-inform-tech-etf",
+        "child": 1
+    }
+]

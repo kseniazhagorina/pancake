@@ -1,0 +1,84 @@
+[
+    {
+        "id": 95,
+        "name": "Индекс РТС",
+        "code": "RTSI",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rts",
+        "child": 1
+    },
+    {
+        "id": 16682,
+        "name": "Индекс РТС второго эшелона",
+        "code": "RTS2",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rts-2",
+        "child": 1
+    },
+    {
+        "id": 90,
+        "name": "SandP-500*",
+        "code": "INX",
+        "market": 6,
+        "url": "mirovye-indeksy/sandp-500",
+        "child": 1
+    },
+    {
+        "id": 91,
+        "name": "D&J-Ind*",
+        "code": "DJI",
+        "market": 6,
+        "url": "mirovye-indeksy/d-j-ind",
+        "child": 1
+    },
+    {
+        "id": 82075,
+        "name": "NASDAQ**",
+        "code": "IXIC",
+        "market": 6,
+        "url": "mirovye-indeksy/nasdaq",
+        "child": 1
+    },
+    {
+        "id": 93,
+        "name": "Futsee-100*",
+        "code": "UKX",
+        "market": 6,
+        "url": "mirovye-indeksy/futsee-100",
+        "child": 1
+    },
+    {
+        "id": 112,
+        "name": "CAC 40",
+        "code": "PX1",
+        "market": 6,
+        "url": "mirovye-indeksy/cac-40",
+        "child": 1
+    },
+    {
+        "id": 19063,
+        "name": "N225Jap*",
+        "code": "NI255",
+        "market": 6,
+        "url": "mirovye-indeksy/n225jap",
+        "child": 1
+    },
+    {
+        "id": 22837,
+        "name": "CSI300 (Китай)",
+        "code": "000300",
+        "market": 6,
+        "url": "mirovye-indeksy/csi300",
+        "child": 1
+    },
+    {
+        "id": 111,
+        "name": "Hang Seng (Гонконг)",
+        "code": "HIS",
+        "market": 6,
+        "url": "mirovye-indeksy/hang-seng",
+        "child": 1
+    }
+]

@@ -1,0 +1,863 @@
+[
+    {
+        "id": 18902,
+        "name": "AMMEKS*",
+        "code": "XAX",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/ammeks",
+        "child": 1
+    },
+    {
+        "id": 19595,
+        "name": "ASX200 (Австралия)*",
+        "code": "XJO",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/asx200-australia",
+        "child": 1
+    },
+    {
+        "id": 19592,
+        "name": "BSE Sensex (Индия)",
+        "code": "SENSEX",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/bse-sensex",
+        "child": 1
+    },
+    {
+        "id": 1097,
+        "name": "Bovespa (Бразилия)",
+        "code": "BVSP",
+        "market": 6,
+        "url": "mirovye-indeksy/bovespa",
+        "child": 1
+    },
+    {
+        "id": 112,
+        "name": "CAC 40",
+        "code": "PX1",
+        "market": 6,
+        "url": "mirovye-indeksy/cac-40",
+        "child": 1
+    },
+    {
+        "id": 19594,
+        "name": "CSI200 (Китай)",
+        "code": "399904",
+        "market": 6,
+        "url": "mirovye-indeksy/csi200",
+        "child": 1
+    },
+    {
+        "id": 22837,
+        "name": "CSI300 (Китай)",
+        "code": "000300",
+        "market": 6,
+        "url": "mirovye-indeksy/csi300",
+        "child": 1
+    },
+    {
+        "id": 91,
+        "name": "D&J-Ind*",
+        "code": "DJI",
+        "market": 6,
+        "url": "mirovye-indeksy/d-j-ind",
+        "child": 1
+    },
+    {
+        "id": 93,
+        "name": "Futsee-100*",
+        "code": "UKX",
+        "market": 6,
+        "url": "mirovye-indeksy/futsee-100",
+        "child": 1
+    },
+    {
+        "id": 111,
+        "name": "Hang Seng (Гонконг)",
+        "code": "HIS",
+        "market": 6,
+        "url": "mirovye-indeksy/hang-seng",
+        "child": 1
+    },
+    {
+        "id": 19593,
+        "name": "KOSPI (Корея)",
+        "code": "KOSPI",
+        "market": 6,
+        "url": "mirovye-indeksy/kospi",
+        "child": 1
+    },
+    {
+        "id": 18857,
+        "name": "MICEX LC",
+        "code": "MICEXLC",
+        "market": 6,
+        "url": "mirovye-indeksy/micex-lc",
+        "child": 1
+    },
+    {
+        "id": 18858,
+        "name": "MICEX MC",
+        "code": "MICEXMC",
+        "market": 6,
+        "url": "mirovye-indeksy/micex-mc",
+        "child": 1
+    },
+    {
+        "id": 20227,
+        "name": "MICEXCBIGP",
+        "code": "MICEXCBIGP",
+        "market": 6,
+        "url": "mirovye-indeksy/micexcbigp",
+        "child": 1
+    },
+    {
+        "id": 20218,
+        "name": "MICEXCBIGP3Y",
+        "code": "MICEXCBIGP3Y",
+        "market": 6,
+        "url": "mirovye-indeksy/micexcbigp3y",
+        "child": 1
+    },
+    {
+        "id": 20219,
+        "name": "MICEXCBIGP5Y",
+        "code": "MICEXCBIGP5Y",
+        "market": 6,
+        "url": "mirovye-indeksy/micexcbigp5y",
+        "child": 1
+    },
+    {
+        "id": 20741,
+        "name": "MICEXMBIGP",
+        "code": "MICEXMBIGP",
+        "market": 6,
+        "url": "mirovye-indeksy/micexmbigp",
+        "child": 1
+    },
+    {
+        "id": 399714,
+        "name": "MOEXREPO акц 12:30",
+        "code": "MOEXREPOEQ",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepoeq",
+        "child": 1
+    },
+    {
+        "id": 399715,
+        "name": "MOEXREPO акц 19:00",
+        "code": "MOEXREPOEQE",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepoeqe",
+        "child": 1
+    },
+    {
+        "id": 399712,
+        "name": "MOEXREPO обл 12:30",
+        "code": "MOEXREPO",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepo",
+        "child": 1
+    },
+    {
+        "id": 399713,
+        "name": "MOEXREPO обл 19:00",
+        "code": "MOEXREPOE",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepoe",
+        "child": 1
+    },
+    {
+        "id": 455247,
+        "name": "MOEXREPO1W обл 12:30",
+        "code": "MOEXREPO1W",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepo1w",
+        "child": 1
+    },
+    {
+        "id": 455248,
+        "name": "MOEXREPO1W обл 19:00",
+        "code": "MOEXREPO1WE",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepo1we",
+        "child": 1
+    },
+    {
+        "id": 455249,
+        "name": "MOEXREPOUSD обл 12:30",
+        "code": "MOEXREPOUSD",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepousd",
+        "child": 1
+    },
+    {
+        "id": 455250,
+        "name": "MOEXREPOUSD обл 19:00",
+        "code": "MOEXREPOUSDE",
+        "market": 6,
+        "url": "mirovye-indeksy/mxrepousde",
+        "child": 1
+    },
+    {
+        "id": 1108,
+        "name": "Merval (Аргентина)",
+        "code": "MERV",
+        "market": 6,
+        "url": "mirovye-indeksy/merval",
+        "child": 1
+    },
+    {
+        "id": 19063,
+        "name": "N225Jap*",
+        "code": "NI255",
+        "market": 6,
+        "url": "mirovye-indeksy/n225jap",
+        "child": 1
+    },
+    {
+        "id": 82074,
+        "name": "NASDAQ 100**",
+        "code": "NDX",
+        "market": 6,
+        "url": "mirovye-indeksy/nasdaq-100",
+        "child": 1
+    },
+    {
+        "id": 82075,
+        "name": "NASDAQ**",
+        "code": "IXIC",
+        "market": 6,
+        "url": "mirovye-indeksy/nasdaq",
+        "child": 1
+    },
+    {
+        "id": 15474,
+        "name": "RCBI",
+        "code": "MICEXBNDPRCI",
+        "market": 6,
+        "url": "mirovye-indeksy/micexbndprci",
+        "child": 1
+    },
+    {
+        "id": 15475,
+        "name": "RCBI-c",
+        "code": "MICEXBNDTRTI",
+        "market": 6,
+        "url": "mirovye-indeksy/micexbndtrti",
+        "child": 1
+    },
+    {
+        "id": 82309,
+        "name": "RGBIG",
+        "code": "RGBIG",
+        "market": 6,
+        "url": "mirovye-indeksy/rgbig",
+        "child": 1
+    },
+    {
+        "id": 491521,
+        "name": "RPGCC КСУ 12:30",
+        "code": "RPGCC",
+        "market": 6,
+        "url": "mirovye-indeksy/rpgcc-gcc-12-30",
+        "child": 1
+    },
+    {
+        "id": 491522,
+        "name": "RPGCC1W КСУ 12:30",
+        "code": "RPGCC1W",
+        "market": 6,
+        "url": "mirovye-indeksy/rpgcc1w-gcc-12-30",
+        "child": 1
+    },
+    {
+        "id": 491523,
+        "name": "RPGCC1WE КСУ 19:00",
+        "code": "RPGCC1WE",
+        "market": 6,
+        "url": "mirovye-indeksy/rpgcc1we-gcc-19-00",
+        "child": 1
+    },
+    {
+        "id": 491524,
+        "name": "RPGCCE КСУ 19:00",
+        "code": "RPGCCE",
+        "market": 6,
+        "url": "mirovye-indeksy/rpgcce-gcc-19-00",
+        "child": 1
+    },
+    {
+        "id": 751,
+        "name": "RTST",
+        "code": "RTST",
+        "market": 6,
+        "url": "mirovye-indeksy/rtst",
+        "child": 1
+    },
+    {
+        "id": 152573,
+        "name": "RTSVX",
+        "code": "RTSVX",
+        "market": 6,
+        "url": "mirovye-indeksy/rtsvx",
+        "child": 1
+    },
+    {
+        "id": 18163,
+        "name": "RTScr",
+        "code": "RTScr",
+        "market": 6,
+        "url": "mirovye-indeksy/rts-index-consumer",
+        "child": 1
+    },
+    {
+        "id": 19627,
+        "name": "RTSeu",
+        "code": "RTSeu",
+        "market": 6,
+        "url": "mirovye-indeksy/rtseu",
+        "child": 1
+    },
+    {
+        "id": 19628,
+        "name": "RTSfn",
+        "code": "RTSfn",
+        "market": 6,
+        "url": "mirovye-indeksy/rtsfn",
+        "child": 1
+    },
+    {
+        "id": 18167,
+        "name": "RTSin",
+        "code": "RTSin",
+        "market": 6,
+        "url": "mirovye-indeksy/rts-index-industrial-sector",
+        "child": 1
+    },
+    {
+        "id": 18162,
+        "name": "RTSmm",
+        "code": "RTSmm",
+        "market": 6,
+        "url": "mirovye-indeksy/rts-index-metals-mining",
+        "child": 1
+    },
+    {
+        "id": 18166,
+        "name": "RTSog",
+        "code": "RTSog",
+        "market": 6,
+        "url": "mirovye-indeksy/rts-index-oil-gas",
+        "child": 1
+    },
+    {
+        "id": 18161,
+        "name": "RTStl",
+        "code": "RTStl",
+        "market": 6,
+        "url": "mirovye-indeksy/rts-index-telecommunications",
+        "child": 1
+    },
+    {
+        "id": 820,
+        "name": "RUIX",
+        "code": "RUIX",
+        "market": 6,
+        "url": "mirovye-indeksy/ruix",
+        "child": 1
+    },
+    {
+        "id": 90,
+        "name": "SandP-500*",
+        "code": "INX",
+        "market": 6,
+        "url": "mirovye-indeksy/sandp-500",
+        "child": 1
+    },
+    {
+        "id": 19101,
+        "name": "Shanghai Composite(Китай)",
+        "code": "000001",
+        "market": 6,
+        "url": "mirovye-indeksy/shanghai-composite",
+        "child": 1
+    },
+    {
+        "id": 82232,
+        "name": "TA-125 Index",
+        "code": "TA125",
+        "market": 6,
+        "url": "mirovye-indeksy/ta-125-index",
+        "child": 1
+    },
+    {
+        "id": 82229,
+        "name": "TA-35 Index",
+        "code": "TA35",
+        "market": 6,
+        "url": "mirovye-indeksy/ta-35-index",
+        "child": 1
+    },
+    {
+        "id": 13851,
+        "name": "Индекс МосБиржи",
+        "code": "MICEX",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex",
+        "child": 1
+    },
+    {
+        "id": 13850,
+        "name": "Индекс МосБиржи 10",
+        "code": "MOEX10",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex10index",
+        "child": 1
+    },
+    {
+        "id": 22831,
+        "name": "Индекс МосБиржи голубых фишек",
+        "code": "MOEXBC",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtsstd",
+        "child": 1
+    },
+    {
+        "id": 81106,
+        "name": "Индекс МосБиржи инноваций",
+        "code": "MOEXINN",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexinnov",
+        "child": 1
+    },
+    {
+        "id": 175802,
+        "name": "Индекс МосБиржи широкого рынка",
+        "code": "MOEXBMI",
+        "market": 6,
+        "decp": 5,
+        "url": "mirovye-indeksy/micexbmi",
+        "child": 1
+    },
+    {
+        "id": 95,
+        "name": "Индекс РТС",
+        "code": "RTSI",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rts",
+        "child": 1
+    },
+    {
+        "id": 16682,
+        "name": "Индекс РТС второго эшелона",
+        "code": "RTS2",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rts-2",
+        "child": 1
+    },
+    {
+        "id": 453804,
+        "name": "Индекс РТС машиностроения",
+        "code": "RTSIN",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtsin",
+        "child": 1
+    },
+    {
+        "id": 453805,
+        "name": "Индекс РТС металлов и добычи",
+        "code": "RTSMM",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtsmm",
+        "child": 1
+    },
+    {
+        "id": 453806,
+        "name": "Индекс РТС нефти и газа",
+        "code": "RTSOG",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtsog",
+        "child": 1
+    },
+    {
+        "id": 453801,
+        "name": "Индекс РТС потреб. сектора",
+        "code": "RTSCR",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtscr",
+        "child": 1
+    },
+    {
+        "id": 453807,
+        "name": "Индекс РТС телекоммуникаций",
+        "code": "RTSTL",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtstl",
+        "child": 1
+    },
+    {
+        "id": 453808,
+        "name": "Индекс РТС транспорта",
+        "code": "RTSTN",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtstn",
+        "child": 1
+    },
+    {
+        "id": 453803,
+        "name": "Индекс РТС финансов",
+        "code": "RTSFN",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtsfn",
+        "child": 1
+    },
+    {
+        "id": 453800,
+        "name": "Индекс РТС химии и нефтехимии",
+        "code": "RTSCH",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtsch",
+        "child": 1
+    },
+    {
+        "id": 453809,
+        "name": "Индекс РТС широкого рынка",
+        "code": "RUBMI",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rubmi",
+        "child": 1
+    },
+    {
+        "id": 453802,
+        "name": "Индекс РТС электроэнергетики",
+        "code": "RTSEU",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rtseu",
+        "child": 1
+    },
+    {
+        "id": 18859,
+        "name": "Индекс акций второго эшелона",
+        "code": "MICEXSC",
+        "market": 6,
+        "decp": 5,
+        "url": "mirovye-indeksy/micex-sc",
+        "child": 1
+    },
+    {
+        "id": 82308,
+        "name": "Индекс гос обл RGBI",
+        "code": "RGBI",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rgbi",
+        "child": 1
+    },
+    {
+        "id": 82310,
+        "name": "Индекс гос обл RGBI TR",
+        "code": "RGBITR",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/rgbitr",
+        "child": 1
+    },
+    {
+        "id": 20226,
+        "name": "Индекс корп обл MOEX CBICP",
+        "code": "RUCBICP",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcbicp",
+        "child": 1
+    },
+    {
+        "id": 20220,
+        "name": "Индекс корп обл MOEX CBITR",
+        "code": "RUCBITR",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcbitr",
+        "child": 1
+    },
+    {
+        "id": 20216,
+        "name": "Индекс корп обл MOEX CP 3",
+        "code": "RUCBCP5Y",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcbicp5y",
+        "child": 1
+    },
+    {
+        "id": 548843,
+        "name": "Индекс корп обл MOEX CP 5",
+        "code": "RUCBCP3Y",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/moex-corp-bond-cp-index-1-3y",
+        "child": 1
+    },
+    {
+        "id": 20222,
+        "name": "Индекс корп обл MOEX TR 3",
+        "code": "RUCBTR5Y",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcbitr5y",
+        "child": 1
+    },
+    {
+        "id": 548844,
+        "name": "Индекс корп обл MOEX TR 5",
+        "code": "RUCBTR3Y",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/moex-corp-bond-tr-index-1-3y",
+        "child": 1
+    },
+    {
+        "id": 18886,
+        "name": "Индекс металлов и добычи",
+        "code": "MOEXMM",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex-m-m",
+        "child": 1
+    },
+    {
+        "id": 20740,
+        "name": "Индекс мун обл MOEX MBICP",
+        "code": "RUMBICP",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexmbicp",
+        "child": 1
+    },
+    {
+        "id": 20742,
+        "name": "Индекс мун обл MOEX MBITR",
+        "code": "RUMBITR",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexmbitr",
+        "child": 1
+    },
+    {
+        "id": 18454,
+        "name": "Индекс нефти и газа",
+        "code": "MOEXOG",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex-o-g",
+        "child": 1
+    },
+    {
+        "id": 22772,
+        "name": "Индекс потребит сектора",
+        "code": "MOEXCN",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcgs",
+        "child": 1
+    },
+    {
+        "id": 18456,
+        "name": "Индекс телекоммуникаций",
+        "code": "MOEXTL",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex-tlc",
+        "child": 1
+    },
+    {
+        "id": 181860,
+        "name": "Индекс транспорта",
+        "code": "MOEXTN",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micextrn",
+        "child": 1
+    },
+    {
+        "id": 20739,
+        "name": "Индекс финансов",
+        "code": "MOEXFN",
+        "market": 6,
+        "decp": 1,
+        "url": "mirovye-indeksy/micexfnl",
+        "child": 1
+    },
+    {
+        "id": 22773,
+        "name": "Индекс химии и нефтехимии",
+        "code": "MOEXCH",
+        "market": 6,
+        "decp": 0,
+        "url": "mirovye-indeksy/micexchm",
+        "child": 1
+    },
+    {
+        "id": 18455,
+        "name": "Индекс электроэнергетики",
+        "code": "MOEXEU",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex-pwr",
+        "child": 1
+    },
+    {
+        "id": 21176,
+        "name": "ММВБ РЕПО акц 1 день",
+        "code": "MICEXEQRRON",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexeqrron",
+        "child": 1
+    },
+    {
+        "id": 21175,
+        "name": "ММВБ РЕПО акц 14 дней",
+        "code": "MICEXEQRR2W",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexeqrr2w",
+        "child": 1
+    },
+    {
+        "id": 21174,
+        "name": "ММВБ РЕПО акц 7 дней",
+        "code": "MICEXEQRR1W",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexeqrr1w",
+        "child": 1
+    },
+    {
+        "id": 21173,
+        "name": "ММВБ РЕПО обл 1 день",
+        "code": "MICEXBORRON",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexborron",
+        "child": 1
+    },
+    {
+        "id": 21172,
+        "name": "ММВБ РЕПО обл 14 дней",
+        "code": "MICEXBORR2W",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexborr2w",
+        "child": 1
+    },
+    {
+        "id": 21171,
+        "name": "ММВБ РЕПО обл 7 дней",
+        "code": "MICEXBORR1W",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexborr1w",
+        "child": 1
+    },
+    {
+        "id": 20215,
+        "name": "ММВБ корп обл (цен) 1-3",
+        "code": "MICEXCBICP3Y",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcbicp3y",
+        "child": 1
+    },
+    {
+        "id": 20221,
+        "name": "ММВБ корп обл 1-3",
+        "code": "MICEXCBITR3Y",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micexcbitr3y",
+        "child": 1
+    },
+    {
+        "id": 18887,
+        "name": "ММВБ машиностроение",
+        "code": "MICEXMNF",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micex-mnf",
+        "child": 1
+    },
+    {
+        "id": 15949,
+        "name": "ТехнИАкций",
+        "code": "TECHIND",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/techind",
+        "child": 1
+    },
+    {
+        "id": 15950,
+        "name": "ТехнИОблиг",
+        "code": "TECHINDBOND",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/techindbond",
+        "child": 1
+    },
+    {
+        "id": 13852,
+        "name": "ТехнСИ",
+        "code": "MICEXTECHIND",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/micext",
+        "child": 1
+    },
+    {
+        "id": 18165,
+        "name": "Технический индекс акций НП РТ",
+        "code": "TIS",
+        "market": 6,
+        "url": "mirovye-indeksy/tis",
+        "child": 1
+    },
+    {
+        "id": 18164,
+        "name": "Технический индекс акций ОАО Р",
+        "code": "GTS_TIS",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/gtstis",
+        "child": 1
+    },
+    {
+        "id": 20914,
+        "name": "Технический индекс инвестицион",
+        "code": "TIU",
+        "market": 6,
+        "decp": 4,
+        "url": "mirovye-indeksy/tiu",
+        "child": 1
+    }
+]

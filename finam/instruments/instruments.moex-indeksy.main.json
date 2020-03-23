@@ -1,0 +1,98 @@
+[
+{
+        "id": 420450,
+        "name": "IMOEX",
+        "code": "IMOEX",
+        "market": 91,
+        "url": "moex-indeksy/micex",
+        "child": 1
+    },
+    {
+        "id": 420446,
+        "name": "MOEXBC",
+        "code": "MOEXBC",
+        "market": 91,
+        "url": "moex-indeksy/rtsstd",
+        "child": 1
+    },
+    {
+        "id": 453689,
+        "name": "MCXSM",
+        "code": "MCXSM",
+        "market": 91,
+        "url": "moex-indeksy/mcxsm",
+        "child": 1
+    },
+    {
+        "id": 420475,
+        "name": "MOEXTN",
+        "code": "MOEXTN",
+        "market": 91,
+        "url": "moex-indeksy/micex-trn",
+        "child": 1
+    },
+    {
+        "id": 420456,
+        "name": "MOEXFN",
+        "code": "MOEXFN",
+        "market": 91,
+        "url": "moex-indeksy/micex-fnl",
+        "child": 1
+    },
+    {
+        "id": 420455,
+        "name": "MOEXCH",
+        "code": "MOEXCH",
+        "market": 91,
+        "url": "moex-indeksy/micex-chm",
+        "child": 1
+    },
+    {
+        "id": 420458,
+        "name": "MOEXOG",
+        "code": "MOEXOG",
+        "market": 91,
+        "url": "moex-indeksy/micex-o-g",
+        "child": 1
+    },
+    {
+        "id": 420459,
+        "name": "MOEXEU",
+        "code": "MOEXEU",
+        "market": 91,
+        "url": "moex-indeksy/micex-pwr",
+        "child": 1
+    },
+    {
+        "id": 420457,
+        "name": "MOEXMM",
+        "code": "MOEXMM",
+        "market": 91,
+        "url": "moex-indeksy/micex-m-m",
+        "child": 1
+    },
+    {
+        "id": 420461,
+        "name": "MOEXTL",
+        "code": "MOEXTL",
+        "market": 91,
+        "url": "moex-indeksy/micex-tlc",
+        "child": 1
+    },
+    {
+        "id": 420454,
+        "name": "MOEXCN",
+        "code": "MOEXCN",
+        "market": 91,
+        "url": "moex-indeksy/micex-cgs",
+        "child": 1
+    },
+    {
+        "id": 420451,
+        "name": "MOEX10",
+        "code": "MOEX10",
+        "market": 91,
+        "url": "moex-indeksy/micex-10",
+        "child": 1
+    }
+]
