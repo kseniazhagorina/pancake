@@ -1,5 +1,9 @@
 #!usr/bin/env
 # -*- coding: utf-8 -*-
+'''
+Открытый курс машинного обучения. Тема 10. Градиентный бустинг
+https://habr.com/ru/company/ods/blog/327250/
+'''
 
 import sys
 import finam.loader as fnm
@@ -14,22 +18,11 @@ import csv
 import information_gain as ig
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.feature_selection import mutual_info_classif
+from sklearn.metrics import classification_report
+import target
 
-
-def load_target(filename):
-    d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
-    d = d.shift(-1)
-    growth = (d.HIGH - d.OPEN)/d.OPEN
-    change = (d.CLOSE - d.OPEN)/d.OPEN
-
-    target = (growth > 0.008).astype(float) # цель - рост на 0.8% в день
-    # weight = change.apply(lambda x: 3.0 if x > 0.008 else 1.0 if x > 0.002 else 2.0 if x > -0.008 else 3.0)
-    weight = change.apply(lambda x: 1.0)
-    
-    return pd.concat([target.rename('TARGET'), weight.rename('WEIGHT'), growth.rename('GROWTH'), change.rename('CHANGE')], axis=1).dropna()
-   
-    
 def load_series(filenames, addf=False):
     series = []
     for filename in filenames:
@@ -48,25 +41,25 @@ def load_extra(filename, series_name):
     g = (g + (g/np.inf)).fillna(0)
     return g.rename(series_name)
     
-def trade(predict, growth, change):
+def trade(predict, award):
     x = 1.0
-    for p, g, c in zip(predict, growth, change):
-        if p:
-            res = 0.008 if g > 0.008 else c
-            x *= (1.0 + res - 0.002)
+    for p, a in zip(predict, award):
+        if a[p] != 1.0:
+            x *= a[p]
     return x
     
 if __name__ == '__main__':
     
-    y = load_target('1_GAZP.csv')
+    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, q=4))
     g = load_extra('gazp_best.csv', 'VALUE')
+    g0 = load_extra('gazp_best_new_target.csv', 'VALUE0')
     g1 = load_extra('gazp_other_best.csv','OTHER_VALUE')
     g2 = load_extra('gazp_similar_best.csv','SIMILAR_VALUE')
+    g3 = load_extra('gazp_similar_best_new_target.csv','SIMILAR_VALUE0')
     
     s = load_series(['1_GAZP.csv'], True)
-    #x = pd.concat(s, axis=1)
-    #x = pd.concat( s + [g] + [g1] + [g2] , axis=1)
-    x = pd.concat( [x for x in s if x.name in ['GAZP.VOL', 'GAZP.VLT', 'GAZP.VOLR']] + [g] + [g1] + [g2] , axis=1)
+    x = pd.concat( s , axis=1)
+    x = pd.concat( s + [g, g0, g1, g2, g3], axis=1)
     x = x + x/np.inf
 
     _, x = y.TARGET.align(x, join='left', fill_value=0)
@@ -79,31 +72,37 @@ if __name__ == '__main__':
     y_test = y['2019-01-01':]
     x_test = x['2019-01-01':]
     
-    
+    '''
     print('\nmutual information:')
     for c in x_train.columns:
         v = x_train[c]
         v = (v + v/np.inf).fillna(0)  # v/np.inf = 0 или inf/inf = NaN        
         info = mutual_info_classif(v.values.reshape(-1,1), y_train.TARGET, n_neighbors=5, random_state=4838474)[0]
         print('{}: {}'.format(c, info))
-       
+    '''   
     
     #clf = DecisionTreeClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5)
-    clf = RandomForestClassifier(random_state=0, min_samples_split=150, min_samples_leaf=50, n_estimators=250)
-    clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
+    #clf = RandomForestClassifier(random_state=0, min_samples_split=150, min_samples_leaf=50, n_estimators=500)
+    # best configuration for 2-class classification
+    clf = GradientBoostingClassifier(random_state=0, n_estimators=300, learning_rate=0.5, max_depth=2, min_samples_leaf=50)
+    # best configuration for 4-class classification
+    #clf = GradientBoostingClassifier(random_state=0, n_estimators=1000, learning_rate=0.02, max_depth=1, min_samples_leaf=25)
+    
+    clf.fit(x_train, y_train.TARGET)
     print('\nfeature importances:')
-    for c, v in zip(x_train.columns, clf.feature_importances_):
+    for c, v in sorted(zip(x_train.columns, clf.feature_importances_), key = lambda x: x[1]):
         print('{0}: {1:.4f}'.format(c, v))
 
     print('\ntrain score:')
-    print(clf.score(x_train, y_train.TARGET, y_train.WEIGHT))
+    print(clf.score(x_train, y_train.TARGET))
     print('\ntest score:')
-    print(clf.score(x_test, y_test.TARGET, y_test.WEIGHT))
-    
+    print(clf.score(x_test, y_test.TARGET))
     predict = clf.predict(x_test)
+    print(classification_report(y_test.TARGET, predict))
+    
     print('\ntrade score:')
-    print(trade(predict, y_test.GROWTH, y_test.CHANGE))
-    print(trade([1.0]*len(predict), y_test.GROWTH, y_test.CHANGE))
+    print(trade(predict, y_test.AWARD))
+
 '''
 D:\Development\Python\pancake>python dt_classifier.py
 load 1_GAZP.csv

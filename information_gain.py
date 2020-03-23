@@ -136,8 +136,8 @@ def add_factors(d):
         ((avgewm2 - avgewm02)/avgewm02).rename('AVG_EWM2_EWM02'),
         ((highewm2 - highewm02)/highewm02).rename('HIGH_EWM2_EWM02'),
         dayofweek.rename('DAYOFWEEK'),
-        day.rename('day'),
-        month.rename('month')
+        day.rename('DAY'),
+        month.rename('MONTH')
         ],
         axis=1
     )

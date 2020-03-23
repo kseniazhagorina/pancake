@@ -3,6 +3,7 @@
 
 import pandas as pd
 from pandas import read_csv
+import numpy as np
 import os.path
 
 def read(filename):
@@ -13,25 +14,30 @@ def read(filename):
              infer_datetime_format=True)
     d.name = os.path.splitext(os.path.basename(filename))[0].split('_', maxsplit=1)[1]  
     return d
+    
+def avgcross(x):
+    x = ((x.ffill().bfill() - x.mean()) > 0)
+    return sum(x.ffill().bfill() ^ x.shift(1).ffill().bfill())
 
 def resample(data, period, dropna=True):
     params = {'rule': period, 'closed':'left', 'label':'left'}
-    close = data.CLOSE.resample(**params).last()
-    open = data.OPEN.resample(**params).first()
-    high = data.HIGH.resample(**params).max()
-    low = data.LOW.resample(**params).min()
-    vol = data.VOL.resample(**params).sum()
     # data.OPEN.filter(data.VOL > 0).resample(**params).mean() работает очень медленно
     vol_filter = lambda s: s + ((data.VOL-data.VOL)/data.VOL) # 0 или NaN
-    avg = vol_filter(data.OPEN).resample(**params).mean()
-    avg.name = 'AVG'
-    volr = (data.VOL * data.OPEN).resample(**params).sum()  # объем в рублях
-    volr.name = 'VOLR'
-    vlt = vol_filter(data.OPEN).resample(**params).std() # волатильность - стандатное отклонение цены от срдней за сутки (тогда когда были продажи)
-    vlt.name = 'VLT'
-
     
-    d = pd.concat([open, high, low, close, vol, volr, avg, vlt], axis=1)
+    close = vol_filter(data.CLOSE).resample(**params).last().rename('CLOSE')
+    open = vol_filter(data.OPEN).resample(**params).first().rename('OPEN')
+    high = vol_filter(data.HIGH).resample(**params).max().rename('HIGH')
+    low = vol_filter(data.LOW).resample(**params).min().rename('LOW')
+    #low1 = vol_filter(data.LOW).resample(**params).apply(
+    #        lambda x: np.nan if len(x) == 0 else np.min(x[0:np.argmax(x)+1])).rename('LOW1')
+    vol = data.VOL.resample(**params).sum()
+    
+    avg = vol_filter(data.OPEN).resample(**params).mean().rename('AVG')
+    volr = (data.VOL * data.OPEN).resample(**params).sum().rename('VOLR')  # объем в рублях
+    vlt = vol_filter(data.OPEN).resample(**params).std().rename('VLT') # волатильность - стандатное отклонение цены от средней
+    avgc = vol_filter(data.OPEN).resample(**params).apply(avgcross).rename('AVGC')
+    
+    d = pd.concat([open, high, low, close, vol, volr, avg, avgc, vlt], axis=1)
     d.name = data.name
     if dropna:
         d.dropna(inplace=True)

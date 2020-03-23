@@ -463,6 +463,7 @@ class GenProg:
 
 
     
+    
     def next_epoch(self):
 
         epoch_start = datetime.now()
@@ -499,22 +500,18 @@ class GenProg:
  
         if self.__items[0][1] != prev_best_score:
             self.__last_epoch_inc_score = self.epoch
-        #elif self.epoch - self.__last_epoch_inc_score > 10:
-        #    c, v = self.select_best_child(self.__items[0][0])        
-        #    if v > prev_best_score:
-        #        print('We crop best to its best child')
-        #        self.__items.push((c, v))
-        #        self.__last_epoch_inc_score = self.epoch
+        
         self.__last_epoch_elapsed_time = datetime.now() - epoch_start
         
 def load_target(filename):
     d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
-    growth = (d.HIGH - d.OPEN)/d.OPEN
-    change = (d.CLOSE - d.OPEN)/d.OPEN
+    target = ((d.VOLR/d.VOL).pct_change(1) > 0).astype(float).shift(-1).dropna()
     
-    target = ((growth > 0.008) & (change > 0.002)).astype(float).shift(-1).dropna()
+    #growth = (d.HIGH - d.OPEN)/d.OPEN
+    #change = (d.CLOSE - d.OPEN)/d.OPEN
+    #target = ((growth > 0.008) & (change > 0.002)).astype(float).shift(-1).dropna()
     #target = (growth > 0.008).astype(float).shift(-1).dropna() # цель - рост на 0.8% в день
-    #target = growth.apply(lambda x: np.round(x)).shift(-1).dropna() # с шагом 0.5%
+    #target = growth.apply(lambda x: np.round(x)).shift(-1).dropna() # с шагом 1%
     return target
     
 def load_series(filenames):
@@ -732,7 +729,7 @@ def main2():
         '1_SIBN.csv', '24_NG.csv', '24_BZ.csv'],
         n=100,
         max_epoch=None,
-        save_as='gazp_other_best.csv',
+        save_as='gazp_other_best_new_target.csv',
         p_series=P_SERIES)
         
 def main3():
@@ -742,8 +739,7 @@ def main3():
        ['1_LKOH.csv', '1_ROSN.csv', '1_NVTK.csv', '1_SIBN.csv'],
         n=100,
         max_epoch=None,
-        save_as='gazp_similar_best.csv',
-        p_series=P_SERIES)
+        save_as='gazp_similar_best_new_target.csv')
 
 
         
@@ -761,7 +757,7 @@ if __name__ == '__main__':
     #instruments = json.loads(codecs.open('finam/instruments/instruments.json', 'r', 'utf-8').read())
     #markets = json.loads(codecs.open('finam/markets.json', 'r', 'utf-8').read())
 
-    main1()
+    main3()
 
 '''
 individual mean:
