@@ -13,7 +13,7 @@ import codecs
 
 
 
-def download(instrument, date_from, date_to, output_file):
+def download_part(instrument, date_from, date_to, output_file):
     
     params = [  
         ('market', instrument['market']),
@@ -65,39 +65,41 @@ def last_downloaded_date(filename):
     last = lines[-1].split(',')
     if len(last) == 0 or len(last[0]) == 0:
         return None
-    return datetime.strptime(last[0], '%Y%m%d').date() 
-    
-def download_all(instruments, date_from, date_to, output_dir):
+    return datetime.strptime(last[0], '%Y%m%d').date()
+
+def download(instrument, date_from, date_to, output_dir):
+    filename = os.path.join(output_dir, '{}_{}.csv'.format(instrument['market'], instrument['code']))
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    for instrument in instruments:
-        filename = os.path.join(output_dir, '{}_{}.csv'.format(instrument['market'], instrument['code']))
-        if os.path.exists(filename):
-            last = last_downloaded_date(filename)
-            date_from = last + timedelta(days=1)
-            
-        f  = date_from
-        while f <= date_to:
-            t = f + timedelta(days=365)
-            if t > date_to:
-                t = date_to
-            print('[{}] Load {} from {} to {}'.format(datetime.now(), instrument['name'], f.strftime('%Y.%m.%d'), t.strftime('%Y.%m.%d')))
-            try:
-                download(instrument, f, t, filename)
-                print('[{}] Success'.format(datetime.now()))
-                time.sleep(5)
-            except Exception as e:
-                print('[{}] Error {}'.format(datetime.now(), e))
-                os.remove(filename)
-                break
-            f = t + timedelta(days=1)
+    elif os.path.exists(filename):
+        last = last_downloaded_date(filename)
+        date_from = last + timedelta(days=1)
+        
+    f  = date_from
+    while f <= date_to:
+        t = f + timedelta(days=365)
+        if t > date_to:
+            t = date_to
+        print('[{}] Load {} from {} to {}'.format(datetime.now(), instrument['name'], f.strftime('%Y.%m.%d'), t.strftime('%Y.%m.%d')))
+        try:
+            download_part(instrument, f, t, filename)
+            print('[{}] Success'.format(datetime.now()))
+            time.sleep(5)
+        except Exception as e:
+            print('[{}] Error {}'.format(datetime.now(), e))
+            os.remove(filename)
+            break
+        f = t + timedelta(days=1)
+
+        
             
 if __name__ == '__main__':
     instruments = json.loads(codecs.open(sys.argv[1], 'r', 'utf-8').read())
     date_from = datetime.strptime(sys.argv[2], '%d.%m.%Y').date()
     date_to = datetime.strptime(sys.argv[3], '%d.%m.%Y').date()
     output_dir = sys.argv[4]
-    download_all(instruments, date_from, date_to, output_dir)
+    for instrument in instruments:
+        download(instrument, date_from, date_to, output_dir)
     
     
     
