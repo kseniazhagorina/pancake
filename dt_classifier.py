@@ -21,7 +21,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.feature_selection import mutual_info_classif
 from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 import target
+from collections import defaultdict
 
 def load_series(filenames, addf=False):
     series = []
@@ -44,22 +46,30 @@ def load_extra(filename, series_name):
 def trade(predict, award):
     x = 1.0
     for p, a in zip(predict, award):
-        if a[p] != 1.0:
-            x *= a[p]
+        # print('p:{} a:{}'.format(p, a))
+        x *= a[p]
     return x
+
+        
+def confusion_report(y_true, y_predict):
+    m = confusion_matrix(y_true, y_predict)
+    print('row=expected  column=predicted')
+    print(m)
     
 if __name__ == '__main__':
     
-    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, q=4))
+    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, q=3))
     g = load_extra('gazp_best.csv', 'VALUE')
     g0 = load_extra('gazp_best_new_target.csv', 'VALUE0')
     g1 = load_extra('gazp_other_best.csv','OTHER_VALUE')
     g2 = load_extra('gazp_similar_best.csv','SIMILAR_VALUE')
     g3 = load_extra('gazp_similar_best_new_target.csv','SIMILAR_VALUE0')
+    g4 = load_extra('gazp_top5_close_high_q4.csv', 'TOP5')
+    g5 = load_extra('gazp_imoex_close_high_q4.csv', 'IMOEX')
     
     s = load_series(['1_GAZP.csv'], True)
     x = pd.concat( s , axis=1)
-    x = pd.concat( s + [g, g0, g1, g2, g3], axis=1)
+    x = pd.concat( s + [g, g0, g1, g2, g3, g4, g5], axis=1)
     x = x + x/np.inf
 
     _, x = y.TARGET.align(x, join='left', fill_value=0)
@@ -84,11 +94,11 @@ if __name__ == '__main__':
     #clf = DecisionTreeClassifier(random_state=0, min_samples_split=30, max_depth=15, min_samples_leaf=5)
     #clf = RandomForestClassifier(random_state=0, min_samples_split=150, min_samples_leaf=50, n_estimators=500)
     # best configuration for 2-class classification
-    clf = GradientBoostingClassifier(random_state=0, n_estimators=300, learning_rate=0.5, max_depth=2, min_samples_leaf=50)
+    #clf = GradientBoostingClassifier(random_state=0, n_estimators=500, learning_rate=0.02, max_depth=1, min_samples_leaf=150)
     # best configuration for 4-class classification
-    #clf = GradientBoostingClassifier(random_state=0, n_estimators=1000, learning_rate=0.02, max_depth=1, min_samples_leaf=25)
+    clf = GradientBoostingClassifier(random_state=0, n_estimators=2000, learning_rate=0.02, max_depth=1, min_samples_leaf=25)
     
-    clf.fit(x_train, y_train.TARGET)
+    clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
     print('\nfeature importances:')
     for c, v in sorted(zip(x_train.columns, clf.feature_importances_), key = lambda x: x[1]):
         print('{0}: {1:.4f}'.format(c, v))
@@ -98,7 +108,10 @@ if __name__ == '__main__':
     print('\ntest score:')
     print(clf.score(x_test, y_test.TARGET))
     predict = clf.predict(x_test)
+    print('\nconfusion matrix:')
+    confusion_report(y_test.TARGET, predict)
     print(classification_report(y_test.TARGET, predict))
+    
     
     print('\ntrade score:')
     print(trade(predict, y_test.AWARD))

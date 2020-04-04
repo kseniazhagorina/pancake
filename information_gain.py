@@ -52,6 +52,9 @@ def add_factors(d):
     change_1m = (d.CLOSE - open_1m_ago)/open_1m_ago
     change_3m = (d.CLOSE - open_3m_ago)/ open_3m_ago
     
+    low1w = d.LOW.rolling('6D').min().shift(1)
+    high1w = d.HIGH.rolling('6D').max().shift(1)
+    
     # экспоненциальное скользящее среднее y^[i] = (1-alpha)*y^[i-1] + alpha*y[i]
     ewm04 = d.AVG.ewm(alpha=0.4).mean()
     
@@ -131,6 +134,10 @@ def add_factors(d):
         openewm02.rename('OPEN_EWM02'),
         openewm2.rename('OPEN_EWM2'),
         d.OPEN.rolling(window=5).mean().rename('OPEN5'),
+        
+        ((d.AVG - low1w)/(high1w - low1w)).rename('AVG_OVER_1W'),
+        ((d.LOW - low1w)/(high1w - low1w)).rename('LOW_OVER_1W'),
+        ((d.HIGH - low1w)/(high1w - low1w)).rename('HIGH_OVER_1W'),
         
         ((openewm2 - openewm02)/openewm02).rename('OPEN_EWM2_EWM02'),
         ((avgewm2 - avgewm02)/avgewm02).rename('AVG_EWM2_EWM02'),
