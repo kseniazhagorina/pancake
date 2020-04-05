@@ -148,7 +148,7 @@ EWM2 = Func('sf.ewm2',
 ALL_OPERATIONS = [ROLLING_MEAN, ROLLING_MIN, ROLLING_MAX, ROLLING_STD, ROLLING_VAR, ROLLING_SUM, #ROLLING_CORR,
                   SSUM, SSUB, SMUL, SDIV, SPCNT, SMAX, SMIN, SLT, SAND, SOR, SXOR,
                   SNOT, SABS, SQRT, SQR, SLOG, CUMMIN, CUMMAX, NSUM, NMUL, NLT, NGT, # CUMSUM,
-                  EWM, EWM2, SHIFT, CHANGE, MINMAX, FFILLNA, FILLNA0, #DROPNA, REIND,  
+                  EWM, EWM2, SHIFT, CHANGE, FFILLNA, FILLNA0, #MINMAX, DROPNA, REIND,  
                   ]
 
 
@@ -503,24 +503,13 @@ class GenProg:
         self.__last_epoch_elapsed_time = datetime.now() - epoch_start
         
 def load_target(filename):
-    return target.load_target(filename, lambda d: target.growth(d, q=4)).TARGET
-    
-def load_series(filenames):
-    series = []
-    for filename in filenames:
-        print('load {}'.format(filename))
-        try:
-            d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
-            series += [d[c].rename(d.name+'.'+d[c].name) for c in d.columns]
-        except Exception as e:
-            print('error {}'.format(e))
-    return series
+    return target.load_target(filename, lambda d: target.growth(d, lambda s: target.split_thr(s, thr=0.015))).TARGET # 0.6% and 1.5%
+
         
-        
-def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_series=None): 
+def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_series=None, expand=False): 
  
-    target = load_target(target_filename)[start:end]
-    series = load_series(series_filenames)
+    t = load_target(target_filename)[start:end]
+    s = target.load_series(series_filenames, expand)
     ps = None
     if p_series:
         ps = np.array([p_series[s.name] if s.name in p_series else min(p_series) for s in series])
@@ -530,7 +519,7 @@ def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_
     
     
     # при N = max_node_size * max_n затраты памяти будут примерно N*100 Кб
-    g = GenProg(ALL_OPERATIONS, series, target, n, p_series=ps, max_n=n*2, max_node_size=120)
+    g = GenProg(ALL_OPERATIONS, s, t, n, p_series=ps, max_n=n*2, max_node_size=120)
     g.start()
     g.print_state()
     while max_epoch is None or g.epoch < max_epoch:
@@ -543,9 +532,9 @@ def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_
    
     
 def calcstat(start, end, target_filename, series_filenames, output_filename):
-    target = load_target(target_filename)[start:end]
-    series = load_series(series_filenames)
-    g = GenProg(ALL_OPERATIONS, series, target, 100)
+    t = load_target(target_filename)[start:end]
+    s = load_series(series_filenames)
+    g = GenProg(ALL_OPERATIONS, s, t, 100)
     
     from collections import defaultdict
     individual = defaultdict(list)
@@ -735,6 +724,16 @@ def main1():
         max_epoch=None,
         save_as='gazp_best_new_target.csv')
         
+def main11():
+    run('2009-01-01',
+        '2018-12-31',
+        '1_GAZP.csv', 
+       ['1_GAZP.csv'],
+        n=100,
+        max_epoch=None,
+        expand=True,
+        save_as='gazp_close_high_015.csv')        
+        
 def main2():
     run('2009-01-01',
         '2018-12-31',
@@ -760,20 +759,20 @@ def main4():
     run('2009-01-01',
         '2018-12-31',
         '1_GAZP.csv', 
-       ['1_AKRN.csv', '1_NVTK.csv', '1_NKNC.csv', '1_VSMO.csv',  '1_TRNFP.csv'],
+       ['1_AKRN.csv', '1_NVTK.csv', '1_NKNC.csv', '1_VSMO.csv',  '1_TRNFP.csv', '1_GMKN.csv'],
         n=100,
         max_epoch=None,
-        save_as='gazp_top5_close_high_q4.csv',
+        save_as='gazp_top6_close_high_015.csv',
         p_series=P_SERIES_NEW)
         
 def main5():
     run('2009-01-01',
         '2018-12-31',
         '1_GAZP.csv', 
-       ['91_IMOEX.csv', '91_MOEXOG.csv', '1_GAZP.csv'],
+       ['91_IMOEX.csv', '91_MOEX10.csv', '91_MOEXOG.csv', '91_MOEXFN.csv', '1_GAZP.csv'],
         n=100,
         max_epoch=None,
-        save_as='gazp_imoex_close_high_q4.csv')       
+        save_as='gazp_imoex_close_high_015.csv')       
 
         
 def main_calcstat():
@@ -789,5 +788,5 @@ if __name__ == '__main__':
     #instruments = json.loads(codecs.open('finam/instruments/instruments.json', 'r', 'utf-8').read())
     #markets = json.loads(codecs.open('finam/markets.json', 'r', 'utf-8').read())
 
-    main5()
+    main11()
 

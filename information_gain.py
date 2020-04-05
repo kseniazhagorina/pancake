@@ -75,11 +75,7 @@ def add_factors(d):
     highewm2 = ewm2(d.HIGH, 0.2, 0.2)
     lowewm2 = ewm2(d.LOW, 0.2, 0.2)
     
-    dayofweek = pd.Series([date.dayofweek for date in d.index], index=d.index)
-    day = pd.Series([date.day for date in d.index], index=d.index)
-    month = pd.Series([date.month for date in d.index], index=d.index)
-    
-    
+
     return pd.concat([
         change.rename('CHANGE'),
         change.shift(1).rename('CHANGE-1'),
@@ -142,12 +138,24 @@ def add_factors(d):
         ((openewm2 - openewm02)/openewm02).rename('OPEN_EWM2_EWM02'),
         ((avgewm2 - avgewm02)/avgewm02).rename('AVG_EWM2_EWM02'),
         ((highewm2 - highewm02)/highewm02).rename('HIGH_EWM2_EWM02'),
+
+        ],
+        axis=1
+    )
+    
+def add_datetime_factors(d):
+    dayofweek = pd.Series([date.dayofweek for date in d.index], index=d.index)
+    day = pd.Series([date.day for date in d.index], index=d.index)
+    month = pd.Series([date.month for date in d.index], index=d.index)
+    
+    return pd.concat([
         dayofweek.rename('DAYOFWEEK'),
         day.rename('DAY'),
         month.rename('MONTH')
         ],
         axis=1
     )
+    
     
 def mean_squared_error(y, y_pred):
     df = pd.concat([y.rename('Y'), y_pred.rename('Y_PRED')], axis=1).dropna()
@@ -161,8 +169,9 @@ if __name__ == '__main__':
     filename = '1_GAZP.csv'
     d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
     a = add_factors(d)
+    dt = add_datetime_factors(d)
     target = a.GROWTH.apply(lambda x: int(x > 0.008)).shift(-1) # цель - рост на 0.8% в день    
-    a1 = pd.concat([pd.concat([d, a], axis=1).fillna(100500), target.rename('TARGET')], axis=1).dropna()
+    a1 = pd.concat([pd.concat([d, a, dt], axis=1).fillna(100500), target.rename('TARGET')], axis=1).dropna()
     info = mutual_info_classif(a1, a1.TARGET.values)
     for col, val in sorted(zip(a1.columns, info), key=lambda x: x[1], reverse=True):
         print('{0}\t{1:.4f}'.format(col, val))
