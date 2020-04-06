@@ -71,11 +71,22 @@ def growth(d, split):
                       pd.Series(award, index=g.index).rename('AWARD'),
                       pd.Series(weight, index=g.index).rename('WEIGHT')], axis=1)
                       
-                      
-def growth_thr(d, thr):
+
+def change(d, split):
     yc = d.CLOSE.shift(1)
-    growth = ((d.HIGH - yc)/yc).dropna()
-    vals = (growth > thr).astype(int)
+    change = ((d.CLOSE - yc)/yc).dropna()
+    vals, catind = split(growth)
+    print('target: {}'.format(catind))
+    
+    award = [[1.0]*len(catind)]*len(vals)
+    weight = [1.0]*len(vals)
+    
+    return pd.concat([pd.Series(vals, index=growth.index).rename('TARGET'),
+                      pd.Series(award, index=g.index).rename('AWARD'),
+                      pd.Series(weight, index=g.index).rename('WEIGHT')], axis=1)
+    
+    
+                      
     
 def load_series(filenames, addf=False, adddt=False):
     series = []
@@ -85,7 +96,7 @@ def load_series(filenames, addf=False, adddt=False):
             d = fnm.resample(fnm.read(os.path.join('finam/data', filename)), period='D')
             if addf:
                 a = ig.add_factors(d)
-                dt = ig.add_datetimefactors(d) if adddt else None
+                dt = ig.add_datetime_factors(d) if adddt else None
                 name = d.name
                 d = pd.concat([d, a, dt], axis=1)
                 d.name = name

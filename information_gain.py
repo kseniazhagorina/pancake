@@ -52,12 +52,16 @@ def add_factors(d):
     change_1m = (d.CLOSE - open_1m_ago)/open_1m_ago
     change_3m = (d.CLOSE - open_3m_ago)/ open_3m_ago
     
+    
     low1w = d.LOW.rolling('6D').min().shift(1)
     high1w = d.HIGH.rolling('6D').max().shift(1)
     
+    low1m = d.LOW.rolling('30D').min().shift(1)
+    high1m = d.HIGH.rolling('30D').max().shift(1)
+    
+    
     # экспоненциальное скользящее среднее y^[i] = (1-alpha)*y^[i-1] + alpha*y[i]
     ewm04 = d.AVG.ewm(alpha=0.4).mean()
-    
     
 
     avgewm02 = d.AVG.ewm(alpha=0.2).mean()
@@ -80,10 +84,12 @@ def add_factors(d):
         change.rename('CHANGE'),
         change.shift(1).rename('CHANGE-1'),
         change.shift(2).rename('CHANGE-2'),
+        change.shift(3).rename('CHANGE-3'),
         change.rolling(window=5).mean().rename('CHANGE5'),
         growth.rename('GROWTH'),
         growth.shift(1).rename('GROWTH-1'),
         growth.shift(2).rename('GROWTH-2'),
+        growth.shift(3).rename('GROWTH-3'),
         growth.rolling(window=5).mean().rename('GROWTH5'),
         growth.rolling(window=5).max().rename('MAX_GROWTH5'),
         growth.rolling(window=3).max().rename('MAX_GROWTH3'),
@@ -94,8 +100,11 @@ def add_factors(d):
         change_1m.rename('CHANGE_1M'),
         change_3m.rename('CHANGE_3M'),
         
+        
         ((d.HIGH - d.LOW)/d.LOW).rename('HIGH_LOW_P'),
         ((d.HIGH - d.LOW)/d.LOW).rolling(window=5).mean().rename('HIGH_LOW_P5'),
+        ((d.HIGH - d.LOW)/d.LOW).rolling(window=5).min().rename('HIGH_LOW_MIN_P5'),
+        ((d.HIGH - d.LOW)/d.LOW).rolling(window=5).max().rename('HIGH_LOW_MAX_P5'),
         
         ((avgewm02 - d.CLOSE)/d.CLOSE).rename('AVG_EWM02_CLOSE'),
         ((highewm02 - d.CLOSE)/d.CLOSE).rename('HIGH_EWM02_CLOSE'),
@@ -135,9 +144,9 @@ def add_factors(d):
         ((d.LOW - low1w)/(high1w - low1w)).rename('LOW_OVER_1W'),
         ((d.HIGH - low1w)/(high1w - low1w)).rename('HIGH_OVER_1W'),
         
-        ((openewm2 - openewm02)/openewm02).rename('OPEN_EWM2_EWM02'),
-        ((avgewm2 - avgewm02)/avgewm02).rename('AVG_EWM2_EWM02'),
-        ((highewm2 - highewm02)/highewm02).rename('HIGH_EWM2_EWM02'),
+        ((d.AVG - low1m)/(high1m - low1m)).rename('AVG_OVER_1M'),
+        ((d.LOW - low1m)/(high1m - low1m)).rename('LOW_OVER_1M'),
+        ((d.HIGH - low1m)/(high1m - low1m)).rename('HIGH_OVER_1M')
 
         ],
         axis=1

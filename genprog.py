@@ -453,7 +453,7 @@ class GenProg:
                
         try:
             v = v.values.reshape(-1, 1)
-            info = mutual_info_classif(v, self.__target, n_neighbors=5, random_state=4838474)[0]
+            info = mutual_info_classif(v, self.__target, n_neighbors=15, random_state=4838474)[0]
             # return info - 0.0002 * node.height # - 0.000002 * node.size
             return info - 0.00001 * node.size
         except Exception as e:
@@ -503,23 +503,23 @@ class GenProg:
         self.__last_epoch_elapsed_time = datetime.now() - epoch_start
         
 def load_target(filename):
-    return target.load_target(filename, lambda d: target.growth(d, lambda s: target.split_thr(s, thr=0.015))).TARGET # 0.6% and 1.5%
+    return target.load_target(filename, lambda d: target.growth(d, lambda s: target.split_thr(s, thr=0.006))).TARGET # 0.6% and 1.5%
 
         
 def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_series=None, expand=False): 
  
     t = load_target(target_filename)[start:end]
-    s = target.load_series(series_filenames, expand)
+    series = target.load_series(series_filenames, expand)
     ps = None
     if p_series:
-        ps = np.array([p_series[s.name] if s.name in p_series else min(p_series) for s in series])
+        ps = np.array([p_series[s.name] if s.name in p_series else min(p_series.values()) for s in series])
         ps = ps - ps.min()
         ps = list(0.5*ps/ps.sum() + 0.5/len(ps))
 
     
     
     # при N = max_node_size * max_n затраты памяти будут примерно N*100 Кб
-    g = GenProg(ALL_OPERATIONS, s, t, n, p_series=ps, max_n=n*2, max_node_size=120)
+    g = GenProg(ALL_OPERATIONS, series, t, n, p_series=ps, max_n=n*2, max_node_size=120)
     g.start()
     g.print_state()
     while max_epoch is None or g.epoch < max_epoch:
@@ -531,9 +531,9 @@ def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_
         
    
     
-def calcstat(start, end, target_filename, series_filenames, output_filename):
+def calcstat(start, end, target_filename, series_filenames, output_filename, expand=False):
     t = load_target(target_filename)[start:end]
-    s = load_series(series_filenames)
+    s = target.load_series(series_filenames, expand)
     g = GenProg(ALL_OPERATIONS, s, t, 100)
     
     from collections import defaultdict
@@ -713,7 +713,8 @@ for v, name in p:
     P_SERIES[name] += v
     
 P_SERIES_NEW = dict(((key, prob) for key, prob, count in json.loads(codecs.open('probabilities_GAZP.json', 'r', 'utf-8').read())['individual']))
-    
+P_SERIES_SELF = dict(((key, prob) for key, prob, count in json.loads(codecs.open('probabilities_GAZP_self.json', 'r', 'utf-8').read())['individual']))
+
     
 def main1():
     run('2009-01-01',
@@ -732,7 +733,8 @@ def main11():
         n=100,
         max_epoch=None,
         expand=True,
-        save_as='gazp_close_high_015.csv')        
+        save_as='gazp_close_high_006.csv',
+        p_series=P_SERIES_SELF)        
         
 def main2():
     run('2009-01-01',
@@ -781,6 +783,14 @@ def main_calcstat():
         '1_GAZP.csv', 
         os.listdir('finam/data'),
         'probabilities_GAZP.json')
+        
+def main_calcstat1():
+    calcstat('2009-01-01',
+        '2018-12-31',
+        '1_GAZP.csv', 
+        ['1_GAZP.csv'],
+        'probabilities_GAZP_self.json',
+        expand=True)       
 
     
     

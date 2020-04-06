@@ -48,7 +48,8 @@ if __name__ == '__main__':
     
     y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, split=lambda s: target.split_qcut(s, q=3)))
     g = load_extra('gazp_best.csv', 'VALUE')
-    #g0 = load_extra('gazp_best_new_target.csv', 'VALUE0')
+    g015 = load_extra('gazp_close_high_015.csv', 'VALUE015')
+    g006 = load_extra('gazp_close_high_006.csv', 'VALUE006')
     g1 = load_extra('gazp_other_best.csv','OTHER_VALUE')
     g2 = load_extra('gazp_similar_best.csv','SIMILAR_VALUE')
     g3 = load_extra('gazp_similar_best_new_target.csv','SIMILAR_VALUE0')
@@ -58,7 +59,7 @@ if __name__ == '__main__':
     
     s = target.load_series(['1_GAZP.csv'], True, True)
     x = pd.concat( s , axis=1)
-    x = pd.concat( s + [g, g1, g2, g3, g4, g5], axis=1)
+    x = pd.concat( s + [g, g015, g006, g1, g2, g3, g4, g5], axis=1)
     x = x + x/np.inf
 
     _, x = y.TARGET.align(x, join='left', fill_value=0)
@@ -85,8 +86,8 @@ if __name__ == '__main__':
     # best configuration for 2-class classification
     # clf = GradientBoostingClassifier(random_state=0, n_estimators=500, learning_rate=0.02, max_depth=1, min_samples_leaf=50)
     # best configurations for 4-class classification
-    #clf = GradientBoostingClassifier(random_state=0, n_estimators=1000, learning_rate=0.005, max_depth=2, min_samples_leaf=25)
-    clf = GradientBoostingClassifier(random_state=1, n_estimators=3000, learning_rate=0.01, max_depth=1, min_samples_leaf=15)
+    # clf = GradientBoostingClassifier(random_state=0, n_estimators=1000, learning_rate=0.005, max_depth=2, min_samples_leaf=25)
+    clf = GradientBoostingClassifier(random_state=0, n_estimators=2000, learning_rate=0.015, max_depth=1, min_samples_leaf=25)
     
     clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
     print('\nfeature importances:')

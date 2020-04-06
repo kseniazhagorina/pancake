@@ -32,8 +32,9 @@ def resample(data, period, dropna=True):
     #        lambda x: np.nan if len(x) == 0 else np.min(x[0:np.argmax(x)+1])).rename('LOW1')
     vol = data.VOL.resample(**params).sum()
     
-    avg = vol_filter(data.OPEN).resample(**params).mean().rename('AVG')
+    
     volr = (data.VOL * data.OPEN).resample(**params).sum().rename('VOLR')  # объем в рублях
+    avg = (volr/vol).rename('AVG')
     vlt = vol_filter(data.OPEN).resample(**params).std().rename('VLT') # волатильность - стандатное отклонение цены от средней
     avgc = vol_filter(data.OPEN).resample(**params).apply(avgcross).rename('AVGC')
     
