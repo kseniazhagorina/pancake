@@ -22,6 +22,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.feature_selection import mutual_info_classif
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import TimeSeriesSplit, cross_val_score
+
 import target
 from collections import defaultdict
 
@@ -45,7 +47,7 @@ def confusion_report(y_true, y_predict):
     
 if __name__ == '__main__':
     
-    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, split=lambda s: target.split_qcut(s, q=4)))
+    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, split=lambda s: target.split_qcut(s, q=3)))
     g = load_extra('gazp_best.csv', 'VALUE')
     g015 = load_extra('gazp_close_high_015.csv', 'VALUE015')
     #g006 = load_extra('gazp_close_high_006.csv', 'VALUE006')
@@ -67,11 +69,6 @@ if __name__ == '__main__':
     _, y = y.TARGET.align(y, join='left', fill_value=0)
     x = x.fillna(0)
     
-    y_train = y['2009-01-01':'2018-12-31']
-    x_train = x['2009-01-01':'2018-12-31']
-
-    y_test = y['2019-01-01':]
-    x_test = x['2019-01-01':]
     
     '''
     print('\nmutual information:')
@@ -88,12 +85,43 @@ if __name__ == '__main__':
     # clf = GradientBoostingClassifier(random_state=0, n_estimators=500, learning_rate=0.02, max_depth=1, min_samples_leaf=50)
     # best configurations for 3-class classification
     # clf = GradientBoostingClassifier(random_state=0, n_estimators=1000, learning_rate=0.005, max_depth=2, min_samples_leaf=25)
-    #clf = GradientBoostingClassifier(random_state=0, n_estimators=2500, learning_rate=0.015, max_depth=1, min_samples_leaf=25)
+    clf = GradientBoostingClassifier(random_state=0, n_estimators=2000, learning_rate=0.01, max_depth=1, min_samples_leaf=25)
     # best configurations for 4-class classification
-    clf = GradientBoostingClassifier(random_state=0, n_estimators=3000, learning_rate=0.005, max_depth=1, min_samples_leaf=25)
+    #clf = GradientBoostingClassifier(random_state=0, n_estimators=3000, learning_rate=0.005, max_depth=1, min_samples_leaf=25)
     #clf = GradientBoostingClassifier(random_state=0, n_estimators=2000, learning_rate=0.002, max_depth=2, min_samples_leaf=25)
     
+    tscv = TimeSeriesSplit(n_splits=10)
+    print('\ntrain cross val score:')
+    for train_inds, test_inds in tscv.split(x):
+        if len(train_inds) < 1000:
+            continue
+        x_train = x[train_inds[0]:train_inds[-1]]
+        y_train = y[train_inds[0]:train_inds[-1]]
+        x_test = x[test_inds[0]:test_inds[-1]]
+        y_test = y[test_inds[0]:test_inds[-1]]
+        clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
+        dtf = '%Y-%m-%d'
+        print('    train {}-{} score: {}'.format(x_train.index[0].strftime(dtf), x_train.index[-1].strftime(dtf), clf.score(x_train, y_train.TARGET)))
+        print('    test {}-{} score: {}'.format(x_test.index[0].strftime(dtf), x_test.index[-1].strftime(dtf), clf.score(x_test, y_test.TARGET)))
+        predict = clf.predict(x_test)
+        '''
+        print('    confusion matrix:')
+        confusion_report(y_test.TARGET, predict)
+        print(classification_report(y_test.TARGET, predict))
+        '''
+        print('    trade score: {}'.format(trade(predict, y_test.AWARD)))
+        print()
+        
+    
+    
+    y_train = y['2009-01-01':'2018-12-31']
+    x_train = x['2009-01-01':'2018-12-31']
+
+    y_test = y['2019-01-01':]
+    x_test = x['2019-01-01':]
+    
     clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
+        
     print('\nfeature importances:')
     for c, v in sorted(zip(x_train.columns, clf.feature_importances_), key = lambda x: x[1]):
         print('{0}: {1:.4f}'.format(c, v))

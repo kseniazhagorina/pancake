@@ -24,10 +24,11 @@ def split_qcut(s, q=3):
     vals, catind = pd.qcut(s, q=q).factorize(sort=True)
     return vals, catind.categories
 
-def split_thr(s, thr):
-    vals = (s > thr).astype(int)
-    categories = [pd.Interval(left=-np.inf, right=thr, closed='right'), pd.Interval(left=thr, right=np.inf, closed='neither')]
-    return vals, categories    
+def split_thr(s, *thr):
+
+    categories = pd.IntervalIndex.from_tuples([(-np.inf, thr[0])] + [(thr[i-1],thr[i]) for i in range(1, len(thr))] + [(thr[-1], np.inf)])
+    vals = pd.cut(s, bins=categories)
+    return vals, categories
     
 def growth(d, split):
     '''максимальный рост следующего дня по сравнению с закрытием предыдущего'''
