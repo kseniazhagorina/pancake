@@ -43,10 +43,10 @@ def growth(d, split):
         '''Если предсказывают низкий рост - не покупаем,
            Если фактический рост в этот день (gi) больше чем предсказано - получаем прибыль
            если меньше - фиксируем убыток на конец дня (ci)'''
-        if predict.left - 0.002 < 0:
+        if predict.left - 0.002 < 0.003:
             return 1.0
         return 1.0 + (predict.left if gi > predict.left else ci) - 0.002              
-        
+    
         
     award = [[_award(p, gi, ci) for p in catind] for gi, ci in zip(g, c)]
     got = np.array([a[p] for p,a in zip(vals, award)])
@@ -57,6 +57,7 @@ def growth(d, split):
     
     w1 = w1/w1.sum()*len(got)
     w2 = w2/w2.sum()*len(got)
+    
     
     weight = w1 + w2 + 2.0*w3
     weight = weight/weight.sum()*len(weight)
@@ -74,16 +75,18 @@ def growth(d, split):
 
 def change(d, split):
     yc = d.CLOSE.shift(1)
-    change = ((d.CLOSE - yc)/yc).dropna()
-    vals, catind = split(growth)
+    c = ((d.CLOSE - yc)/yc).dropna()
+    vals, catind = split(c)
     print('target: {}'.format(catind))
     
     award = [[1.0]*len(catind)]*len(vals)
     weight = [1.0]*len(vals)
+    for i in range(len(catind)):
+        print('{}: {}'.format(i, sum(wi for vi,wi in zip(vals, weight) if vi == i)))
     
-    return pd.concat([pd.Series(vals, index=growth.index).rename('TARGET'),
-                      pd.Series(award, index=g.index).rename('AWARD'),
-                      pd.Series(weight, index=g.index).rename('WEIGHT')], axis=1)
+    return pd.concat([pd.Series(vals, index=c.index).rename('TARGET'),
+                      pd.Series(award, index=c.index).rename('AWARD'),
+                      pd.Series(weight, index=c.index).rename('WEIGHT')], axis=1)
     
     
                       

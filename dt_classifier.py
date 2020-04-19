@@ -34,7 +34,6 @@ def load_extra(filename, series_name):
 def trade(predict, award):
     x = 1.0
     for p, a in zip(predict, award):
-        # print('p:{} a:{}'.format(p, a))
         x *= a[p]
     return x
 
@@ -46,20 +45,22 @@ def confusion_report(y_true, y_predict):
     
 if __name__ == '__main__':
     
-    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, split=lambda s: target.split_qcut(s, q=3)))
+    y = target.load_target('1_GAZP.csv', lambda d: target.growth(d, split=lambda s: target.split_qcut(s, q=4)))
     g = load_extra('gazp_best.csv', 'VALUE')
     g015 = load_extra('gazp_close_high_015.csv', 'VALUE015')
-    g006 = load_extra('gazp_close_high_006.csv', 'VALUE006')
+    #g006 = load_extra('gazp_close_high_006.csv', 'VALUE006')
+    #g002 = load_extra('gazp_close_close_002.csv', 'VALUE002')
     g1 = load_extra('gazp_other_best.csv','OTHER_VALUE')
     g2 = load_extra('gazp_similar_best.csv','SIMILAR_VALUE')
-    g3 = load_extra('gazp_similar_best_new_target.csv','SIMILAR_VALUE0')
+    g21 = load_extra('gazp_similar_best_new_target.csv','SIMILAR_VALUE0')
+    g201 = load_extra('gazp_similar_close_high_01.csv','SIMILAR_VALUE01')
     g4 = load_extra('gazp_top5_close_high_q4.csv', 'TOP5')
     g5 = load_extra('gazp_top6_close_high_015.csv', 'TOP6')
-    #g6 = load_extra('gazp_imoex_close_high_015.csv', 'IMOEX')
+    #g6 = load_extra('gazp_imoex_close_high_02.csv', 'IMOEX')
     
     s = target.load_series(['1_GAZP.csv'], True, True)
     x = pd.concat( s , axis=1)
-    x = pd.concat( s + [g, g015, g006, g1, g2, g3, g4, g5], axis=1)
+    x = pd.concat( s + [g, g015, g1, g2, g21, g4, g5], axis=1)
     x = x + x/np.inf
 
     _, x = y.TARGET.align(x, join='left', fill_value=0)
@@ -85,9 +86,12 @@ if __name__ == '__main__':
     #clf = RandomForestClassifier(random_state=0, min_samples_split=150, min_samples_leaf=50, n_estimators=500)
     # best configuration for 2-class classification
     # clf = GradientBoostingClassifier(random_state=0, n_estimators=500, learning_rate=0.02, max_depth=1, min_samples_leaf=50)
-    # best configurations for 4-class classification
+    # best configurations for 3-class classification
     # clf = GradientBoostingClassifier(random_state=0, n_estimators=1000, learning_rate=0.005, max_depth=2, min_samples_leaf=25)
-    clf = GradientBoostingClassifier(random_state=0, n_estimators=2000, learning_rate=0.015, max_depth=1, min_samples_leaf=25)
+    #clf = GradientBoostingClassifier(random_state=0, n_estimators=2500, learning_rate=0.015, max_depth=1, min_samples_leaf=25)
+    # best configurations for 4-class classification
+    clf = GradientBoostingClassifier(random_state=0, n_estimators=3000, learning_rate=0.005, max_depth=1, min_samples_leaf=25)
+    #clf = GradientBoostingClassifier(random_state=0, n_estimators=2000, learning_rate=0.002, max_depth=2, min_samples_leaf=25)
     
     clf.fit(x_train, y_train.TARGET, y_train.WEIGHT)
     print('\nfeature importances:')

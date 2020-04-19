@@ -148,7 +148,7 @@ EWM2 = Func('sf.ewm2',
 ALL_OPERATIONS = [ROLLING_MEAN, ROLLING_MIN, ROLLING_MAX, ROLLING_STD, ROLLING_VAR, ROLLING_SUM, #ROLLING_CORR,
                   SSUM, SSUB, SMUL, SDIV, SPCNT, SMAX, SMIN, SLT, SAND, SOR, SXOR,
                   SNOT, SABS, SQRT, SQR, SLOG, CUMMIN, CUMMAX, NSUM, NMUL, NLT, NGT, # CUMSUM,
-                  EWM, EWM2, SHIFT, CHANGE, FFILLNA, FILLNA0, #MINMAX, DROPNA, REIND,  
+                  EWM, EWM2, SHIFT, CHANGE, FFILLNA, FILLNA0, MINMAX, DROPNA #, REIND,  
                   ]
 
 
@@ -501,14 +501,13 @@ class GenProg:
             self.__last_epoch_inc_score = self.epoch
         
         self.__last_epoch_elapsed_time = datetime.now() - epoch_start
-        
-def load_target(filename):
-    return target.load_target(filename, lambda d: target.growth(d, lambda s: target.split_thr(s, thr=0.006))).TARGET # 0.6% and 1.5%
 
-        
-def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_series=None, expand=False): 
- 
-    t = load_target(target_filename)[start:end]
+GROWTH = lambda thr: lambda d: target.growth(d, lambda s: target.split_thr(s, thr=thr))
+CHANGE = lambda thr: lambda d: target.change(d, lambda s: target.split_thr(s, thr=thr))   
+
+def run(start, end, target_params, series_filenames, n, max_epoch, save_as, p_series=None, expand=False): 
+    print(target_params)
+    t = target.load_target(*target_params).TARGET[start:end]
     series = target.load_series(series_filenames, expand)
     ps = None
     if p_series:
@@ -531,8 +530,8 @@ def run(start, end, target_filename, series_filenames, n, max_epoch, save_as, p_
         
    
     
-def calcstat(start, end, target_filename, series_filenames, output_filename, expand=False):
-    t = load_target(target_filename)[start:end]
+def calcstat(start, end, target_params, series_filenames, output_filename, expand=False):
+    t = target.load_target(*target_params)[start:end]
     s = target.load_series(series_filenames, expand)
     g = GenProg(ALL_OPERATIONS, s, t, 100)
     
@@ -720,7 +719,7 @@ def main1():
     run('2009-01-01',
         '2018-12-31',
         '1_GAZP.csv', 
-       ['1_GAZP.csv'],
+        ['1_GAZP.csv'],
         n=100,
         max_epoch=None,
         save_as='gazp_best_new_target.csv')
@@ -728,13 +727,12 @@ def main1():
 def main11():
     run('2009-01-01',
         '2018-12-31',
-        '1_GAZP.csv', 
-       ['1_GAZP.csv'],
+        ['1_GAZP.csv', CHANGE(0.002)], 
+        ['1_GAZP.csv'],
         n=100,
         max_epoch=None,
         expand=True,
-        save_as='gazp_close_high_006.csv',
-        p_series=P_SERIES_SELF)        
+        save_as='gazp_close_close_002.csv')        
         
 def main2():
     run('2009-01-01',
@@ -751,16 +749,16 @@ def main2():
 def main3():
     run('2009-01-01',
         '2018-12-31',
-        '1_GAZP.csv', 
-       ['1_LKOH.csv', '1_ROSN.csv', '1_NVTK.csv', '1_SIBN.csv'],
+        ['1_GAZP.csv', GROWTH(0.01)], 
+        ['1_LKOH.csv', '1_ROSN.csv', '1_NVTK.csv', '1_SIBN.csv'],
         n=100,
         max_epoch=None,
-        save_as='gazp_similar_best_new_target.csv')
+        save_as='gazp_similar_close_high_01.csv')
         
 def main4():
     run('2009-01-01',
         '2018-12-31',
-        '1_GAZP.csv', 
+        ['1_GAZP.csv', GROWTH(0.015)], 
        ['1_AKRN.csv', '1_NVTK.csv', '1_NKNC.csv', '1_VSMO.csv',  '1_TRNFP.csv', '1_GMKN.csv'],
         n=100,
         max_epoch=None,
@@ -770,11 +768,11 @@ def main4():
 def main5():
     run('2009-01-01',
         '2018-12-31',
-        '1_GAZP.csv', 
-       ['91_IMOEX.csv', '91_MOEX10.csv', '91_MOEXOG.csv', '91_MOEXFN.csv', '1_GAZP.csv'],
+        ['1_GAZP.csv', GROWTH(0.02)], 
+        ['91_IMOEX.csv', '91_MOEX10.csv', '91_MOEXOG.csv', '91_MOEXFN.csv', '1_GAZP.csv'],
         n=100,
         max_epoch=None,
-        save_as='gazp_imoex_close_high_015.csv')       
+        save_as='gazp_imoex_close_high_02.csv')       
 
         
 def main_calcstat():
@@ -798,5 +796,5 @@ if __name__ == '__main__':
     #instruments = json.loads(codecs.open('finam/instruments/instruments.json', 'r', 'utf-8').read())
     #markets = json.loads(codecs.open('finam/markets.json', 'r', 'utf-8').read())
 
-    main11()
+    main3()
 
